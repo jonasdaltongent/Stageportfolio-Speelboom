@@ -1,0 +1,23 @@
+{
+  "lesid": "stageportfolio-speelboom",
+  "lesnr": "02",
+  "titel": "Mijn digitaal stageportfolio",
+  "week": 4,
+  "schooljaar": "2026-2027",
+  "datum": "2026-09-21",
+  "_opmerking_datum": "Maandag van lesweek 4. Vervang dit door de echte lesdag.",
+  "klasgroepen": ["3MWb"],
+  "finaliteit": "dubbele finaliteit",
+  "lesduur_minuten": 50,
+  "evaluatie": "formatief",
+  "deadline": "2026-09-25T20:00",
+  "bron": "https://github.com/jonasdaltongent/Stageportfolio-Speelboom",
+  "doelen": [
+    { "code": "BV2_04.03",    "rol": "kern" },
+    { "code": "BK2_01.02",    "rol": "ondersteunend" },
+    { "code": "BK2_01.02.01", "rol": "ondersteunend" },
+    { "code": "BK2_01.02.03", "rol": "ondersteunend" },
+    { "code": "BV2_04.04",    "rol": "voorbereidend" },
+    { "code": "BK2_02.07.04", "rol": "contextueel" }
+  ]
+}
