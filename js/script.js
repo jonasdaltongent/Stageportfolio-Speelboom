@@ -174,7 +174,7 @@
     'versie': 'De hoeveelste keer dat je een document hebt aangepast: v1, v2, v3. Zo weet je welk bestand het recentste is.',
     'sorteren': 'De bestanden op volgorde zetten, bijvoorbeeld op naam of op datum.',
     'delen': 'Iemand anders toegang geven tot jouw map of bestand. Jij blijft de eigenaar.',
-    'lezer': 'Iemand die je bestand mag openen en lezen, maar niets mag veranderen.',
+    'kijker': 'Iemand die je bestand mag bekijken, maar niets mag veranderen.',
     'reageerder': 'Iemand die je bestand mag lezen en er opmerkingen bij mag zetten, maar de tekst zelf niet mag veranderen.',
     'bewerker': 'Iemand die alles mag veranderen in je bestand: aanpassen, hernoemen en zelfs verwijderen.',
     'eigenaar': 'Degene die het bestand heeft gemaakt. De eigenaar beslist wie het mag zien.',

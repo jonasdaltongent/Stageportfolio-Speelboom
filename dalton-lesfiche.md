@@ -5,7 +5,7 @@ LESTIJD/OEFENTIJD - duurt 50 minuten
 Wat leer ik? Lesdoel(en):
 	•	Ik weet waar mijn bestand staat: op de Chromebook zelf (Downloads) of online in Google Drive. Schoolwerk en stagewerk horen in Drive.
 	•	Ik maak een hoofdmap met vijf genummerde submappen, en ik geef mijn bestanden een naam volgens de afspraak: 2026-09-22_wat-het-is_v1. Nooit de naam van een kind.
-	•	Ik zet elk bestand in de juiste map, ik vind het terug met de zoekbalk, en ik deel mijn map met mijn leraar als Lezer.
+	•	Ik zet elk bestand in de juiste map, ik vind het terug met de zoekbalk, en ik deel mijn map met mijn leraar als Kijker.
 
 Wat heb ik nodig?
 	•	Chromebook met Google Chrome en mijn schoolaccount.
@@ -26,7 +26,7 @@ Deze Daltontaken moet je maken. Je kiest aan welke taak je eerst begint.
 	•	Screenshot, delen en inleveren (stap 5 tot 7) - 12 minuten
 	◦	verplicht
 	◦	alleen
-	◦	Maak een screenshot van je mappen en voeg het in deel 3 van je paspoort. Deel je hoofdmap met je leraar als Lezer. Doorloop de controlelijst, beantwoord de twee slotvragen en klik op Inleveren in Google Classroom.
+	◦	Maak een screenshot van je mappen en voeg het in deel 3 van je paspoort. Deel je hoofdmap met je leraar als Kijker. Doorloop de controlelijst, beantwoord de twee slotvragen en klik op Inleveren in Google Classroom.
 	•	Mijn kast op maat (extra) - 8 minuten
 	◦	niet verplicht
 	◦	alleen

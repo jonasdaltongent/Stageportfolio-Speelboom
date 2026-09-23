@@ -167,7 +167,7 @@ def portfoliopaspoort():
 
     # ---- Deel 4
     kop(doc, "Deel 4 — Delen met mijn leraar")
-    tekst(doc, "Vraag 4. Je deelde je map met je leraar als Lezer. Noem één ding dat je leraar nu WÉL mag "
+    tekst(doc, "Vraag 4. Je deelde je map met je leraar als Kijker. Noem één ding dat je leraar nu WÉL mag "
                "doen en één ding dat je leraar NIET mag doen.", vet=True)
     tekst(doc, "Mijn leraar mag wel:")
     antwoordlijnen(doc, 1)
@@ -190,7 +190,7 @@ def portfoliopaspoort():
         "In geen enkele bestandsnaam staat de naam van een kind.",
         "Elk bestand staat in de juiste map.",
         "Mijn screenshot staat in deel 3.",
-        "Mijn map is gedeeld met mijn leraar als Lezer.",
+        "Mijn map is gedeeld met mijn leraar als Kijker.",
         "Alle vragen zijn ingevuld.",
     ]:
         p = doc.add_paragraph("☐  " + s)

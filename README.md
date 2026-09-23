@@ -164,7 +164,7 @@ datumvorm · geen spaties · versie als `vX` · geen kindnaam.
    `2026-09-22` sorteert correct; `22-9-26` niet.
 3. **Vraag 3 (geen kindnaam):** Iedereen die op het scherm kijkt of de map ziet, leest de bestandsnaam.
    Wat je op stage over een kind weet, deel je niet met anderen (beroepsgeheim).
-4. **Vraag 4 (Lezer):** Wel — openen en lezen. Niet — iets veranderen, hernoemen of verwijderen.
+4. **Vraag 4 (Kijker):** Wel — openen en lezen. Niet — iets veranderen, hernoemen of verwijderen.
    (Ook goed: "geen opmerkingen zetten".)
 
 ### Essentiële fouten (geven altijd feedback)
@@ -178,7 +178,7 @@ datumvorm · geen spaties · versie als `vX` · geen kindnaam.
 ### Minimumroute
 
 Hoofdmap + vijf submappen · minstens twee hernoemde en verplaatste bestanden (waaronder het
-observatieverslag) · de map gedeeld als Lezer. Het screenshot mag vervangen worden door de mapnamen
+observatieverslag) · de map gedeeld als Kijker. Het screenshot mag vervangen worden door de mapnamen
 uit te typen; die terugvaloptie staat in de hint bij stap 5.
 
 ---

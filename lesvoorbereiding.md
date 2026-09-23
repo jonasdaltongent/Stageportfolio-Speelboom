@@ -75,7 +75,7 @@ en een reflectie moeten ergens bewaard worden en later terugvindbaar zijn — oo
     toe.* (de controlelijst vóór het indienen)
 - **BV2_04.04** — *De leerlingen respecteren ethische, sociale en legale regels bij het gebruiken van
   digitale technologie.* · **Toepassen** — hier **voorbereidend en niet summatief**: alleen de regel
-  "geen naam van een kind in een bestandsnaam" en het verschil tussen Lezer en Bewerker. De volledige
+  "geen naam van een kind in een bestandsnaam" en het verschil tussen Kijker en Bewerker. De volledige
   realisatie gebeurt in les 5 (*Wat mag je delen?*).
 - **BK2_02.07.04** — *De leerlingen gaan correct om met privacy van anderen als voorloper op
   deontologisch handelen.* · **Toepassen** — contextueel, samen met de praktijkleraar.
@@ -97,7 +97,7 @@ en een reflectie moeten ergens bewaard worden en later terugvindbaar zijn — oo
    daarbij de naam van een kind weg. *(toepassen, procedurele kennis)*
 4. De leerlingen verplaatsen elk bestand naar de passende map en vinden een bestand terug met de
    zoekfunctie. *(toepassen, procedurele kennis)*
-5. De leerlingen delen hun hoofdmap met de leraar als **Lezer** en beschrijven wat dat recht wel en
+5. De leerlingen delen hun hoofdmap met de leraar als **Kijker** en beschrijven wat dat recht wel en
    niet toelaat. *(toepassen + begrijpen, conceptuele kennis)*
 6. De leerlingen controleren hun eigen portfolio met de controlelijst en verbeteren wat niet klopt
    vóór ze indienen. *(toepassen, metacognitieve kennis)*
@@ -112,7 +112,7 @@ De eindtaak ligt op het officiële niveau **toepassen**.
 - In geen enkele bestandsnaam staat de naam van een kind.
 - Elk bestand zit in de map waar ik het zou gaan zoeken.
 - Ik vind een bestand terug met de zoekbalk in minder dan 10 seconden.
-- Mijn map is gedeeld met mijn leraar als **Lezer**, en ik blijf eigenaar.
+- Mijn map is gedeeld met mijn leraar als **Kijker**, en ik blijf eigenaar.
 
 ## 10. Benodigde voorkennis
 
@@ -184,7 +184,7 @@ ontbreken van spaties en het ontbreken van de kindnaam kloppen.
 | Fase | Tijd | Inhoud |
 |---|---|---|
 | **1. Lesstart** | 5' | Dia 1–2: Chromebooks opstarten. "Je bent ziek en een collega moet jouw activiteitenfiche van dinsdag vinden — in welke kast lukt dat?" Doorvraag: wat is er precies mis met die namen? En: waar staan jouw bestanden nu eigenlijk? |
-| **2. Ik doe** | 12' | Dia 3–9. Lesdoel en eindproduct tonen. **Demo (± 6'), telkens hardop denkend:** (a) Bestanden-app: Downloads versus Drive; (b) hoofdmap + één submap maken; (c) bestand 1 openen, lezen, hernoemen volgens de naamafspraak; (d) het venster Delen met de keuze Lezer. Twee begripscontroles met vingers (dia 5 en 8). |
+| **2. Ik doe** | 12' | Dia 3–9. Lesdoel en eindproduct tonen. **Demo (± 6'), telkens hardop denkend:** (a) Bestanden-app: Downloads versus Drive; (b) hoofdmap + één submap maken; (c) bestand 1 openen, lezen, hernoemen volgens de naamafspraak; (d) het venster Delen met de keuze Kijker. Twee begripscontroles met vingers (dia 5 en 8). |
 | **3. Jullie doen** | 28' | Dia 10. De leerlingen werken zelfstandig stap 1 tot 7 van de lespagina af. Rondgang: eerst controleren of iedereen in *Mijn Drive* werkt, daarna gerichte feedback en verlengde instructie aan de instructietafel. |
 | **4. Controle en indiening** | 4' | Stap 7: zelftest van 3 vragen, controlelijst, slotvragen, inleveren in Classroom. |
 | **5. Afsluiting** | 1' | Dia 11: "Wat ga jij vanaf nu anders doen met je bestanden?" Vooruitblik op les 3 (professionele e-mail → map 01_Stageplaats). |
@@ -203,7 +203,7 @@ hints die de leerling zelf opent · een vinkje *Klaar*.
 3. **De naamafspraak** — vier bestanden hernoemen. (9')
 4. **Alles op zijn plaats** — verplaatsen en terugvinden met de zoekbalk. (5')
 5. **Een foto van je kast** — screenshot maken en invoegen. (4')
-6. **Delen met je leraar** — als Lezer. (3')
+6. **Delen met je leraar** — als Kijker. (3')
 7. **Controleren en inleveren** — zelftest, controlelijst en Classroom. (5')
 8. **Extra (optioneel)** — mapkleuren, ster, een zesde map bedenken en verantwoorden.
 
@@ -232,7 +232,7 @@ extra opdrachten · theorie staat op de theoriekaart, niet in de stappen.
 - Tijdens de instructie: twee meerkeuzevragen op de dia's, iedereen antwoordt tegelijk met vingers
   (dia 5: Downloads versus Drive; dia 8: wat is er fout aan deze bestandsnaam?).
 - Op de lespagina: een zelftest van drie vragen in stap 7 (lokale opslag versus Drive · welke naam
-  volgt de afspraak · wat mag een Lezer?). Er wordt niets bewaard; ze dient als retrieval practice
+  volgt de afspraak · wat mag een Kijker?). Er wordt niets bewaard; ze dient als retrieval practice
   vóór het indienen.
 - Tijdens de les: de mappenstructuur is zichtbaar bij de rondgang; de gedeelde mappen verschijnen in
   *Gedeeld met mij* zodra een leerling stap 6 doet — een handige live voortgangsmeter.
@@ -249,7 +249,7 @@ Beoordeeld op het **Portfoliopaspoort** plus de gedeelde map. Zie de verbetersle
 | naamafspraak correct toegepast op 4 bestanden | deel 2 van het paspoort |
 | geen naam van een kind in een bestandsnaam | deel 2 + gedeelde map |
 | bestanden in de passende map | deel 2 + gedeelde map |
-| gedeeld als Lezer, leerling blijft eigenaar | Gedeeld met mij |
+| gedeeld als Kijker, leerling blijft eigenaar | Gedeeld met mij |
 | kwaliteitscontrole uitgevoerd | zelfcontrolelijst afgevinkt, fouten verbeterd |
 
 **Essentiële fouten** (moeten sowieso feedback krijgen): de naam van het kind blijft staan · delen als
