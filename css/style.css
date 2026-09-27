@@ -200,6 +200,12 @@ code { font-family: var(--mono); font-size: .92em; background: var(--peri-soft);
 .cl-note { font-size: .8rem; color: var(--muted); margin: 0; flex-basis: 100%; }
 .cl-toggle { display: none; }
 
+/* ---------- Filmpje in Hulp nodig? ---------- */
+.help-video { margin: .6rem 0 .8rem; }
+.help-video video { width: 100%; max-width: 640px; height: auto; display: block; background: #000;
+  border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.help-video figcaption { font-size: .88rem; color: var(--muted); margin-top: .3rem; }
+
 /* ---------- Startpagina ---------- */
 .werkwijze { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin: 0 0 .4rem; }
 .werk-tegel { background: #FAFAFD; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .9rem 1rem; }
