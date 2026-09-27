@@ -161,7 +161,7 @@ bord. Het staat bewust **niet** op de lespagina: die staat openbaar op GitHub Pa
 ## 13. Opbouw in Google Classroom
 
 Onderwerp **Digitaal organiseren en communiceren**. Eén opdracht, *Les 2 — Mijn digitaal
-stageportfolio*, zonder cijfer (formatief), met drie bijlagen:
+stageportfolio*, 20 punten, met drie bijlagen:
 
 | Bijlage | Instelling | Waarom |
 |---|---|---|

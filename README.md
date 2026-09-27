@@ -114,7 +114,7 @@ Daarna, voor deze les:
 | **Bijlage 1** | de link naar de lespagina (GitHub Pages) |
 | **Bijlage 2** | `Portfoliopaspoort` (Google-document) — **Een kopie maken voor elke leerling** |
 | **Bijlage 3** | `Les2_bestanden-om-op-te-ruimen.zip` — **Leerlingen kunnen bestand bekijken** |
-| **Punten** | Zonder cijfer (formatief) |
+| **Punten** | 20 (in Classroom gezet op 27-09-2026) |
 | **Deadline** | vrijdag 2 oktober 2026, 20.00 uur |
 
 > [!IMPORTANT]
