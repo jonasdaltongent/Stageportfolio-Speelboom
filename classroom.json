@@ -1,0 +1,28 @@
+{
+  "_uitleg": "Wordt gelezen door _tools/zet_opdracht_klaar.py (zie _tools/CLASSROOM-KOPPELING.md). Dit bestand staat openbaar op GitHub: zet hier nooit een e-mailadres of wachtwoord in. {email} en {deadline} vult het script zelf in; klas en deadline komen uit lesdoelen.json.",
+  "titel": "Les 2 — Mijn digitaal stageportfolio",
+  "onderwerp": "Module 1 — Organiseren en professioneel communiceren",
+  "instructie": [
+    "Open de lespagina en werk stap 1 tot 8 af.",
+    "Het zip-bestand heb je nodig in stap 3. Onderweg vul je je portfoliopaspoort in.",
+    "",
+    "Mijn e-mailadres, voor stap 7: {email}",
+    "",
+    "Klik op Inleveren, ten laatste {deadline}."
+  ],
+  "bijlagen": [
+    {
+      "soort": "link",
+      "url": "https://jonasdaltongent.github.io/Stageportfolio-Speelboom/"
+    },
+    {
+      "soort": "kopie",
+      "bestand": "werkdocument/Portfoliopaspoort.docx",
+      "naam": "Portfoliopaspoort"
+    },
+    {
+      "soort": "bekijken",
+      "bestand": "werkdocument/Les2_bestanden-om-op-te-ruimen.zip"
+    }
+  ]
+}

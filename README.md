@@ -79,6 +79,11 @@ en schrijf het **op het bord** (dia 7 herinnert je eraan).
 
 ### Stap 3 — Eén opdracht in Google Classroom
 
+> [!TIP]
+> **Met één commando:** `_tools/zet_opdracht_klaar.py` zet deze opdracht als concept klaar, met alle
+> bijlagen en instellingen hieronder, uit `classroom.json`. Zie `_tools/CLASSROOM-KOPPELING.md`. Wat
+> volgt, is de manier met de hand.
+
 **Eenmalig, en daarna nooit meer:** zet in Google Drive de instelling aan die een Word-bestand bij het
 uploaden meteen omzet naar Google Documenten. Ga naar
 [drive.google.com/drive/settings](https://drive.google.com/drive/settings) en vink **Uploads
