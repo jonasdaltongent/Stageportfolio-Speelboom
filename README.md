@@ -69,8 +69,7 @@ Deze les kreeg dezelfde opbouw als les 2 van 3MWWE (*Mijn digitale onderzoeksmap
 - **Lespagina voor de leerlingen:** <https://jonasdaltongent.github.io/Stageportfolio-Speelboom/>
 - **Dia's voor het bord:** <https://jonasdaltongent.github.io/Stageportfolio-Speelboom/presentatie.html>
 
-⚠️ **Versie 2 staat nog niet online.** Ze is lokaal vastgelegd in git; publiceren gebeurt pas op
-jouw vraag (`git push`). Tot dan toont het adres nog versie 1.
+Versie 2 staat online sinds 27 september 2026. Na een wijziging: `git push` (op jouw vraag).
 
 ### Stap 2 — Je e-mailadres  ⚠️ **verplicht, maar niet op de website**
 
@@ -208,11 +207,9 @@ lesmateriaal, geen slordigheid.
 `lesdoelen.json` gebruikt nu de klasgroepcode **`3 MW`** (met spatie; in versie 1 stond `3MWb`, en
 die code vindt `_tools/update_leerdoelen.py` niet). De echte klasnaam staat in het veld `klasnaam`.
 
-> [!NOTE]
-> Het blad **3 Maatschappij en welzijn** in `Leerplandoelen 2026-2027.xlsx` is nog leeg ("Leerplan
-> nog niet beschikbaar op deze computer"). Het script schrijft de regels wel weg op het blad
-> *Registratie*, maar telt ze niet tot dat blad de doelen uit
-> `Leerplannen_2de_graad_TOINFO_MW_dubbele_finaliteit.md` bevat.
+Het blad **3 Maatschappij en welzijn** in `Leerplandoelen 2026-2027.xlsx` bevat sinds 27 september
+2026 de doelen uit `Leerplannen_2de_graad_TOINFO_MW_dubbele_finaliteit.md`, dus de zes doelen van
+deze les worden meegeteld.
 
 ---
 
