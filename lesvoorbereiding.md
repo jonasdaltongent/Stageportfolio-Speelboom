@@ -2,23 +2,30 @@
 title: "Lesvoorbereiding — Les 2: Mijn digitaal stageportfolio"
 vak: "Toegepaste Informatica"
 studierichting: "Maatschappij en welzijn (dubbele finaliteit), 2de graad — klas 3MWb"
-lesduur: "1 × 50 minuten"
-week: "W04 — 2026-2027"
-toestel: "Chromebook (schoolaccount, Google Workspace)"
+lesduur: "1 × 50 minuten: 10 minuten instructie + 40 minuten keuzewerktijd"
+week: "W05 — 2026-2027"
+lokaal: "18 — computers met Windows 11, Google Workspace in Chrome"
+lesdag: "maandag 28 september 2026, 9de lesuur (rooster van 25-09-2026)"
 gekoppeld_lessenplan: "Lessenplan_TOINFO_MW_dubbele_finaliteit_30u.md — module 1, les 2"
+opgesteld_volgens: "AI-lesplanner versie 2.1, §9.2"
 ---
 
 # Lesvoorbereiding — Les 2: Mijn digitaal stageportfolio
 
-Opgesteld volgens §46 van de AI-lesplanner. De leerplandoelen zijn **letterlijk** overgenomen uit
-`Leerplannen_2de_graad_TOINFO_MW_dubbele_finaliteit.md`.
+Opgesteld volgens §9.2 van de AI-lesplanner (versie 2.1). De leerplandoelen zijn **letterlijk**
+overgenomen uit `Leerplannen_2de_graad_TOINFO_MW_dubbele_finaliteit.md` (nagekeken op 27-09-2026).
 
 > [!NOTE]
-> **Afwijking van §36.11 van de AI-lesplanner, op vraag van de leraar.**
-> De opbouw *Ik doe → Wij doen → Jullie doen → Jij doet* is vervangen door **Ik doe → Jullie doen**:
-> een korte klassikale instructie met demonstratie, daarna werken de leerlingen de rest van de les
-> zelfstandig aan de taak. De "Wij doen"-stap zit verwerkt in de demonstratie (bestand 1 van de
-> hernoemoefening doet de leraar hardop denkend voor; de leerlingen doen de vier andere zelf).
+> **Afwijking van de vierfasige opbouw, op vraag van de leraar.** De opbouw *Ik doe → Wij doen →
+> Jullie doen → Jij doet* is vervangen door **Ik doe → Jullie doen**: een korte instructie met
+> demonstratie, daarna werken de leerlingen de rest van de les zelfstandig. De "Wij doen"-stap zit
+> in de demonstratie: de leraar haalt het zip-bestand op en hernoemt bestand 1 hardop denkend; de
+> leerlingen doen de vier andere zelf.
+
+> [!NOTE]
+> **Versie 2 (27-09-2026).** Deze les is omgebouwd naar de opbouw van les 2 van 3MWWE: lespagina
+> met route, één stap en checklist; de rommelbestanden als één zip-bestand in plaats van een kopie
+> per leerling; alleen Windows 11 (lokaal 18); de Drive-knopnamen zoals Google ze nu noemt.
 
 ---
 
@@ -34,26 +41,32 @@ Klas **3MWb**, 2de graad Maatschappij en welzijn, dubbele finaliteit. Dit is in 
 De leerlingen kunnen aanmelden met hun schoolaccount en een opdracht openen in Google Classroom.
 Ze hebben nog **geen** systematische ervaring met mappen, bestandsnamen of deelrechten. Veel
 leerlingen bewaren alles waar het toevallig terechtkomt, of werken thuis alleen met een gsm, waar
-mappen niet eens zichtbaar zijn.
+mappen niet eens zichtbaar zijn. Een zip-bestand uitpakken is voor een deel van de klas nieuw.
 
 Verschillen om rekening mee te houden: digitale ervaring, begrijpend lezen, werktempo en
 zelfstandigheid.
 
 > [!NOTE]
+> Alle klassen werken vanaf 28-09-2026 in **lokaal 18**, een computerlokaal met **Windows 11**.
+> De lespagina en het werkdocument geven daarom alleen de werkwijze voor Windows. Hoe de
+> leerlingen hun vensters schikken, kiezen ze zelf; de leraar toont dat in de klas.
+
+> [!NOTE]
 > Omdat er geen voorkennis te activeren valt, vertrekt de lesstart van een **herkenbare situatie**
-> (twee schermen naast elkaar: rommel versus orde) in plaats van van herhalingsvragen. De zelftest
-> van drie vragen staat daarom aan het **einde** van de les, als retrieval practice vóór het
-> indienen.
+> (rommel versus orde) in plaats van van herhalingsvragen. De zelftest van drie vragen staat aan
+> het **einde** van de les, als retrieval practice vóór het indienen.
 
 ## 3. Tijdsduur
 
-1 × 50 minuten. Wat niet af raakt, is keuzewerktijd (zie `dalton-lesfiche.md`).
+1 × 50 minuten: **10 minuten instructie** en **40 minuten keuzewerktijd** (keuzewerktijd = 50 −
+instructie). De verdeling over de taken staat in `dalton-lesfiche.html`.
 
-## 4. Beroepscontext
+## 4. Context
 
-**Buitenschoolse opvang De Speelboom** (fictief). De leerling bereidt haar of zijn stage voor: een
-uurrooster, een activiteitenfiche voor een knutselmoment, een observatieverslag, een boodschappenlijst
-en een reflectie moeten ergens bewaard worden en later terugvindbaar zijn — ook door een collega.
+**Buitenschoolse opvang De Speelboom** (fictief). De leerling bereidt de stage voor: een
+uurrooster, een activiteitenfiche voor een knutselmoment, een observatieverslag, een
+boodschappenlijst en een reflectie moeten ergens bewaard worden en later terugvindbaar zijn — ook
+door een collega.
 
 ## 5–6. Officiële leerplandoelen en beheersingsniveaus
 
@@ -90,7 +103,8 @@ en een reflectie moeten ergens bewaard worden en later terugvindbaar zijn — oo
 ## 7. Concrete lesdoelen · 9. Bloomniveau en kennisdimensie
 
 1. De leerlingen leggen uit waar een bestand staat als ze het in **Downloads** of in **Google Drive**
-   bewaren, en waarom stagewerk in Drive hoort. *(begrijpen, conceptuele kennis)*
+   bewaren, en brengen bestanden van Downloads naar Drive door ze uit te pakken en te uploaden.
+   *(begrijpen + toepassen, conceptueel en procedureel)*
 2. De leerlingen maken in Google Drive één hoofdmap met vijf genummerde submappen, en verantwoorden
    waarom de nummering er staat. *(toepassen, procedurele kennis)*
 3. De leerlingen passen de naamafspraak `JJJJ-MM-DD_wat-het-is_vX` toe op vier bestanden, en laten
@@ -99,7 +113,7 @@ en een reflectie moeten ergens bewaard worden en later terugvindbaar zijn — oo
    zoekfunctie. *(toepassen, procedurele kennis)*
 5. De leerlingen delen hun hoofdmap met de leraar als **Kijker** en beschrijven wat dat recht wel en
    niet toelaat. *(toepassen + begrijpen, conceptuele kennis)*
-6. De leerlingen controleren hun eigen portfolio met de controlelijst en verbeteren wat niet klopt
+6. De leerlingen controleren hun eigen portfolio met de checklist en verbeteren wat niet klopt
    vóór ze indienen. *(toepassen, metacognitieve kennis)*
 
 De eindtaak ligt op het officiële niveau **toepassen**.
@@ -107,7 +121,8 @@ De eindtaak ligt op het officiële niveau **toepassen**.
 ## 8. Succescriteria (leerlingtaal)
 
 - Mijn hoofdmap staat in **Mijn Drive** en heeft mijn naam.
-- Ik heb vijf submappen, genummerd 01 tot 05, en geen map "Varia" of "Nieuwe map".
+- Ik heb vijf mappen, genummerd 01 tot 05, en geen map "Varia" of "Nieuwe map".
+- Mijn vijf bestanden staan in Drive, niet meer alleen in Downloads.
 - Elke bestandsnaam begint met een datum in de vorm `2026-09-22`.
 - In geen enkele bestandsnaam staat de naam van een kind.
 - Elk bestand zit in de map waar ik het zou gaan zoeken.
@@ -117,56 +132,63 @@ De eindtaak ligt op het officiële niveau **toepassen**.
 ## 10. Benodigde voorkennis
 
 Aanmelden met het schoolaccount · een opdracht openen in Google Classroom · een Google-document
-openen en typen. Meer is niet nodig: alle nieuwe begrippen worden in de les zelf ingevoerd.
+openen en typen. Meer is niet nodig: alle nieuwe begrippen worden in de les zelf ingevoerd; het
+kaartje *Woorden* op de theoriekaart zet de belangrijkste op een rij.
 
 ## 11. Benodigd materiaal en software
 
-- Chromebook per leerling, schoolaccount, Google Chrome.
+- Een computer in lokaal 18 (Windows 11) met het schoolaccount en Google Chrome.
 - Google Drive, Google Documenten, Google Spreadsheets, Google Classroom.
-- De Bestanden-app van ChromeOS (voor het verschil lokaal/cloud en voor het screenshot).
+- De Verkenner van Windows — voor het uitpakken en voor het verschil lokaal/cloud.
 - Beamer met `presentatie.html`.
-- De lespagina op GitHub Pages en het werkdocument **Portfoliopaspoort**.
+- De lespagina op GitHub Pages, het werkdocument **Portfoliopaspoort** en het zip-bestand
+  **Les2_bestanden-om-op-te-ruimen.zip**.
 
 ## 12. Voorbereiding door de leraar
 
 Zie `README.md` §2. In het kort:
 
-1. Publiceer de map via GitHub Pages en test de link.
-2. **Zet je e-mailadres in de opdracht in Classroom** (en schrijf het bij de demo op het bord). Het
-   staat bewust *niet* op de lespagina: die is openbaar.
-3. Upload de zes bestanden uit `werkdocument/` naar Drive en open ze met Google Documenten /
-   Spreadsheets. Verwijder daarna de geüploade .docx/.xlsx-originelen.
-4. Maak in Classroom één **materiaalpost** (de vijf rommelbestanden) en één **opdracht** (het
-   Portfoliopaspoort), beide met *Een kopie maken voor elke leerling*.
-5. Test met een leerlingaccount: komen de vijf kopieën in `Mijn Drive › Classroom › <klas>` terecht?
+1. Publiceer de lespagina (staat al online; na een wijziging opnieuw pushen) en test de link.
+2. Zet **één keer** in Drive de instelling *Uploads converteren naar de indeling van een Editor
+   van Google Documenten* aan. Upload dan in Classroom (**Bijvoegen** › **Uploaden**) het paspoort
+   en het zip-bestand; het paspoort wordt een Google-document, het zip-bestand blijft een zip.
+   Details en een terugvaloptie: `README.md` §2, stap 3.
+3. Maak **één** opdracht met drie bijlagen (zie punt 13) en test met een leerlingaccount.
+
+**Zet je e-mailadres in de instructietekst van de opdracht** en schrijf het tijdens de les op het
+bord. Het staat bewust **niet** op de lespagina: die staat openbaar op GitHub Pages.
 
 ## 13. Opbouw in Google Classroom
 
-Onderwerp **Digitaal organiseren en communiceren**.
+Onderwerp **Digitaal organiseren en communiceren**. Eén opdracht, *Les 2 — Mijn digitaal
+stageportfolio*, zonder cijfer (formatief), met drie bijlagen:
 
-| | Materiaal | Opdracht |
+| Bijlage | Instelling | Waarom |
 |---|---|---|
-| **Titel** | Les 2 — Bestanden om op te ruimen | Les 2 — Mijn digitaal stageportfolio |
-| **Inhoud** | de 5 rommelbestanden, *Een kopie maken voor elke leerling* | link naar de lespagina + Portfoliopaspoort, *Een kopie maken voor elke leerling* |
-| **Punten** | — | Zonder cijfer (formatief) |
+| Link naar de lespagina (GitHub Pages) | link | de instructiesite |
+| `Portfoliopaspoort` (Google-document) | **Een kopie maken voor elke leerling** | het enige in te dienen bestand |
+| `Les2_bestanden-om-op-te-ruimen.zip` | **Leerlingen kunnen bestand bekijken** | één gedeeld bestand; iedereen downloadt hetzelfde |
 
-De rommelbestanden staan bewust **niet** in de opdracht: bij het inleveren zou de leerling er de
-eigendom van verliezen, en die bestanden moeten het hele jaar in het portfolio blijven staan.
+> [!IMPORTANT]
+> In versie 1 kreeg elke leerling via een aparte materiaalpost een kopie van de vijf
+> rommelbestanden. Dat is vervangen door **één zip-bestand**: minder werk om klaar te zetten, en
+> downloaden, uitpakken en uploaden wordt zelf een leerstap (lokale opslag versus cloud).
 
 ## 14. Het individuele werkdocument
 
 **Portfoliopaspoort** (Google-document, één kopie per leerling):
 
-- kopregel met naam, klas en datum;
-- **deel 1** — vraag over lokale opslag versus Drive;
+- kopregel met naam, klas en datum; *Zo werk je* in vier regels;
+- **deel 1** — vraag 1: waar staan de bestanden na het uitpakken, en kan je ze thuis openen?;
 - **deel 2** — tabel met vijf rijen (oude naam → nieuwe naam → map), de eerste rij is al ingevuld als
-  uitgewerkt voorbeeld, plus twee vragen (waarom de datum vooraan, waarom geen naam van een kind);
-- **deel 3** — plaats voor het screenshot van de mappenstructuur;
-- **deel 4** — vraag over de deelrechten;
-- **deel 5** — twee slotvragen (exitvragen);
-- zelfcontrolelijst en een optionele uitbreiding.
+  uitgewerkt voorbeeld, plus vraag 2 (waarom de datum vooraan) en vraag 3 (waarom geen naam van een kind);
+- **deel 3** — plaats voor de schermafbeelding van de mappen;
+- **deel 4** — vraag 4 over de deelrechten (wat mag een Kijker wel en niet?);
+- **deel 5** — vraag 5 en 6 (exitvragen);
+- zelfcontrolelijst van negen punten en een optionele uitbreiding.
 
-**De vijf rommelbestanden** (ook Google-bestanden, met opzettelijk slechte namen):
+**De vijf rommelbestanden** (in het zip-bestand; alle gegevens fictief, elk met een datum in de vorm
+`DD-MM-JJJJ` die de leerling moet omzetten):
 
 | Bestandsnaam | Inhoud | Datum in het bestand | Verwachte nieuwe naam | Map |
 |---|---|---|---|---|
@@ -183,107 +205,103 @@ ontbreken van spaties en het ontbreken van de kindnaam kloppen.
 
 | Fase | Tijd | Inhoud |
 |---|---|---|
-| **1. Lesstart** | 5' | Dia 1–2: Chromebooks opstarten. "Je bent ziek en een collega moet jouw activiteitenfiche van dinsdag vinden — in welke kast lukt dat?" Doorvraag: wat is er precies mis met die namen? En: waar staan jouw bestanden nu eigenlijk? |
-| **2. Ik doe** | 12' | Dia 3–9. Lesdoel en eindproduct tonen. **Demo (± 6'), telkens hardop denkend:** (a) Bestanden-app: Downloads versus Drive; (b) hoofdmap + één submap maken; (c) bestand 1 openen, lezen, hernoemen volgens de naamafspraak; (d) het venster Delen met de keuze Kijker. Twee begripscontroles met vingers (dia 5 en 8). |
-| **3. Jullie doen** | 28' | Dia 10. De leerlingen werken zelfstandig stap 1 tot 7 van de lespagina af. Rondgang: eerst controleren of iedereen in *Mijn Drive* werkt, daarna gerichte feedback en verlengde instructie aan de instructietafel. |
-| **4. Controle en indiening** | 4' | Stap 7: zelftest van 3 vragen, controlelijst, slotvragen, inleveren in Classroom. |
-| **5. Afsluiting** | 1' | Dia 11: "Wat ga jij vanaf nu anders doen met je bestanden?" Vooruitblik op les 3 (professionele e-mail → map 01_Stageplaats). |
+| **Instructie** — lesstart | 3' | Dia 1–2. *“Je bent ziek en een collega moet jouw activiteitenfiche van dinsdag vinden — in welke kast lukt dat?”* Doorvraag: wat is er precies mis met die namen? Onthulling: in één naam staat de naam van een kind. |
+| **Instructie** — Ik doe | **5'** | Dia 3–6, met de klok zichtbaar. Lesdoel en eindproduct (30"). **Demo, hardop denkend:** (a) zip downloaden, uitpakken in de Verkenner — *“kijk, dit staat op déze computer, niet in mijn Drive”* — en uploaden naar de hoofdmap (2'); (b) bestand 1 openen, de datum lezen, hernoemen volgens de afspraak, extensie laten staan (1'30"). |
+| **Instructie** — zo werk je verder | 2' | Dia 7: waar alles staat (de opdracht), de stappen, de hulpvolgorde. E-mailadres op het bord. |
+| **Keuzewerktijd** | **40'** | De leerlingen werken stap 1 tot 8 af, inleveren inbegrepen. Eerste rondgang: alleen controleren of iedereen in *Mijn Drive* werkt en of de bestanden van Downloads naar Drive geraakt zijn. Daarna gerichte feedback en verlengde instructie aan de instructietafel. In de laatste minuut: dia 8 en mondeling: wie niet klaar is, levert toch in. |
 
-De demonstratie blijft beperkt tot wat nodig is om te kunnen starten. Alle overige uitleg staat op de
-theoriekaart van de lespagina, zodat de leerlingen ze kunnen raadplegen wanneer ze ze nodig hebben.
+Wat **niet** wordt voorgedaan, om binnen de vijf minuten te blijven: mappen maken (staat als
+mappenboom op de lespagina), verplaatsen, delen en de schermafbeelding. De begripscontrole met
+vingers uit versie 1 is geschrapt; ze zit nu in de zelftest van stap 8.
 
 ## 18–19. Zelfstandige verwerking en stappenplan
 
-Elke stap op de lespagina heeft dezelfde opbouw: doelzin · *Waarom?* · *Waar werk je?* (badge) ·
-maximaal vijf handelingen, één werkwoord per regel · *Controleer jezelf* met concrete criteria ·
-hints die de leerling zelf opent · een vinkje *Klaar*.
+De lespagina heeft links de **route** met alle stappen, midden **één stap**, rechts een
+**checklist** met 20 concrete taken. Op een smal venster staat alles onder elkaar en toont de
+checklist alleen de taken van de huidige stap.
 
-1. **Klaarzetten** — vensters links/rechts, Bestanden-app, vraag 1 van het paspoort. (4')
-2. **Je kast bouwen** — hoofdmap + vijf submappen. (6')
-3. **De naamafspraak** — vier bestanden hernoemen. (9')
-4. **Alles op zijn plaats** — verplaatsen en terugvinden met de zoekbalk. (5')
-5. **Een foto van je kast** — screenshot maken en invoegen. (4')
-6. **Delen met je leraar** — als Kijker. (3')
-7. **Controleren en inleveren** — zelftest, controlelijst en Classroom. (5')
-8. **Extra (optioneel)** — mapkleuren, ster, een zesde map bedenken en verantwoorden.
+Elke stap heeft dezelfde vijf blokken: **één zin** uitleg · **Wat moet je doen?** (3 tot 5
+handelingen) · hoogstens **één tip** · **Hulp nodig?** (dichtgeklapt) · **Klaar als**.
 
-**Schrijfregels voor de instructies:** één handeling per regel, beginnend met een werkwoord · vaste
-woorden (*lespagina*, *werkdocument*, *hoofdmap*, *submap*) · knoppen in het vet, precies zoals op het
-scherm · moeilijke woorden zijn aanklikbaar (woordenlijst) · hints bevatten alleen extra uitleg, nooit
-extra opdrachten · theorie staat op de theoriekaart, niet in de stappen.
+1. **Klaarzetten** — paspoort openen en invullen, Drive openen. (2')
+2. **Je kast bouwen** — hoofdmap + vijf mappen. (5')
+3. **Bestanden ophalen** — downloaden, uitpakken in de Verkenner, uploaden naar de hoofdmap. (6')
+4. **De naamafspraak** — vier bestanden hernoemen. (9')
+5. **Alles op zijn plaats** — verplaatsen met *Ordenen › Verplaatsen*, zoektest. (5')
+6. **Een foto van je kast** — schermafbeelding maken en plakken. (3')
+7. **Delen met je leraar** — als Kijker. (5')
+8. **Controleren en inleveren** — zelftest, checklist nalopen, slotvragen, inleveren. (5')
+9. **Extra (optioneel)** — kleur van map, ster, een zesde map bedenken en verantwoorden.
 
 ## 20. Differentiatie en scaffolding
 
-- **Ondersteuning:** theoriekaart met de naamafspraak, de mapbetekenissen, de Drive-knoppen en de
-  Chromebook-sneltoetsen · hints per stap · woordenlijst · de hulpvolgorde *theoriekaart → hint →
-  buur → leraar* · verlengde instructie aan de instructietafel voor wie stap 2 niet rond krijgt.
-- **Minimumroute:** hoofdmap + vijf submappen (stap 2) en minstens **twee** hernoemde en verplaatste
-  bestanden (stap 3 en 4), waaronder het observatieverslag, plus het delen (stap 6). Het screenshot
-  mag vervangen worden door de mapnamen uit te typen — dat staat als terugvaloptie in de hint bij
-  stap 5.
-- **Voor wie snel klaar is:** de extra stap (mapkleuren, ster, een zesde map bedenken en
-  verantwoorden). Uitdrukkelijk **optioneel** en niet-officieel; pas te starten na het indienen.
-- **Taalvaardigheid:** korte zinnen, één handeling per regel, en de begrippen zijn aanklikbaar.
-- **Thuis of op een ander toestel:** de lespagina werkt op eender welke browser; de voortgangsvinkjes
-  zijn gekoppeld aan het toestel.
+- **Ondersteuning:** de theoriekaart met tien kaartjes (waaronder *Woorden*, *Beroepsgeheim* en
+  *Veelgemaakte fouten*) · per stap één *Hulp nodig?* · de checklist met concrete taken · de
+  hulpvolgorde *theoriekaart → Hulp nodig? → buur → leraar* · verlengde instructie aan de
+  instructietafel voor wie stap 2 of 3 niet rond krijgt.
+- **Minimumroute:** de kast (stap 2), de bestanden in Drive (stap 3), minstens **twee** hernoemde en
+  verplaatste bestanden (stap 4 en 5) waaronder het observatieverslag, en het delen (stap 7). De
+  schermafbeelding mag vervangen worden door de mapnamen uit te typen — dat staat in *Hulp nodig?*.
+- **Voor wie snel klaar is:** de extra stap, uitdrukkelijk **optioneel** en niet-officieel.
+- **Taalvaardigheid:** korte zinnen, één handeling per regel, begrippen op het kaartje *Woorden*.
 
 ## 21. Controle van begrip
 
-- Tijdens de instructie: twee meerkeuzevragen op de dia's, iedereen antwoordt tegelijk met vingers
-  (dia 5: Downloads versus Drive; dia 8: wat is er fout aan deze bestandsnaam?).
-- Op de lespagina: een zelftest van drie vragen in stap 7 (lokale opslag versus Drive · welke naam
-  volgt de afspraak · wat mag een Kijker?). Er wordt niets bewaard; ze dient als retrieval practice
-  vóór het indienen.
-- Tijdens de les: de mappenstructuur is zichtbaar bij de rondgang; de gedeelde mappen verschijnen in
-  *Gedeeld met mij* zodra een leerling stap 6 doet — een handige live voortgangsmeter.
-- Na de les: de slotvragen in het paspoort lezen; de vaakst gemelde moeilijkheid wordt de lesstart
-  van les 3.
+- **Tijdens de lesstart:** de vraag wat er precies mis is met de namen in kolom A.
+- **Op de lespagina:** *Klaar als* bij elke stap en de checklist met 20 concrete taken, plus een
+  zelftest van drie vragen in stap 8 (Downloads of Drive · welke naam volgt de afspraak · wat mag
+  een Kijker). Er wordt niets bewaard.
+- **Tijdens de les:** de gedeelde mappen verschijnen bij de leraar in *Gedeeld met mij* zodra een
+  leerling stap 7 doet — een handige live voortgangsmeter.
+- **Na de les:** de antwoorden op vraag 6 (wat was moeilijk?) worden de lesstart van les 3.
 
 ## 22. Evaluatiecriteria (formatief)
 
-Beoordeeld op het **Portfoliopaspoort** plus de gedeelde map. Zie de verbetersleutel in `README.md` §4.
+Beoordeeld op het **Portfoliopaspoort** plus de gedeelde map. Verbetersleutel in `README.md` §4.
 
 | Criterium | Waar zichtbaar |
 |---|---|
-| mappenstructuur volledig en juist genummerd | screenshot (deel 3) + gedeelde map |
-| naamafspraak correct toegepast op 4 bestanden | deel 2 van het paspoort |
+| kast volledig en juist genummerd | schermafbeelding (deel 3) + gedeelde map |
+| bestanden staan in Drive, niet meer alleen in Downloads | gedeelde map |
+| naamafspraak correct toegepast op 4 bestanden | deel 2 |
 | geen naam van een kind in een bestandsnaam | deel 2 + gedeelde map |
 | bestanden in de passende map | deel 2 + gedeelde map |
 | gedeeld als Kijker, leerling blijft eigenaar | Gedeeld met mij |
 | kwaliteitscontrole uitgevoerd | zelfcontrolelijst afgevinkt, fouten verbeterd |
 
 **Essentiële fouten** (moeten sowieso feedback krijgen): de naam van het kind blijft staan · delen als
-Bewerker of via "iedereen met de link" · de hoofdmap staat in de Classroom-map in plaats van in Mijn
-Drive · datum als `22-9-26`.
+Bewerker of via "Iedereen met de link" · de hoofdmap staat in de Classroom-map in plaats van in Mijn
+Drive · datum als `22-9-26` · de bestanden blijven in Downloads staan.
 
 ## 23. Feedback
 
-- Tijdens de les, met denkvragen in plaats van verbeteringen: *"Lees die bestandsnaam eens luidop. Wat
-  weet ik nu nog niet over dat bestand?"* · *"Waar zou jij dit gaan zoeken over drie weken?"*
-- Na de les: één top en één tip als privéopmerking in Classroom. De leerling mag verbeteren en
+- **Tijdens de les**, met denkvragen in plaats van verbeteringen: *"Lees die bestandsnaam eens
+  luidop. Wat weet ik nu nog niet over dat bestand?"* · *"Waar zou jij dit gaan zoeken over drie
+  weken?"*
+- **Na de les:** één top en één tip als privéreactie in Classroom. De leerling mag verbeteren en
   opnieuw inleveren.
-- Deze les is **formatief**. De doelen worden summatief geëvalueerd in E1 (les 11, activiteitenbank)
-  en via het portfolio (les 30).
+- Deze les is **formatief**. De doelen komen terug in E1 (les 11, activiteitenbank) en via het
+  portfolio (les 30).
 
 ## 24. Indieninstructies
 
 - De leerling leest op de **lespagina**, werkt in **Google Drive** en schrijft in het
   **Portfoliopaspoort**.
-- Alleen het Portfoliopaspoort wordt ingediend, via *Inleveren* in Google Classroom.
+- Alleen het Portfoliopaspoort wordt ingediend, via *Inleveren* bij de opdracht.
 - De mappen en de vijf bestanden worden **niet** ingediend: die blijven het hele jaar in de Drive van
   de leerling staan. De leraar ziet ze via de gedeelde map.
-- **Deadline:** vrijdag 25 september 2026 om 20.00 uur.
-- Niet klaar? Toch inleveren, met in een privéopmerking tot welke stap de leerling geraakte.
+- **Deadline:** vrijdag 2 oktober 2026 om 20.00 uur.
+- Niet klaar? Toch inleveren. De leraar zegt dat mondeling aan het einde van de les; het staat
+  bewust niet op de lespagina (wie niet klaar is, leest het toch niet meer).
 
 ## 25. Privacy, auteursrecht en digitale veiligheid
 
 - De Speelboom, Liam en alle gegevens zijn **fictief**. Het telefoonnummer is onbestaand.
 - Alleen het schoolaccount wordt gebruikt. Leerlingen delen enkel met de leraar, nooit publiek.
-- De leerling blijft **eigenaar** van de map; de leraar krijgt uitsluitend leesrechten.
-- De lespagina bewaart alleen vinkjes in `localStorage` op het toestel zelf, met een wisknop. Geen
-  login, geen tracking, geen externe scripts.
-- De lespagina staat **openbaar** op GitHub Pages. Daarom staat er geen e-mailadres van de leraar op:
-  dat wordt via Classroom en op het bord gegeven.
+- De leerling blijft **eigenaar** van de map; de leraar krijgt uitsluitend kijkrechten.
+- De lespagina bewaart alleen vinkjes en de laatste stap in `localStorage` op de computer zelf, met
+  een wisknop. Geen login, geen tracking, geen externe scripts.
+- De lespagina staat **openbaar** op GitHub Pages. Daarom staat er geen e-mailadres van de leraar op.
 - De lettertypes (Atkinson Hyperlegible, Montserrat) staan lokaal en vallen onder de OFL-licentie.
 - Het logo van De Speelboom is eigen werk (SVG in `assets/`).
 - Inhoudelijk anonimiseren van een verslag (niet alleen de bestandsnaam) komt in les 5.
@@ -293,28 +311,25 @@ Drive · datum als `22-9-26`.
 - Elke volgende les start met het opbergen van het nieuwe product in de juiste map: les 3 (e-mail) →
   `01_Stageplaats`, les 8 (instructiefiche) en les 10 (activiteitenfiche) → `02_Activiteiten`,
   les 20 (observatieformulier) → `03_Observaties`, les 18 (boodschappenlijst) → `04_Materiaal`.
-- Zo wordt `BV2_04.03` het hele jaar herhaald in plaats van één keer aangeleerd.
-- De naamafspraak komt terug als expliciet criterium bij **E1** (les 11): de fiches moeten met een
-  correcte bestandsnaam in de gedeelde activiteitenbank staan.
+- De naamafspraak komt terug als expliciet criterium bij **E1** (les 11).
 
 ## 27. Inhoudsstructuur van de HTML-pagina
 
-- Kopbalk met logo, voortgangsbalk en de knop Theoriekaart.
-- Een stappenbalk (Start · 1–7 · Extra).
-- Startscherm: situering, voorbeeld "zo niet / zo wel", lesdoelen, werkwijze, tijdsoverzicht, wat je
-  indient.
-- De zeven stappen volgens het vaste sjabloon van §43.
-- Zelftest, controlelijst en afronding in stap 7; optionele uitbreiding in Extra.
-- Theoriekaart met zeven blokken: waar staat het? · naamafspraak · mijn vijf mappen · knoppen in
-  Drive · wie mag wat? · Chromebook · veelgemaakte fouten. Schuift open, en staat vast rechts vanaf
-  1280 px.
+- Kopbalk met logo en lestitel.
+- **Links** de route: *Start*, *Theoriekaart*, stap 1–5 (*Je kast bouwen*), stap 6–8 (*Delen en
+  inleveren*), *Extra*. Een afgewerkte stap krijgt een groen vinkje.
+- **Midden** één stap tegelijk, met de vaste vijf blokken.
+- **Rechts** de checklist: 20 taken, per stap gegroepeerd, met voortgangsbalk.
+- Theoriekaart: tien kaartjes — waar staat je bestand? · van Downloads naar Drive · de naamafspraak ·
+  mijn vijf mappen · wie mag wat? · knoppen in Drive · zoeken en sneltoetsen · beroepsgeheim ·
+  woorden · veelgemaakte fouten.
 
 ## 28. Benodigde interactieve functies
 
-- Vinkjes met voortgangsbalk (`localStorage`) en een wisknop.
+- Checklist met voortgangsbalk (`localStorage`) en een wisknop; een afgewerkte stap krijgt een
+  vinkje in de route; op een smal scherm alleen de taken van de huidige stap, met *Toon alles*.
 - Vorige/volgende-knoppen; de laatst geopende stap wordt onthouden.
-- Hints (`details`/`summary`), woordenlijst-popups, zelftest met directe feedback.
-- Screenshot-plaatsen die alleen verschijnen als het bestand bestaat (`index.html?leraar` toont de
-  lege plaatsen).
-- Afsluitmelding wanneer alle verplichte onderdelen afgevinkt zijn.
+- *Hulp nodig?* (`details`/`summary`) en een zelftest met directe feedback.
+- Screenshot-plaatsen die alleen verschijnen als het bestand bestaat (`index.html?leraar`).
+- Een melding wanneer alle 20 taken afgevinkt zijn.
 - Geen logins, tracking of externe scripts.

@@ -6,44 +6,34 @@
   <title>Les 2 · Mijn digitaal stageportfolio · De Speelboom</title>
   <link rel="icon" href="assets/speelboom-icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* ---- Mappenboom ---- */
-    .tree { font-family: Arial, Helvetica, sans-serif; font-size: .95rem; line-height: 1.7; background: #fff; border: 2px solid var(--line); border-radius: var(--radius-sm); padding: .8rem 1rem; margin: .8rem 0; }
-    .tree .fold::before { content: "📁 "; }
-    .tree .file::before { content: "📄 "; }
-    .tree ul { list-style: none; margin: 0; padding-left: 1.4rem; border-left: 1px dotted var(--peri); }
-    .tree > ul { padding-left: 0; border-left: 0; }
-    .tree li { position: relative; }
-    .tree .hint-txt { color: var(--muted); font-size: .88rem; }
-    /* ---- Naamkaart ---- */
-    .nameplate { border: 3px solid var(--navy); border-radius: var(--radius); background: #fff; overflow: hidden; margin: .8rem 0; }
-    .nameplate-head { background: var(--navy); color: #fff; font-family: var(--head); font-weight: 800; padding: .5rem 1rem; }
-    .nameplate-body { padding: 1rem; }
-    .fname { font-family: "Courier New", monospace; font-size: 1.05rem; font-weight: 700; word-break: break-all; display: block; margin-bottom: .6rem; }
-    .fname .d { background: #E4E8F6; padding: 0 .15rem; border-radius: 3px; }
-    .fname .o { background: #FCD6CF; padding: 0 .15rem; border-radius: 3px; }
-    .fname .v { background: #E3F3EB; padding: 0 .15rem; border-radius: 3px; }
-    .legend-name { list-style: none; padding: 0; margin: 0; font-size: .95rem; }
-    .legend-name li { padding-left: 1.6rem; position: relative; margin-bottom: .3rem; }
-    .legend-name li::before { content: "■"; position: absolute; left: 0; }
-    .legend-name li.d::before { color: #A7B1DE; }
-    .legend-name li.o::before { color: #F2A99C; }
-    .legend-name li.v::before { color: #9CCFB6; }
-    /* ---- Naamvoorbeelden fout/goed ---- */
-    .names { width: 100%; border-collapse: collapse; font-family: "Courier New", monospace; font-size: .92rem; }
-    .names td { padding: .35rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
-    .names td.bad { color: var(--warn); }
-    .names td.good { color: var(--ok); }
-    .names td.why { font-family: var(--body); color: var(--muted); font-size: .9rem; }
-    /* ---- Toets van de Chromebook ---- */
-    .keycap { display: inline-flex; align-items: center; gap: .25rem; }
-    /* Voorbeeldnamen in de theoriekaart mogen niet middenin de datum afbreken */
-    .theory-body code { font-size: .88em; }
-    .theory-body code.ex { display: block; font-size: .78rem; white-space: nowrap; overflow-x: auto; padding: .15rem 0; }
-    .winkey { display: inline-block; border: 1px solid #B9B8AE; border-bottom-width: 3px; border-radius: 6px; background: #fff; padding: 0 .35rem; font-weight: 700; }
-  </style>
 </head>
-<body data-storage="speelboom_portfolio_">
+<body data-storage="speelboom_portfolio_v2_">
+
+<!-- Pictogrammen: eenvoudige lijntekeningen, eigen werk. Gebruik: een svg met class "ic" en daarin use met href naar het symbool. -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4 2.5 4H5"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 5h6a4 4 0 0 1 4 4v11a3 3 0 0 0-3-3H2z"/><path d="M22 5h-6a4 4 0 0 0-4 4v11a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.7 2.7L16 10"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01" stroke-width="3"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5l9.5 17h-19z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 1 1 3.4 2.5c-.6.3-1 .8-1 1.5v.4M12 17h.01"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13 7l4 4"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 14.2a5 5 0 0 1 5 5"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M4 14v6h16v-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9l-5.2 2.8 1-5.9-4.3-4.1 5.9-.8z"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 18.5h10a4 4 0 0 0 .6-8A6 6 0 0 0 6 11.5a3.5 3.5 0 0 0 1 7z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20.5 20.5L16 16"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+</svg>
 
 <div class="teacher-banner">Leraarweergave: de roze kaders tonen waar je een screenshot kan plaatsen. Leerlingen zien die kaders niet.</div>
 
@@ -54,798 +44,594 @@
       <span class="brand-lesson">Les 2 · Mijn digitaal stageportfolio</span>
     </a>
     <span class="topbar-spacer"></span>
-    <div class="progress-wrap" title="Jouw voortgang">
-      <div class="progress-track" role="progressbar" aria-label="Voortgang" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-fill" id="progressFill"></div></div>
-      <span class="progress-label" id="progressLabel">0 van 0</span>
-    </div>
-    <button class="btn-theory" type="button" data-open-theory>📖 Theoriekaart</button>
     <img class="dalton-mark" src="assets/dalton-gent-logo.png" alt="GO! Dalton Gent">
   </div>
-  <nav class="stepper" aria-label="Stappen">
-    <button type="button" data-step="start"><span class="num"><span>i</span></span><span class="lbl">Start</span></button>
-    <button type="button" data-step="1"><span class="num"><span>1</span></span><span class="lbl">Klaarzetten</span></button>
-    <button type="button" data-step="2"><span class="num"><span>2</span></span><span class="lbl">Je kast</span></button>
-    <button type="button" data-step="3"><span class="num"><span>3</span></span><span class="lbl">Namen</span></button>
-    <button type="button" data-step="4"><span class="num"><span>4</span></span><span class="lbl">Opbergen</span></button>
-    <button type="button" data-step="5"><span class="num"><span>5</span></span><span class="lbl">Screenshot</span></button>
-    <button type="button" data-step="6"><span class="num"><span>6</span></span><span class="lbl">Delen</span></button>
-    <button type="button" data-step="7"><span class="num"><span>7</span></span><span class="lbl">Inleveren</span></button>
-    <button type="button" data-step="extra" class="extra"><span class="num"><span>+</span></span><span class="lbl">Extra</span></button>
-  </nav>
 </header>
 
 <div class="layout">
-<main id="main">
 
-  <!-- ================= START ================= -->
-  <section class="pane" id="pane-start" aria-labelledby="h-start">
-    <div class="card">
-      <p class="pane-kicker">Toegepaste Informatica · les 2</p>
-      <h1 id="h-start">Mijn digitaal stageportfolio</h1>
-      <p>Straks sta je op stage in <strong>buitenschoolse opvang De Speelboom</strong>. Je maakt daar activiteitenfiches, je schrijft verslagen, je neemt foto&rsquo;s van een knutselwerk en je vult een uurrooster in.</p>
-      <p>Al die bestanden moeten <em>ergens</em> staan. En je moet ze terugvinden: volgende week, en ook in het derde jaar. Vandaag bouw je daarvoor je <button class="term" type="button" data-term="portfolio">portfolio</button>: een digitale kast met laden.</p>
+  <!-- ============ LINKS: de route ============ -->
+  <nav class="route" aria-label="Stappenplan">
+    <p class="route-title">Stappenplan</p>
+    <button class="nav-btn" type="button" data-step="start"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-flag"/></svg></span><span class="nav-lbl">Start</span></button>
+    <button class="nav-btn" type="button" data-step="theorie"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg></span><span class="nav-lbl">Theoriekaart</span></button>
 
-      <h3>Twee keer dezelfde bestanden</h3>
-      <div class="compare">
-        <div class="sample bad"><div class="sample-head">Zo niet</div>
-          <div class="sample-page">
-            <p style="font-family:Arial;font-size:.88rem;line-height:1.8">
-              📄 Document zonder titel<br>
-              📄 verslag Liam boos DEFINITIEF (2)<br>
-              📄 dingen<br>
-              📄 Kopie van sjabloon reflectie<br>
-              📄 uurrooster okt def<br>
-              📄 Naamloze spreadsheet
-            </p>
-            <p class="hint-txt" style="margin-top:.6rem;color:var(--warn);font-family:var(--body)">Welk bestand heb je morgen nodig? Je moet ze allemaal openen om het te weten.</p>
-          </div></div>
-        <div class="sample goodx"><div class="sample-head">Zo wel</div>
-          <div class="sample-page">
-            <p style="font-family:Arial;font-size:.88rem;line-height:1.8">
-              📁 01_Stageplaats<br>
-              📁 02_Activiteiten<br>
-              📁 03_Observaties<br>
-              📁 04_Materiaal<br>
-              📁 05_Reflectie
-            </p>
-            <p class="hint-txt" style="margin-top:.6rem;color:var(--ok);font-family:var(--body)">Je ziet in één blik waar alles zit. En elke naam zegt zelf wat erin staat.</p>
-          </div></div>
-      </div>
+    <p class="route-group">Je kast bouwen</p>
+    <button class="nav-btn" type="button" data-step="1"><span class="nav-num"><span class="nav-n">1</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Klaarzetten</span></button>
+    <button class="nav-btn" type="button" data-step="2"><span class="nav-num"><span class="nav-n">2</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Je kast bouwen</span></button>
+    <button class="nav-btn" type="button" data-step="3"><span class="nav-num"><span class="nav-n">3</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Bestanden ophalen</span></button>
+    <button class="nav-btn" type="button" data-step="4"><span class="nav-num"><span class="nav-n">4</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">De naamafspraak</span></button>
+    <button class="nav-btn" type="button" data-step="5"><span class="nav-num"><span class="nav-n">5</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Alles op zijn plaats</span></button>
 
-      <h3>Op het einde van deze les kan je</h3>
-      <ul>
-        <li>uitleggen waar een bestand staat: op de Chromebook zelf of in <button class="term" type="button" data-term="google drive">Google Drive</button>;</li>
-        <li>een <button class="term" type="button">mappenstructuur</button> maken voor je stage;</li>
-        <li>bestanden benoemen volgens een vaste <button class="term" type="button">naamafspraak</button>;</li>
-        <li>bestanden verplaatsen en in enkele seconden terugvinden;</li>
-        <li>je map <button class="term" type="button">delen</button> met je leraar, met de juiste rechten.</li>
-      </ul>
-    </div>
+    <p class="route-group">Delen en inleveren</p>
+    <button class="nav-btn" type="button" data-step="6"><span class="nav-num"><span class="nav-n">6</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Een foto van je kast</span></button>
+    <button class="nav-btn" type="button" data-step="7"><span class="nav-num"><span class="nav-n">7</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Delen met je leraar</span></button>
+    <button class="nav-btn" type="button" data-step="8"><span class="nav-num"><span class="nav-n">8</span><svg class="ic nav-check" aria-hidden="true"><use href="#i-check"/></svg></span><span class="nav-lbl">Inleveren</span></button>
+    <button class="nav-btn extra" type="button" data-step="extra"><span class="nav-num"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span><span class="nav-lbl">Extra</span></button>
+  </nav>
 
-    <div class="card">
-      <h2>Zo werk je vandaag</h2>
-      <p>Eerst doet je leraar het voor (<strong>Ik doe</strong>). Daarna werk jij zelfstandig verder met deze pagina (<strong>Jullie doen</strong>).</p>
-      <table class="plain">
-        <tr><th><span class="badge badge-web">🖥️ Lespagina</span></th><td>Deze website, <strong>links</strong> op je scherm. Hier lees je wat je moet doen. <strong>Je levert ze niet in.</strong></td></tr>
-        <tr><th><span class="badge badge-web">📁 Google Drive</span></th><td><strong>Rechts</strong> op je scherm. Hier bouw je je mappen. Dit is jouw echte werk.</td></tr>
-        <tr><th><span class="badge badge-doc">📄 Portfoliopaspoort</span></th><td>Jouw Google-document uit Classroom. Hierin schrijf je op wat je gedaan hebt. <strong>Dit lever je in.</strong></td></tr>
-        <tr><th><span class="badge badge-class">✅ Classroom</span></th><td>Hier staat je opdracht en hier klik je op <span class="ui">Inleveren</span>.</td></tr>
-      </table>
-      <div class="note" style="margin-top:1rem">
-        <p><strong>Vast je?</strong> 1. Kijk op de theoriekaart. &nbsp;2. Open de hint (💡). &nbsp;3. Vraag het aan je buur. &nbsp;4. Vraag het aan de leraar.</p>
-      </div>
+  <!-- ============ MIDDEN: één stap tegelijk ============ -->
+  <main id="main">
 
-      <h3>Overzicht</h3>
-      <div class="table-wrap">
-      <table class="plain">
-        <thead><tr><th>Stap</th><th>Wat doe je?</th><th>Tijd</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td>Klaarzetten: lespagina, Drive en je paspoort</td><td>4 min.</td></tr>
-          <tr><td>2</td><td>Je kast bouwen: 1 hoofdmap + 5 submappen</td><td>6 min.</td></tr>
-          <tr><td>3</td><td>4 bestanden hernoemen volgens de naamafspraak</td><td>9 min.</td></tr>
-          <tr><td>4</td><td>Alles op zijn plaats zetten en terugvinden</td><td>5 min.</td></tr>
-          <tr><td>5</td><td>Screenshot van je kast in je paspoort</td><td>4 min.</td></tr>
-          <tr><td>6</td><td>Je map delen met je leraar als Kijker</td><td>3 min.</td></tr>
-          <tr><td>7</td><td>Controleren en inleveren</td><td>5 min.</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p style="margin-top:.8rem"><strong>Wat lever je in?</strong> Alleen je <strong>Portfoliopaspoort</strong>, via Google Classroom. Je mappen blijven gewoon in je Drive staan.</p>
-    </div>
+    <!-- ===== START ===== -->
+    <section class="pane" id="pane-start" aria-labelledby="h-start">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-where">Toegepaste Informatica · les 2</span></div>
+          <h1 id="h-start">Mijn digitaal stageportfolio</h1>
+        </header>
+        <div class="card-body">
+          <p class="intro">Straks ga je op stage in buitenschoolse opvang <strong>De Speelboom</strong>. Vandaag bouw je de digitale kast voor al je stagewerk. En je ruimt vijf bestanden op die al klaarstaan.</p>
 
-    <div class="card" style="text-align:center">
-      <h2>Klaar om te beginnen?</h2>
-      <p>Neem de stappen één voor één. Lees eerst de hele stap, doe daarna wat er staat.</p>
-      <p style="margin-top:1rem"><button class="btn btn-primary" type="button" data-goto="1">Start met stap 1 →</button></p>
-    </div>
+          <h2 class="sec">Zo werk je</h2>
+          <div class="werkwijze">
+            <div class="werk-tegel"><svg class="ic" aria-hidden="true"><use href="#i-monitor"/></svg><strong>Lees hier</strong><span>Op deze pagina staat wat je moet doen, stap voor stap.</span></div>
+            <div class="werk-tegel"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg><strong>Werk in Drive</strong><span>Daar maak je je mappen en bewaar je je bestanden.</span></div>
+            <div class="werk-tegel inleveren"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg><strong>Schrijf in je paspoort</strong><span>Dat lever je in. Niets anders.</span></div>
+          </div>
 
-  </section>
-
-  <!-- ================= STAP 1 ================= -->
-  <section class="pane" id="pane-1" aria-labelledby="h-1">
-    <div class="card">
-      <div class="pane-head">
-        <p class="pane-kicker">Stap 1 van 7</p>
-        <h2 id="h-1">Klaarzetten</h2>
-        <p class="goal">Je zet drie dingen klaar: deze lespagina, je Google Drive en je Portfoliopaspoort.</p>
-        <span class="time">⏱ 4 minuten</span>
-      </div>
-
-      <h3>Waarom?</h3>
-      <p>Je werkt vandaag in twee vensters naast elkaar: <strong>lezen links</strong>, <strong>doen rechts</strong>. Zo moet je niet de hele tijd wisselen.</p>
-
-      <div class="where"><span class="where-label">Waar werk je?</span>
-        <span class="badge badge-web">🖥️ Lespagina</span>
-        <span class="badge badge-class">✅ Classroom</span>
-        <span class="badge badge-doc">📄 Portfoliopaspoort</span>
-      </div>
-
-      <h3>Wat moet je doen?</h3>
-      <ol class="todo">
-        <li>Zet deze lespagina <strong>links</strong> op je scherm.
-          <span class="sub">Druk op <kbd>Alt</kbd> + <kbd>[</kbd>. Of hou de knop <span class="ui">Maximaliseren</span> (het vierkantje rechtsboven) ingedrukt en kies de pijl naar links.</span></li>
-        <li>Open <strong>Google Classroom</strong> en zoek de opdracht <span class="ui">Les 2 — Mijn digitaal stageportfolio</span>.</li>
-        <li>Open je <strong>Portfoliopaspoort</strong> en zet het <strong>rechts</strong> op je scherm.
-          <span class="sub">Druk in dat venster op <kbd>Alt</kbd> + <kbd>]</kbd>.</span></li>
-        <li>Open de <strong>Bestanden-app</strong> van je Chromebook en kijk even rond.
-          <span class="sub">Klik linksonder op de rondje-knop (Launcher) en typ <em>Bestanden</em>.</span>
-          <ul>
-            <li><strong>Mijn bestanden &rsaquo; Downloads</strong> = de Chromebook zelf (<button class="term" type="button" data-term="lokale opslag">lokale opslag</button>).</li>
-            <li><strong>Google Drive &rsaquo; Mijn Drive</strong> = online, bij je schoolaccount.</li>
+          <h2 class="sec">Na deze les kan je</h2>
+          <ul class="doelen">
+            <li>zeggen of een bestand op de computer staat of in de cloud;</li>
+            <li>een kast met mappen maken voor je stage en bestanden een duidelijke naam geven;</li>
+            <li>je map delen met je leraar, met de juiste rechten.</li>
           </ul>
-        </li>
-        <li>Vul in je Portfoliopaspoort <strong>vraag 1</strong> in.</li>
-      </ol>
 
-      <div class="note warn">
-        <p><strong>Onthoud dit.</strong> Alles wat in <strong>Downloads</strong> staat, staat maar op dat ene toestel. De school maakt die map regelmatig leeg. <strong>Schoolwerk en stagewerk horen in Google Drive.</strong></p>
-      </div>
+          <div class="tip"><svg class="ic" aria-hidden="true"><use href="#i-bulb"/></svg><p><strong>Vast?</strong> Kijk eerst op de theoriekaart. Open dan <em>Hulp nodig?</em> onder de stap. Vraag het daarna aan je buur, en pas dan aan je leraar.</p></div>
 
-      <figure class="shot" data-shot="les2-bestanden-app.png" data-caption="De Bestanden-app: bovenaan Mijn bestanden (het toestel), onderaan Google Drive (online)." data-alt="Screenshot van de Bestanden-app met Mijn bestanden en Google Drive"></figure>
-
-      <div class="check-self">
-        <h3>Controleer jezelf</h3>
-        <ul>
-          <li>Links staat de lespagina, rechts staat mijn Portfoliopaspoort.</li>
-          <li>Bovenaan mijn paspoort staat mijn naam en mijn klas.</li>
-          <li>Ik vind in de Bestanden-app zowel <strong>Mijn bestanden</strong> als <strong>Google Drive</strong>.</li>
-          <li>Vraag 1 van mijn paspoort is ingevuld.</li>
-        </ul>
-      </div>
-
-      <details class="hint"><summary>Hulp nodig? De vensters willen niet naast elkaar.</summary>
-        <div class="hint-body">
-          <p>Sleep het venster met de muis helemaal naar de linkerrand van het scherm en laat los. Het venster klikt vast op de helft.</p>
-          <p>Lukt dat niet? Werk dan met twee tabbladen en wissel met <kbd>Ctrl</kbd> + <kbd>Tab</kbd>. Dat mag ook.</p>
+          <p class="start-cta"><button class="btn btn-primary" type="button" data-goto="1">Start met stap 1 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button></p>
         </div>
-      </details>
+      </article>
+    </section>
 
-      <div class="done-box">
-        <input class="js-check" type="checkbox" id="klaar-1">
-        <label for="klaar-1">Klaar met stap 1</label>
-      </div>
-      <div class="pane-nav">
-        <button class="btn" type="button" data-goto="start">← Terug</button>
-        <button class="btn btn-primary" type="button" data-goto="2">Naar stap 2 →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= STAP 2 ================= -->
-  <section class="pane" id="pane-2" aria-labelledby="h-2">
-    <div class="card">
-      <div class="pane-head">
-        <p class="pane-kicker">Stap 2 van 7</p>
-        <h2 id="h-2">Je kast bouwen</h2>
-        <p class="goal">Je maakt in Google Drive één hoofdmap met vijf submappen.</p>
-        <span class="time">⏱ 6 minuten</span>
-      </div>
-
-      <h3>Waarom?</h3>
-      <p>Een kast maak je <em>vóór</em> je iets begint op te bergen. Anders ligt alles op één hoop en zoek je later veel te lang.</p>
-
-      <div class="where"><span class="where-label">Waar werk je?</span>
-        <span class="badge badge-web">📁 Google Drive</span>
-      </div>
-
-      <h3>Wat moet je doen?</h3>
-      <ol class="todo">
-        <li>Ga naar <strong>drive.google.com</strong> en klik links op <span class="ui">Mijn Drive</span>.</li>
-        <li>Klik op <span class="ui">Nieuw</span> &rsaquo; <span class="ui">Map</span>.</li>
-        <li>Noem je <button class="term" type="button">hoofdmap</button> zo, maar met <strong>jouw</strong> naam:
-          <span class="sub"><code>Stageportfolio_2026-2027_Voornaam-Achternaam</code></span>
-          <span class="sub">Klik daarna op <span class="ui">Maken</span>.</span></li>
-        <li><strong>Dubbelklik</strong> op je hoofdmap om ze te openen.
-          <span class="sub">Bovenaan zie je nu: Mijn Drive &rsaquo; Stageportfolio&hellip; Daar zie je altijd waar je bent.</span></li>
-        <li>Maak daarin <strong>vijf</strong> <button class="term" type="button" data-term="submap">submappen</button>. Typ de namen exact over:</li>
-      </ol>
-
-      <div class="tree">
-        <ul>
-          <li class="fold"><strong>Stageportfolio_2026-2027_Voornaam-Achternaam</strong>
-            <ul>
-              <li class="fold">01_Stageplaats <span class="hint-txt">— uurrooster, afspraken, contactgegevens</span></li>
-              <li class="fold">02_Activiteiten <span class="hint-txt">— activiteitenfiches en instructiefiches</span></li>
-              <li class="fold">03_Observaties <span class="hint-txt">— wat je ziet en wat je erover schrijft</span></li>
-              <li class="fold">04_Materiaal <span class="hint-txt">— boodschappenlijsten, foto&rsquo;s van materiaal</span></li>
-              <li class="fold">05_Reflectie <span class="hint-txt">— hoe het ging en wat je wil bijleren</span></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div class="note">
-        <p><strong>Waarom 01 en niet 1?</strong> Drive zet mappen op alfabet. Met een cijfer vooraan bepaal jij zelf de volgorde. En met <em>01</em> in plaats van <em>1</em> blijft het kloppen als je later een tiende map maakt.</p>
-      </div>
-      <div class="note warn">
-        <p><strong>Maak nooit een map “Varia”, “Rest” of “Nieuwe map”.</strong> Alles wat je twijfelt, verdwijnt daarin. En dan vind je het nooit meer terug.</p>
-      </div>
-
-      <div class="check-self">
-        <h3>Controleer jezelf</h3>
-        <ul>
-          <li>Ik heb <strong>één</strong> hoofdmap, met mijn eigen naam erin.</li>
-          <li>In die hoofdmap staan precies <strong>5</strong> submappen en <strong>0</strong> bestanden.</li>
-          <li>Mijn mappen staan van boven naar onder in de volgorde 01, 02, 03, 04, 05.</li>
-          <li>Er staat geen map met de naam “Nieuwe map”.</li>
-        </ul>
-      </div>
-
-      <details class="hint"><summary>Hulp nodig? Ik zit in de verkeerde map.</summary>
-        <div class="hint-body">
-          <p>Kijk bovenaan in Drive. Daar staat het pad, bijvoorbeeld <em>Mijn Drive &rsaquo; Stageportfolio_2026-2027_Sofie-Janssens</em>.</p>
-          <p>Klik op <em>Mijn Drive</em> om terug te gaan. Staat je submap op de verkeerde plaats? Sleep ze naar de juiste map.</p>
-        </div>
-      </details>
-
-      <div class="done-box">
-        <input class="js-check" type="checkbox" id="klaar-2">
-        <label for="klaar-2">Klaar met stap 2</label>
-      </div>
-      <div class="pane-nav">
-        <button class="btn" type="button" data-goto="1">← Stap 1</button>
-        <button class="btn btn-primary" type="button" data-goto="3">Naar stap 3 →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= STAP 3 ================= -->
-  <section class="pane" id="pane-3" aria-labelledby="h-3">
-    <div class="card">
-      <div class="pane-head">
-        <p class="pane-kicker">Stap 3 van 7</p>
-        <h2 id="h-3">De naamafspraak</h2>
-        <p class="goal">Je geeft vier bestanden een naam die meteen zegt wat erin zit.</p>
-        <span class="time">⏱ 9 minuten</span>
-      </div>
-
-      <h3>Waarom?</h3>
-      <p>Op stage werk je niet alleen. Een collega moet jouw verslag kunnen terugvinden terwijl jij er niet bent. Daarom benoemt iedereen zijn bestanden op <strong>dezelfde manier</strong>.</p>
-
-      <div class="nameplate">
-        <div class="nameplate-head">De naamafspraak van je stageportfolio</div>
-        <div class="nameplate-body">
-          <code class="fname"><span class="d">2026-09-22</span>_<span class="o">activiteitenfiche_herfstslinger</span>_<span class="v">v1</span></code>
-          <ul class="legend-name">
-            <li class="d"><strong>Datum</strong> — altijd <em>jaar-maand-dag</em>: 2026-09-22. Zo staan je bestanden vanzelf op volgorde in de tijd.</li>
-            <li class="o"><strong>Wat is het?</strong> — 1 tot 3 woorden. Streepje <code>-</code> tussen woorden die samen horen.</li>
-            <li class="v"><strong>Versie</strong> — <code>v1</code>, <code>v2</code>, <code>v3</code>&hellip; De hoogste is de recentste.</li>
-          </ul>
-          <p style="margin:.8rem 0 0"><strong>Altijd:</strong> geen spaties (gebruik <code>_</code> en <code>-</code>) · geen hoofdletters nodig · <strong>nooit de naam van een kind of zorgvrager</strong>.</p>
-        </div>
-      </div>
-
-      <div class="note warn">
-        <p><strong>Beroepsgeheim, ook in een bestandsnaam.</strong> Iedereen die toevallig op je scherm kijkt, leest de naam van je bestand. Schrijf daarom nooit <em>verslag Liam</em>, maar <button class="term" type="button">anonimiseren</button>: <em>observatie_kind-A</em>. Wie het kind is, staat in je verslag zelf — niet op de buitenkant.</p>
-      </div>
-
-      <h3>Goed en fout</h3>
-      <div class="table-wrap">
-        <table class="names">
-          <tr><td class="bad">verslag Liam boos DEFINITIEF (2)</td><td class="good">2026-09-18_observatie_kind-A_v2</td><td class="why">naam van een kind · “definitief” zegt niets · spaties</td></tr>
-          <tr><td class="bad">Document zonder titel</td><td class="good">2026-09-22_activiteitenfiche_herfstslinger_v1</td><td class="why">je moet het openen om te weten wat het is</td></tr>
-          <tr><td class="bad">22-9-26 fiche</td><td class="good">2026-09-22_activiteitenfiche_herfstslinger_v1</td><td class="why">verkeerde datumvorm: sorteert niet</td></tr>
-        </table>
-      </div>
-
-      <div class="where"><span class="where-label">Waar werk je?</span>
-        <span class="badge badge-web">📁 Google Drive</span>
-        <span class="badge badge-doc">📄 Portfoliopaspoort</span>
-      </div>
-
-      <h3>Wat moet je doen?</h3>
-      <ol class="todo">
-        <li>Ga in Drive naar <span class="ui">Mijn Drive</span> &rsaquo; <span class="ui">Classroom</span> en zoek je <strong>vijf rommelbestanden</strong>.
-          <span class="sub">Ze eindigen op jouw naam, want Classroom maakte een kopie voor jou.</span></li>
-        <li><strong>Open</strong> een bestand en lees wat erin staat. Bovenaan elk bestand staat een datum.</li>
-        <li>Sluit het bestand. Klik in Drive met de <strong>rechtermuisknop</strong> op het bestand &rsaquo; <span class="ui">Naam wijzigen</span>.
-          <span class="sub">Geen rechtermuisknop op je Chromebook? Tik met <strong>twee vingers</strong> op het touchpad.</span></li>
-        <li>Typ de nieuwe naam volgens de naamafspraak. Haal ook <strong>jouw eigen naam</strong> uit de bestandsnaam: de map is al van jou.</li>
-        <li>Schrijf elke nieuwe naam in <strong>deel 2</strong> van je Portfoliopaspoort.</li>
-      </ol>
-
-      <div class="note good">
-        <p><strong>Bestand 1 deed je samen met je leraar.</strong> Die naam staat er al: <code>2026-09-22_activiteitenfiche_herfstslinger_v1</code>. De vier andere doe je zelf.</p>
-      </div>
-
-      <div class="table-wrap">
-        <table class="plain">
-          <thead><tr><th>Oude naam</th><th>Jouw nieuwe naam</th></tr></thead>
-          <tbody>
-            <tr><td><code>Document zonder titel</code></td><td>✔ samen gedaan: <code>2026-09-22_activiteitenfiche_herfstslinger_v1</code></td></tr>
-            <tr><td><code>verslag Liam boos DEFINITIEF (2)</code></td><td>vul zelf in — <strong>let op de naam van het kind</strong></td></tr>
-            <tr><td><code>dingen</code></td><td>vul zelf in</td></tr>
-            <tr><td><code>Kopie van sjabloon reflectie</code></td><td>vul zelf in</td></tr>
-            <tr><td><code>uurrooster okt def</code></td><td>vul zelf in</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <figure class="shot" data-shot="les2-naam-wijzigen.png" data-caption="Rechtsklik op een bestand in Drive en kies Naam wijzigen." data-alt="Screenshot van het menu Naam wijzigen in Google Drive"></figure>
-
-      <div class="check-self">
-        <h3>Controleer jezelf</h3>
-        <ul>
-          <li>Elke naam begint met een datum in de vorm <code>2026-09-18</code>.</li>
-          <li>In <strong>geen enkele</strong> naam staat de naam van een kind.</li>
-          <li>Nergens staat nog “DEFINITIEF”, “(2)”, “Kopie van” of “zonder titel”.</li>
-          <li>Er staan geen spaties in mijn bestandsnamen.</li>
-          <li>Mijn eigen naam staat niet meer in de bestandsnaam.</li>
-          <li>De vijf nieuwe namen staan in deel 2 van mijn paspoort.</li>
-        </ul>
-      </div>
-
-      <details class="hint"><summary>Hulp nodig? Ik weet niet welke datum ik moet nemen.</summary>
-        <div class="hint-body">
-          <p>Neem de datum die <strong>in het bestand zelf</strong> staat (bovenaan de eerste regel). Dat is de dag waarover het gaat — niet de dag van vandaag.</p>
-          <p>Staat er geen datum in? Neem dan de datum van vandaag.</p>
-        </div>
-      </details>
-      <details class="hint"><summary>Hulp nodig? Ik vind mijn vijf bestanden niet.</summary>
-        <div class="hint-body">
-          <p>Klik in Drive links op <span class="ui">Mijn Drive</span> en open de map <span class="ui">Classroom</span>. Daarin staat een map met de naam van je klas.</p>
-          <p>Nog niet gevonden? Typ in de zoekbalk bovenaan: <em>dingen</em>. Klik daarna met de rechtermuisknop op het bestand &rsaquo; <span class="ui">Bestandslocatie tonen</span>.</p>
-        </div>
-      </details>
-
-      <div class="done-box">
-        <input class="js-check" type="checkbox" id="klaar-3">
-        <label for="klaar-3">Klaar met stap 3</label>
-      </div>
-      <div class="pane-nav">
-        <button class="btn" type="button" data-goto="2">← Stap 2</button>
-        <button class="btn btn-primary" type="button" data-goto="4">Naar stap 4 →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= STAP 4 ================= -->
-  <section class="pane" id="pane-4" aria-labelledby="h-4">
-    <div class="card">
-      <div class="pane-head">
-        <p class="pane-kicker">Stap 4 van 7</p>
-        <h2 id="h-4">Alles op zijn plaats</h2>
-        <p class="goal">Je verplaatst elk bestand naar de juiste map en vindt het daarna in enkele seconden terug.</p>
-        <span class="time">⏱ 5 minuten</span>
-      </div>
-
-      <h3>Waarom?</h3>
-      <p>Een goede naam is de helft van het werk. Het bestand moet ook op de juiste plaats liggen — anders sta je op stage te zoeken terwijl de kinderen wachten.</p>
-
-      <div class="where"><span class="where-label">Waar werk je?</span>
-        <span class="badge badge-web">📁 Google Drive</span>
-        <span class="badge badge-doc">📄 Portfoliopaspoort</span>
-      </div>
-
-      <h3>Wat moet je doen?</h3>
-      <ol class="todo">
-        <li>Bekijk je vijf bestanden. Denk bij elk: <strong>in welke lade hoort dit?</strong></li>
-        <li><strong>Sleep</strong> elk bestand naar de juiste submap.
-          <span class="sub">Lukt slepen niet? Rechtsklik &rsaquo; <span class="ui">Ordenen</span> &rsaquo; <span class="ui">Verplaatsen</span>, kies de map en klik op <span class="ui">Verplaatsen</span>.</span></li>
-        <li>Schrijf in <strong>deel 2</strong> van je paspoort achter elke naam in welke map je hem stopte.</li>
-        <li>Doe de <strong>zoektest</strong>: typ bovenaan in de zoekbalk van Drive het woord <em>herfstslinger</em>. Druk op <kbd>Enter</kbd>.</li>
-        <li>Open je hoofdmap opnieuw en controleer: in elke submap zit nu <strong>één</strong> bestand.</li>
-      </ol>
-
-      <div class="note">
-        <p><strong>Je Portfoliopaspoort laat je staan waar het staat</strong>, in je Classroom-map. Dat bestand lever je straks in.</p>
-      </div>
-
-      <div class="check-self">
-        <h3>Controleer jezelf</h3>
-        <ul>
-          <li>In mijn hoofdmap staan alleen nog mappen, geen losse bestanden.</li>
-          <li>In elke submap zit precies één bestand.</li>
-          <li>De zoekbalk vond mijn bestand in minder dan 10 seconden.</li>
-          <li>Deel 2 van mijn paspoort is volledig ingevuld: oude naam, nieuwe naam, map.</li>
-        </ul>
-      </div>
-
-      <details class="hint"><summary>Hulp nodig? Twijfel je over één bestand?</summary>
-        <div class="hint-body">
-          <p>Vraag jezelf af: <em>waar zou ik dit gaan zoeken over drie weken?</em> Dat antwoord is meestal juist.</p>
-          <p>Nog steeds twijfel? Een boodschappenlijst gaat over <strong>materiaal</strong> dat je moet kopen. Een uurrooster gaat over je <strong>stageplaats</strong>.</p>
-        </div>
-      </details>
-
-      <div class="done-box">
-        <input class="js-check" type="checkbox" id="klaar-4">
-        <label for="klaar-4">Klaar met stap 4</label>
-      </div>
-      <div class="pane-nav">
-        <button class="btn" type="button" data-goto="3">← Stap 3</button>
-        <button class="btn btn-primary" type="button" data-goto="5">Naar stap 5 →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= STAP 5 ================= -->
-  <section class="pane" id="pane-5" aria-labelledby="h-5">
-    <div class="card">
-      <div class="pane-head">
-        <p class="pane-kicker">Stap 5 van 7</p>
-        <h2 id="h-5">Een foto van je kast</h2>
-        <p class="goal">Je maakt een screenshot van je mappen en plakt die in je Portfoliopaspoort.</p>
-        <span class="time">⏱ 4 minuten</span>
-      </div>
-
-      <h3>Waarom?</h3>
-      <p>Je leraar ziet zo in één blik hoe jouw kast eruitziet. En jij leert meteen waar een screenshot op een Chromebook terechtkomt.</p>
-
-      <div class="where"><span class="where-label">Waar werk je?</span>
-        <span class="badge badge-web">📁 Google Drive</span>
-        <span class="badge badge-doc">📄 Portfoliopaspoort</span>
-      </div>
-
-      <h3>Wat moet je doen?</h3>
-      <ol class="todo">
-        <li>Open in Drive je <strong>hoofdmap</strong>, zodat je de vijf submappen op je scherm ziet.</li>
-        <li>Maak een screenshot van je hele scherm:
-          <span class="sub"><kbd>Ctrl</kbd> + <span class="winkey">▭|||</span> (de toets <em>Toon vensters</em>, op de bovenste rij).</span>
-          <span class="sub">Alleen een stuk van je scherm? <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <span class="winkey">▭|||</span>, sleep dan een kader.</span></li>
-        <li>Je screenshot komt terecht in <strong>Mijn bestanden &rsaquo; Downloads</strong>. Dat is de <button class="term" type="button" data-term="lokale opslag">lokale opslag</button> van je Chromebook.</li>
-        <li>Ga naar je Portfoliopaspoort, <strong>deel 3</strong>. Klik op de lege regel onder de titel.</li>
-        <li>Klik op <span class="ui">Invoegen</span> &rsaquo; <span class="ui">Afbeelding</span> &rsaquo; <span class="ui">Uploaden vanaf computer</span> &rsaquo; open <strong>Downloads</strong> en kies je screenshot.</li>
-      </ol>
-
-      <div class="note">
-        <p><strong>Merk je het?</strong> Je screenshot maakte de reis van <strong>lokale opslag</strong> (Downloads) naar de <strong>cloud</strong> (je document in Drive). Vanaf nu kan je hem op elk toestel zien.</p>
-      </div>
-
-      <figure class="shot" data-shot="les2-screenshot-toets.png" data-caption="De toets Toon vensters op het Chromebook-klavier." data-alt="Screenshot of foto van de toets Toon vensters"></figure>
-
-      <div class="check-self">
-        <h3>Controleer jezelf</h3>
-        <ul>
-          <li>Op mijn screenshot zie ik de naam van mijn hoofdmap <strong>en</strong> de vijf submappen.</li>
-          <li>De afbeelding staat in deel 3 van mijn paspoort, niet ergens anders.</li>
-          <li>Ik kan de tekst op mijn screenshot lezen (niet te klein, niet afgesneden).</li>
-        </ul>
-      </div>
-
-      <details class="hint"><summary>Hulp nodig? Het screenshot lukt niet.</summary>
-        <div class="hint-body">
-          <p>Vind je de toets niet? Klik dan rechtsonder op de klok &rsaquo; <span class="ui">Schermopname</span> &rsaquo; kies het icoontje van het <strong>fototoestel</strong> &rsaquo; klik op <span class="ui">Volledig scherm</span>.</p>
-          <p><strong>Lukt het echt niet?</strong> Typ dan in deel 3 van je paspoort de namen van je zes mappen onder elkaar. Zo kan je leraar toch zien hoe je kast eruitziet.</p>
-        </div>
-      </details>
-
-      <div class="done-box">
-        <input class="js-check" type="checkbox" id="klaar-5">
-        <label for="klaar-5">Klaar met stap 5</label>
-      </div>
-      <div class="pane-nav">
-        <button class="btn" type="button" data-goto="4">← Stap 4</button>
-        <button class="btn btn-primary" type="button" data-goto="6">Naar stap 6 →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= STAP 6 ================= -->
-  <section class="pane" id="pane-6" aria-labelledby="h-6">
-    <div class="card">
-      <div class="pane-head">
-        <p class="pane-kicker">Stap 6 van 7</p>
-        <h2 id="h-6">Delen met je leraar</h2>
-        <p class="goal">Je deelt je hoofdmap met je leraar als <strong>Kijker</strong>, en je legt uit wat dat betekent.</p>
-        <span class="time">⏱ 3 minuten</span>
-      </div>
-
-      <h3>Waarom?</h3>
-      <p>Je leraar moet je portfolio het hele jaar kunnen bekijken. Maar <strong>jij</strong> blijft de <button class="term" type="button">eigenaar</button>: niemand anders mag jouw werk veranderen of verwijderen.</p>
-
-      <h3>Wie mag wat?</h3>
-      <div class="table-wrap">
-        <table class="plain">
-          <thead><tr><th>Recht</th><th>Openen en lezen</th><th>Opmerking zetten</th><th>Veranderen en verwijderen</th></tr></thead>
-          <tbody>
-            <tr><th><button class="term" type="button">Kijker</button></th><td>✅</td><td>❌</td><td>❌</td></tr>
-            <tr><th><button class="term" type="button">Reageerder</button></th><td>✅</td><td>✅</td><td>❌</td></tr>
-            <tr><th><button class="term" type="button">Bewerker</button></th><td>✅</td><td>✅</td><td>✅</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="where"><span class="where-label">Waar werk je?</span>
-        <span class="badge badge-web">📁 Google Drive</span>
-        <span class="badge badge-doc">📄 Portfoliopaspoort</span>
-      </div>
-
-      <h3>Wat moet je doen?</h3>
-      <ol class="todo">
-        <li>Klik met de rechtermuisknop op je <strong>hoofdmap</strong> &rsaquo; <span class="ui">Delen</span> &rsaquo; <span class="ui">Delen</span>.</li>
-        <li>Typ het e-mailadres van je leraar.
-          <span class="sub">Het adres staat bij de opdracht in <strong>Google Classroom</strong> en op het bord. Typ het letter voor letter over.</span>
-          <span class="sub">Drive vult het verder aan zodra je begint te typen. Kies het juiste adres uit de lijst.</span></li>
-        <li>Klik rechts op het pijltje en kies <span class="ui">Kijker</span>. <strong>Niet</strong> Bewerker.</li>
-        <li>Klik op <span class="ui">Sturen</span>.
-          <span class="sub">Heet de knop bij jou <span class="ui">Delen</span>? Klik dan daarop.</span></li>
-        <li>Beantwoord <strong>vraag 4</strong> in je paspoort: wat mag je leraar nu wél en wat niet?</li>
-      </ol>
-
-      <div class="note warn">
-        <p><strong>Nooit “Iedereen met de link”.</strong> Later staan er verslagen over kinderen in deze map. Die deel je alleen met wie ze echt nodig heeft — dat is ook op stage de regel.</p>
-      </div>
-
-      <figure class="shot" data-shot="les2-delen-kijker.png" data-caption="Het venster Delen: rechts kies je Kijker." data-alt="Screenshot van het deelvenster van Google Drive met de keuze Kijker"></figure>
-
-      <div class="check-self">
-        <h3>Controleer jezelf</h3>
-        <ul>
-          <li>Als ik opnieuw op <span class="ui">Delen</span> klik, zie ik mijn leraar staan met daarachter <strong>Kijker</strong>.</li>
-          <li>Achter mijn eigen naam staat <strong>Eigenaar</strong>.</li>
-          <li>Bij “Algemene toegang” staat <strong>Beperkt</strong>, niet “Iedereen met de link”.</li>
-          <li>Vraag 4 van mijn paspoort is ingevuld.</li>
-        </ul>
-      </div>
-
-      <div class="done-box">
-        <input class="js-check" type="checkbox" id="klaar-6">
-        <label for="klaar-6">Klaar met stap 6</label>
-      </div>
-      <div class="pane-nav">
-        <button class="btn" type="button" data-goto="5">← Stap 5</button>
-        <button class="btn btn-primary" type="button" data-goto="7">Naar stap 7 →</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= STAP 7 ================= -->
-  <section class="pane" id="pane-7" aria-labelledby="h-7">
-    <div class="card">
-      <div class="pane-head">
-        <p class="pane-kicker">Stap 7 van 7</p>
-        <h2 id="h-7">Controleren en inleveren</h2>
-        <p class="goal">Je controleert je eigen werk en levert je Portfoliopaspoort in.</p>
-        <span class="time">⏱ 5 minuten</span>
-      </div>
-
-      <h3>Waarom?</h3>
-      <p>Op stage controleer je je werk altijd zelf, vóór je het afgeeft. Dat heet <strong>kwaliteitscontrole</strong>. Doe dat hier ook.</p>
-
-      <h3>Weet je het nog?</h3>
-      <p>Drie vragen over vandaag. Je antwoorden worden nergens bewaard.</p>
-      <div class="quiz">
-        <div class="quiz-q" data-ok="Juist! In Drive staan je bestanden online. Je vindt ze terug op elk toestel waarop je aanmeldt." data-nok="Nog niet. Denk na: waar staat de map Downloads precies?">
-          <p>1. Je bewaart een verslag in de map <strong>Downloads</strong> van je Chromebook. Morgen krijg je een ander toestel. Wat gebeurt er?</p>
-          <div class="opts">
-            <button type="button">Je verslag staat er gewoon weer.</button>
-            <button type="button" data-right>Je verslag staat er niet: het stond alleen op dat ene toestel.</button>
-            <button type="button">Je verslag wordt automatisch doorgestuurd.</button>
+    <!-- ===== THEORIEKAART ===== -->
+    <section class="pane" id="pane-theorie" aria-labelledby="h-theorie">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-where">Spiekbriefje</span></div>
+          <h2 id="h-theorie">Theoriekaart</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Alles op één plek. Kom hier terug als je iets niet meer weet.</p>
+          <div class="t-grid">
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-cloud"/></svg>Waar staat je bestand?</h3>
+              <table class="t-rows">
+                <tr><th>Downloads</th><td>Op de <strong>computer zelf</strong>. Niet in je Drive: thuis heb je het niet.</td></tr>
+                <tr><th>Google Drive</th><td>In de <strong>cloud</strong>. Op elk toestel waarop je aanmeldt.</td></tr>
+              </table>
+              <p class="t-os">School en stage bewaar je altijd in Drive.</p>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-download"/></svg>Van Downloads naar Drive</h3>
+              <ul>
+                <li><strong>Downloaden</strong>: de knop met de pijl naar beneden.</li>
+                <li><strong>Uitpakken</strong>: rechtsklik op het zip-bestand › <span class="ui">Alles uitpakken…</span></li>
+                <li><strong>Uploaden</strong>: in Drive op <span class="ui">Nieuw</span> › <span class="ui">Bestanden uploaden</span>.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-pen"/></svg>De naamafspraak</h3>
+              <p><code>2026-09-22_activiteitenfiche_herfstslinger_v1</code></p>
+              <ul>
+                <li>eerst de datum: jaar-maand-dag;</li>
+                <li>geen spaties: <code>_</code> en <code>-</code>;</li>
+                <li><code>v1</code>, <code>v2</code> in plaats van "definitief" of "(2)";</li>
+                <li>nooit de naam van een kind: <code>kind-A</code>.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg>Mijn vijf mappen</h3>
+              <table class="t-rows">
+                <tr><th>01_Stageplaats</th><td>uurrooster, afspraken</td></tr>
+                <tr><th>02_Activiteiten</th><td>activiteitenfiches</td></tr>
+                <tr><th>03_Observaties</th><td>wat je ziet en schrijft</td></tr>
+                <tr><th>04_Materiaal</th><td>boodschappenlijsten</td></tr>
+                <tr><th>05_Reflectie</th><td>hoe het ging</td></tr>
+              </table>
+              <p class="t-os">Het nummer vooraan houdt ze op volgorde.</p>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg>Wie mag wat?</h3>
+              <table class="t-rows">
+                <tr><th>Eigenaar</th><td>jij: je beslist wie erbij mag</td></tr>
+                <tr><th>Bewerker</th><td>mag alles veranderen</td></tr>
+                <tr><th>Reageerder</th><td>mag lezen en opmerkingen zetten</td></tr>
+                <tr><th>Kijker</th><td>mag alleen kijken</td></tr>
+              </table>
+              <p class="t-os">Je leraar krijgt <strong>Kijker</strong>.</p>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-pen"/></svg>Knoppen in Drive</h3>
+              <table class="t-rows">
+                <tr><th>Map maken</th><td><span class="ui">Nieuw</span> › <span class="ui">Map</span> › <span class="ui">Maken</span></td></tr>
+                <tr><th>Naam wijzigen</th><td>rechtsklik › <span class="ui">Naam wijzigen</span></td></tr>
+                <tr><th>Verplaatsen</th><td>slepen, of rechtsklik › <span class="ui">Ordenen</span> › <span class="ui">Verplaatsen</span></td></tr>
+                <tr><th>Delen</th><td>rechtsklik › <span class="ui">Delen</span></td></tr>
+              </table>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>Zoeken en sneltoetsen</h3>
+              <ul>
+                <li>Typ een woord uit de naam in de <strong>zoekbalk</strong> van Drive.</li>
+                <li><span class="key">Windows</span> + <span class="key">E</span>: de Verkenner openen.</li>
+                <li><span class="key">Windows</span> + <span class="key">Shift</span> + <span class="key">S</span>: een schermafbeelding maken.</li>
+                <li><span class="key">Ctrl</span> + <span class="key">C</span> en <span class="key">Ctrl</span> + <span class="key">V</span>: kopiëren en plakken.</li>
+              </ul>
+            </section>
+            <section class="t-card">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg>Beroepsgeheim</h3>
+              <p>Wat je op stage over een kind te weten komt, deel je niet. Dat geldt ook voor een bestandsnaam: iedereen die op je scherm kijkt, leest ze. Schrijf daarom <code>kind-A</code>, nooit de naam.</p>
+            </section>
+            <section class="t-card wide">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-chat"/></svg>Woorden</h3>
+              <table class="t-rows">
+                <tr><th>cloudopslag</th><td>opslag op het internet, zoals Google Drive</td></tr>
+                <tr><th>lokale opslag</th><td>opslag op de computer zelf, zoals de map Downloads</td></tr>
+                <tr><th>zip-bestand</th><td>één ingepakt bestand met meerdere bestanden erin</td></tr>
+                <tr><th>extensie</th><td>de letters na de punt, zoals <code>.docx</code>: welk soort bestand het is</td></tr>
+                <tr><th>anonimiseren</th><td>de naam van een kind weglaten of vervangen, zoals <code>kind-A</code></td></tr>
+                <tr><th>portfolio</th><td>de verzameling van alles wat je maakt en leert op stage</td></tr>
+              </table>
+            </section>
+            <section class="t-card wide warn">
+              <h3><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg>Veelgemaakte fouten</h3>
+              <ul>
+                <li>De bestanden blijven in Downloads staan.</li>
+                <li>De hoofdmap staat in de map Classroom in plaats van in Mijn Drive.</li>
+                <li>Een map met de naam "Nieuwe map" of "Varia".</li>
+                <li>Datum als <code>22-9-26</code> in plaats van <code>2026-09-22</code>.</li>
+                <li>De naam van een kind in een bestandsnaam.</li>
+                <li>Delen als Bewerker, of via "Iedereen met de link", in plaats van als Kijker.</li>
+              </ul>
+            </section>
           </div>
-          <p class="feedback" aria-live="polite"></p>
         </div>
-        <div class="quiz-q" data-ok="Juist! Datum vooraan in de vorm 2026-09-18, geen spaties, geen naam van een kind." data-nok="Nog niet. Kijk op de theoriekaart bij De naamafspraak.">
-          <p>2. Welke naam volgt de afspraak?</p>
-          <div class="opts">
-            <button type="button">18-9-26 verslag Liam v2</button>
-            <button type="button" data-right>2026-09-18_observatie_kind-A_v2</button>
-            <button type="button">observatie Liam DEFINITIEF</button>
+      </article>
+    </section>
+
+    <!-- ===== STAP 1 ===== -->
+    <section class="pane" id="pane-1" aria-labelledby="h-1">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 1</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg> Paspoort</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg> Drive</span></div>
+          <h2 id="h-1">Klaarzetten</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Je zet je paspoort en Google Drive klaar. Die heb je de hele les nodig.</p>
+          <div class="todo-box">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3>
+            <ol class="todo">
+              <li>Open je <strong>Portfoliopaspoort</strong>. Het staat in de opdracht, net als deze pagina.</li>
+              <li>Vul bovenaan je <strong>naam</strong>, je <strong>klas</strong> en de <strong>datum</strong> in.</li>
+              <li>Open <strong>drive.google.com</strong> in een nieuw tabblad.</li>
+            </ol>
           </div>
-          <p class="feedback" aria-live="polite"></p>
+          <details class="help"><summary><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg> Hulp nodig?</summary>
+            <div class="help-body">
+              <p>Vind je je paspoort niet? Kijk opnieuw in de opdracht. Je paspoort heeft jouw naam in de titel.</p>
+            </div>
+          </details>
+          <p class="result"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Klaar als:</strong> je paspoort open is met je naam erin, en Google Drive open is in een ander tabblad.</span></p>
         </div>
-        <div class="quiz-q" data-ok="Juist! Een Kijker mag kijken, meer niet. Jij blijft eigenaar." data-nok="Nog niet. Kijk op de theoriekaart bij Wie mag wat?">
-          <p>3. Je deelde je map met je leraar als <strong>Kijker</strong>. Wat mag je leraar doen?</p>
-          <div class="opts">
-            <button type="button">Alles aanpassen en verwijderen.</button>
-            <button type="button" data-right>Alleen openen en lezen.</button>
-            <button type="button">Niets: Kijker betekent dat de map dicht blijft.</button>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="start"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Start</button>
+          <button class="btn btn-primary" type="button" data-goto="2">Stap 2 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 2 ===== -->
+    <section class="pane" id="pane-2" aria-labelledby="h-2">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 2</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg> Google Drive</span></div>
+          <h2 id="h-2">Je kast bouwen</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Een kast maak je vóór je iets opbergt. Anders ligt alles op één hoop.</p>
+          <div class="todo-box">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3>
+            <ol class="todo">
+              <li>Klik in Drive links op <span class="ui">Mijn Drive</span>. Klik dan op <span class="ui">Nieuw</span> › <span class="ui">Map</span>.</li>
+              <li>Noem de map <code>Stageportfolio_2026-2027_Voornaam-Achternaam</code>, met jouw naam. Klik op <span class="ui">Maken</span>.</li>
+              <li>Open je nieuwe map. Maak daarin de <strong>vijf</strong> mappen hieronder. Typ de namen exact over.</li>
+            </ol>
+            <div class="tree">
+              <ul>
+                <li class="fold"><strong>Stageportfolio_2026-2027_Voornaam-Achternaam</strong>
+                  <ul>
+                    <li class="fold">01_Stageplaats <span class="hint-txt">— uurrooster, afspraken, contactgegevens</span></li>
+                    <li class="fold">02_Activiteiten <span class="hint-txt">— activiteitenfiches, instructiefiches</span></li>
+                    <li class="fold">03_Observaties <span class="hint-txt">— wat je ziet en wat je erover schrijft</span></li>
+                    <li class="fold">04_Materiaal <span class="hint-txt">— boodschappenlijsten, materiaallijsten</span></li>
+                    <li class="fold">05_Reflectie <span class="hint-txt">— hoe het ging en wat je wil bijleren</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
-          <p class="feedback" aria-live="polite"></p>
+          <div class="tip warn"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p><strong>Maak nooit een map "Varia", "Rest" of "Nieuwe map".</strong> Alles waarover je twijfelt, verdwijnt daarin, en dan vind je het nooit meer terug.</p></div>
+          <details class="help"><summary><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg> Hulp nodig?</summary>
+            <div class="help-body">
+              <p>Bovenaan in Drive zie je waar je bent, bijvoorbeeld <em>Mijn Drive › Stageportfolio…</em>. Klik op <em>Mijn Drive</em> om terug te gaan.</p>
+              <p>Staat je hoofdmap in de map <em>Classroom</em>? Maak ze dan opnieuw in <span class="ui">Mijn Drive</span>.</p>
+            </div>
+          </details>
+          <p class="result"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Klaar als:</strong> je hoofdmap in Mijn Drive staat, met vijf mappen erin, op volgorde van 01 tot 05.</span></p>
         </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="1"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 1</button>
+          <button class="btn btn-primary" type="button" data-goto="3">Stap 3 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 3 ===== -->
+    <section class="pane" id="pane-3" aria-labelledby="h-3">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 3</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-monitor"/></svg> Verkenner</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg> Drive</span></div>
+          <h2 id="h-3">Bestanden ophalen</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Je hebt al vijf bestanden voor je stage. Ze zitten samen in één zip-bestand in de opdracht.</p>
+          <div class="todo-box">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3>
+            <ol class="todo">
+              <li>Klik in de opdracht op <code>Les2_bestanden-om-op-te-ruimen.zip</code> en download het (de knop met de pijl naar beneden).</li>
+              <li>Open de <strong>Verkenner</strong> met <span class="key">Windows</span> + <span class="key">E</span> en klik links op <span class="ui">Downloads</span>.</li>
+              <li>Klik met de rechtermuisknop op het zip-bestand › <span class="ui">Alles uitpakken…</span> en volg de instructies. Je vijf bestanden staan nu in een nieuwe map.</li>
+              <li>Open in Drive je hoofdmap. Klik op <span class="ui">Nieuw</span> › <span class="ui">Bestanden uploaden</span> en kies de vijf bestanden uit die nieuwe map.<span class="sub">Alle vijf tegelijk kiezen: <span class="key">Ctrl</span> + <span class="key">A</span>.</span></li>
+              <li>Beantwoord <strong>vraag 1</strong> in je paspoort.</li>
+            </ol>
+            <figure class="shot" data-shot="stap3-uitpakken.png" data-caption="Rechtsklik op het zip-bestand › Alles uitpakken…" data-alt="Het rechtermuisknopmenu op het zip-bestand in de Verkenner, met Alles uitpakken."></figure>
+            <figure class="shot" data-shot="stap3-uploaden.png" data-caption="Nieuw › Bestanden uploaden in Google Drive." data-alt="Het menu Nieuw in Google Drive met Bestanden uploaden."></figure>
+          </div>
+          <div class="tip warn"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p><strong>Downloads staat op deze computer, niet in je Drive.</strong> Thuis of op je stageplaats heb je die bestanden niet. Je stagewerk bewaar je daarom altijd in Drive.</p></div>
+          <details class="help"><summary><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg> Hulp nodig?</summary>
+            <div class="help-body">
+              <p>Zie je in Downloads alleen het zip-bestand? Dan is het uitpakken niet gelukt. Probeer het nog eens.</p>
+              <p>De vijf bestanden staan in een nieuwe map met dezelfde naam als het zip-bestand. Open die map in het uploadvenster.</p>
+            </div>
+          </details>
+          <p class="result"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Klaar als:</strong> in je hoofdmap vijf losse bestanden staan.</span></p>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="2"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 2</button>
+          <button class="btn btn-primary" type="button" data-goto="4">Stap 4 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 4 ===== -->
+    <section class="pane" id="pane-4" aria-labelledby="h-4">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 4</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg> Drive</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg> Paspoort, deel 2</span></div>
+          <h2 id="h-4">De naamafspraak</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Elk bestand krijgt een naam die zegt wat erin zit. Zo vindt ook een collega het terug.</p>
+          <div class="nameplate">
+            <div class="nameplate-head">De naamafspraak van je stageportfolio</div>
+            <div class="nameplate-body">
+              <code class="fname"><span class="d">2026-09-18</span>_<span class="o">observatie_kind-A</span>_<span class="v">v2</span></code>
+              <ul class="legend-name">
+                <li class="d"><strong>datum</strong>: jaar-maand-dag</li>
+                <li class="o"><strong>wat het is</strong>: gewone woorden, met <code>-</code> ertussen</li>
+                <li class="v"><strong>versie</strong>: <code>v1</code>, <code>v2</code>…</li>
+              </ul>
+            </div>
+          </div>
+          <div class="todo-box">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen? Voor elk bestand:</h3>
+            <ol class="todo">
+              <li>Dubbelklik op het bestand en lees bovenaan de <strong>datum</strong>. Sluit het daarna.</li>
+              <li>Klik met de rechtermuisknop op het bestand › <span class="ui">Naam wijzigen</span>.</li>
+              <li>Typ de nieuwe naam. Laat <code>.docx</code> of <code>.xlsx</code> achteraan staan.</li>
+              <li>Schrijf de oude en de nieuwe naam in <strong>deel 2</strong> van je paspoort.</li>
+            </ol>
+            <figure class="shot" data-shot="stap4-naam-wijzigen.png" data-caption="Rechtsklik › Naam wijzigen." data-alt="Het rechtermuisknopmenu in Google Drive met Naam wijzigen."></figure>
+          </div>
+          <div class="tip warn"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p><strong>Nooit de naam van een kind.</strong> Gebruik <code>kind-A</code>. Je beroepsgeheim geldt ook voor een bestandsnaam: iedereen die op je scherm kijkt, leest ze.</p></div>
+          <details class="help"><summary><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg> Hulp nodig? Tips per bestand</summary>
+            <div class="help-body">
+              <table class="mini">
+                <tr><td>verslag Liam boos…</td><td>Een observatie. Schrijf <code>kind-A</code> in plaats van de naam. Het is de tweede versie: <code>v2</code>.</td></tr>
+                <tr><td>dingen</td><td>Een boodschappenlijst. De datum staat in cel A1.</td></tr>
+                <tr><td>Kopie van sjabloon…</td><td>De reflectie van week 1.</td></tr>
+                <tr><td>uurrooster okt def</td><td>Je uurrooster van oktober. De datum staat bovenaan.</td></tr>
+              </table>
+              <p>Het eerste bestand, <em>Document zonder titel</em>, deed je leraar voor. Het staat al in je paspoort.</p>
+              <p>Zie je <span class="ui">Naam wijzigen</span> niet? Klik één keer op het bestand en dan onder de zoekbalk op <span class="ui">Meer acties</span>.</p>
+            </div>
+          </details>
+          <p class="result"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Klaar als:</strong> elke naam begint met een datum zoals <code>2026-09-18</code>, geen spaties heeft en eindigt op <code>_v1</code> of <code>_v2</code>.</span></p>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="3"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 3</button>
+          <button class="btn btn-primary" type="button" data-goto="5">Stap 5 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 5 ===== -->
+    <section class="pane" id="pane-5" aria-labelledby="h-5">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 5</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg> Drive</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg> Paspoort, deel 2</span></div>
+          <h2 id="h-5">Alles op zijn plaats</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Zet elk bestand in de map waar je het later zou gaan zoeken.</p>
+          <div class="todo-box">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3>
+            <ol class="todo">
+              <li>Klik met de rechtermuisknop op een bestand › <span class="ui">Ordenen</span> › <span class="ui">Verplaatsen</span>. Kies de juiste map en klik op <span class="ui">Verplaatsen</span>.<span class="sub">Slepen naar de map mag ook.</span></li>
+              <li>Doe dat voor alle vijf de bestanden. Gebruik de tabel hieronder.</li>
+              <li>Schrijf in deel 2 van je paspoort in welke map elk bestand staat.</li>
+              <li><strong>Zoektest:</strong> typ <em>herfstslinger</em> in de zoekbalk van Drive.</li>
+            </ol>
+            <table class="mini">
+              <tr><th>Map</th><th>Wat hoort erin?</th></tr>
+              <tr><td>01_Stageplaats</td><td>uurrooster, afspraken, contactgegevens</td></tr>
+              <tr><td>02_Activiteiten</td><td>activiteitenfiches, instructiefiches</td></tr>
+              <tr><td>03_Observaties</td><td>wat je ziet bij de kinderen en wat je erover schrijft</td></tr>
+              <tr><td>04_Materiaal</td><td>boodschappenlijsten, materiaallijsten</td></tr>
+              <tr><td>05_Reflectie</td><td>hoe het ging, wat je wil bijleren</td></tr>
+            </table>
+            <figure class="shot" data-shot="stap5-verplaatsen.png" data-caption="Rechtsklik › Ordenen › Verplaatsen." data-alt="Het menu Ordenen in Google Drive met Verplaatsen."></figure>
+          </div>
+          <details class="help"><summary><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg> Hulp nodig? Twijfel je over een bestand?</summary>
+            <div class="help-body">
+              <p>Vraag je af: waar zou ik dit gaan zoeken over drie weken? Dat antwoord is meestal juist.</p>
+              <p>Een boodschappenlijst gaat over materiaal dat je moet kopen. Een uurrooster gaat over je stageplaats.</p>
+            </div>
+          </details>
+          <p class="result"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Klaar als:</strong> in je hoofdmap geen losse bestanden meer staan. In elke map zit één bestand.</span></p>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="4"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 4</button>
+          <button class="btn btn-primary" type="button" data-goto="6">Stap 6 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 6 ===== -->
+    <section class="pane" id="pane-6" aria-labelledby="h-6">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 6</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg> Paspoort, deel 3</span></div>
+          <h2 id="h-6">Een foto van je kast</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Je leraar wil in één blik zien hoe jouw kast eruitziet.</p>
+          <div class="todo-box">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3>
+            <ol class="todo">
+              <li>Open je hoofdmap in Drive, zodat je je vijf mappen ziet.</li>
+              <li>Druk op <span class="key">Windows</span> + <span class="key">Shift</span> + <span class="key">S</span> en sleep een kader rond je mappen.</li>
+              <li>Klik in <strong>deel 3</strong> van je paspoort en plak met <span class="key">Ctrl</span> + <span class="key">V</span>.</li>
+            </ol>
+          </div>
+          <details class="help"><summary><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg> Hulp nodig?</summary>
+            <div class="help-body">
+              <p>Lukt plakken niet? Bewaar het knipsel in het venster van Knipprogramma. Voeg het dan in via <span class="ui">Invoegen</span> › <span class="ui">Afbeelding</span>.</p>
+              <p>Lukt het echt niet? Typ dan in deel 3 de naam van je hoofdmap en je vijf mappen, één per regel.</p>
+            </div>
+          </details>
+          <p class="result"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Klaar als:</strong> je op de afbeelding de naam van je hoofdmap en je vijf mappen kan lezen.</span></p>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="5"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 5</button>
+          <button class="btn btn-primary" type="button" data-goto="7">Stap 7 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 7 ===== -->
+    <section class="pane" id="pane-7" aria-labelledby="h-7">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 7</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-folder"/></svg> Drive</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg> Paspoort, deel 4</span></div>
+          <h2 id="h-7">Delen met je leraar</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Je leraar mag je portfolio bekijken. Maar jij blijft de eigenaar: niemand anders mag je werk veranderen.</p>
+          <div class="todo-box">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3>
+            <ol class="todo">
+              <li>Klik in Drive met de rechtermuisknop op je hoofdmap › <span class="ui">Delen</span>.</li>
+              <li>Typ het e-mailadres van je leraar. Het staat in de opdracht.</li>
+              <li>Kies <span class="ui">Kijker</span> en klik op <span class="ui">Sturen</span>.</li>
+              <li>Beantwoord <strong>vraag 4</strong>: wat mag je leraar nu wél, en wat niet?</li>
+            </ol>
+            <figure class="shot" data-shot="stap7-delen.png" data-caption="Het venster Delen, met de keuze Kijker, Reageerder of Bewerker." data-alt="Het deelvenster in Google Drive met de rollen opengeklapt."></figure>
+          </div>
+          <div class="tip warn"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><p><strong>Kies nooit "Iedereen met de link".</strong> Later staan er verslagen over kinderen in deze map. Die deel je alleen met wie ze echt nodig heeft.</p></div>
+          <details class="help"><summary><svg class="ic" aria-hidden="true"><use href="#i-help"/></svg> Hulp nodig?</summary>
+            <div class="help-body">
+              <p>Zie je na <span class="ui">Delen</span> nog een keuze? Kies dan nog eens <span class="ui">Delen</span>.</p>
+              <p>Heet de knop bij jou <span class="ui">Delen</span> in plaats van <span class="ui">Sturen</span>? Klik daarop.</p>
+            </div>
+          </details>
+          <p class="result"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Klaar als:</strong> je leraar als <strong>Kijker</strong> in de lijst staat, jij als <strong>Eigenaar</strong>, en er bij <em>Algemene toegang</em> <strong>Beperkt</strong> staat.</span></p>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="6"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 6</button>
+          <button class="btn btn-primary" type="button" data-goto="8">Stap 8 <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== STAP 8 ===== -->
+    <section class="pane" id="pane-8" aria-labelledby="h-8">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-step">Stap 8</span><span class="tag tag-where"><svg class="ic" aria-hidden="true"><use href="#i-send"/></svg> Inleveren</span></div>
+          <h2 id="h-8">Controleren en inleveren</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Bijna klaar. Test eerst of je het onthouden hebt. Er wordt niets bewaard.</p>
+          <div class="quiz">
+            <div class="quiz-q" data-ok="Juist. Downloads staat op de computer zelf, niet in je Drive." data-nok="Nog niet. Denk aan stap 3.">
+              <p>1. Je zet een verslag in de map Downloads van de computer in de klas. Kan je het thuis openen?</p>
+              <div class="opts">
+                <button type="button">Ja, het staat ook in mijn Drive.</button>
+                <button type="button" data-right>Nee, het staat alleen op die ene computer.</button>
+                <button type="button">Ja, Classroom stuurt het door.</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+            <div class="quiz-q" data-ok="Juist. Datum vooraan, geen spaties, kind-A en een versie." data-nok="Nog niet. Kijk naar de datum, de spaties en de naam van het kind.">
+              <p>2. Welke naam volgt de afspraak?</p>
+              <div class="opts">
+                <button type="button">18-9-26 verslag Liam v2</button>
+                <button type="button" data-right>2026-09-18_observatie_kind-A_v2</button>
+                <button type="button">observatie Liam DEFINITIEF</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+            <div class="quiz-q" data-ok="Juist. Een kijker mag alleen kijken." data-nok="Nog niet. Kijk op de theoriekaart bij Wie mag wat?">
+              <p>3. Je leraar is Kijker van je map. Wat mag je leraar?</p>
+              <div class="opts">
+                <button type="button">Alles aanpassen en verwijderen</button>
+                <button type="button" data-right>Je mappen en bestanden bekijken</button>
+                <button type="button">Eigenaar worden</button>
+              </div>
+              <p class="feedback" role="status"></p>
+            </div>
+          </div>
+          <div class="todo-box">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat moet je doen?</h3>
+            <ol class="todo">
+              <li>Loop de <strong>checklist</strong> na. Staat er nog iets open? Werk het eerst af.</li>
+              <li>Beantwoord de twee <strong>slotvragen</strong> in je paspoort.</li>
+              <li>Klik in de opdracht op <span class="ui">Inleveren</span>.</li>
+            </ol>
+          </div>
+          <p class="result"><svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg><span><strong>Klaar als:</strong> er bij de opdracht <em>Ingeleverd</em> staat.</span></p>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="7"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 7</button>
+          <button class="btn btn-primary" type="button" data-goto="extra">Extra <svg class="ic" aria-hidden="true"><use href="#i-right"/></svg></button>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ===== EXTRA ===== -->
+    <section class="pane" id="pane-extra" aria-labelledby="h-extra">
+      <article class="card">
+        <header class="card-head">
+          <div class="tags"><span class="tag tag-extra">Extra · niet verplicht</span></div>
+          <h2 id="h-extra">Voor wie klaar is</h2>
+        </header>
+        <div class="card-body">
+          <p class="intro">Begin hier pas nadat je hebt ingeleverd.</p>
+          <div class="todo-box">
+            <h3><svg class="ic" aria-hidden="true"><use href="#i-list"/></svg> Wat kan je doen?</h3>
+            <ol class="todo">
+              <li>Geef je mappen een kleur: rechtsklik › <span class="ui">Ordenen</span>, en kies een kleur bij <span class="ui">Kleur van map</span>. Kies een kleur die ergens op slaat.</li>
+              <li>Zet een ster op je hoofdmap: rechtsklik › <span class="ui">Ordenen</span> › <span class="ui">Toevoegen aan Met ster</span>.</li>
+              <li>Bedenk een zesde map die jij op je stageplaats nodig hebt. Maak ze met het juiste nummer, en schrijf onderaan je paspoort waarom.</li>
+            </ol>
+          </div>
+        </div>
+        <footer class="card-nav">
+          <button class="btn" type="button" data-goto="8"><svg class="ic" aria-hidden="true"><use href="#i-left"/></svg> Stap 8</button>
+          <button class="btn" type="button" data-goto="start">Naar het begin</button>
+        </footer>
+      </article>
+    </section>
+  </main>
+
+  <!-- ============ RECHTS: de checklist ============ -->
+  <aside class="checklist leeg" id="checklist" aria-labelledby="h-cl">
+    <div class="cl-head">
+      <h2 id="h-cl">Checklist</h2>
+      <div class="cl-bar" role="progressbar" aria-label="Voortgang" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="cl-fill" id="clFill"></div></div>
+      <p class="cl-count" id="clCount">0 van 0 klaar</p>
+    </div>
+    <div class="cl-body">
+      <div class="cl-group" data-step="1"><h3>1 · Klaarzetten</h3>
+        <label class="cl-item"><input type="checkbox" id="c1a"><span>Drive open in een tabblad</span></label>
+        <label class="cl-item"><input type="checkbox" id="c1b"><span>Paspoort open, naam ingevuld</span></label>
       </div>
-
-      <h3>Controlelijst</h3>
-      <p>Ga elk punt echt na op je scherm. Vink pas aan als het klopt.</p>
-      <div class="done-box"><input class="js-check" type="checkbox" id="c1"><label for="c1">Mijn hoofdmap staat in <strong>Mijn Drive</strong> en heeft mijn naam.</label></div>
-      <div class="done-box"><input class="js-check" type="checkbox" id="c2"><label for="c2">Ik heb <strong>5 submappen</strong>, genummerd 01 tot 05.</label></div>
-      <div class="done-box"><input class="js-check" type="checkbox" id="c3"><label for="c3">Mijn <strong>5 bestanden</strong> hebben een nieuwe naam volgens de naamafspraak.</label></div>
-      <div class="done-box"><input class="js-check" type="checkbox" id="c4"><label for="c4">In <strong>geen enkele</strong> bestandsnaam staat de naam van een kind.</label></div>
-      <div class="done-box"><input class="js-check" type="checkbox" id="c5"><label for="c5">Elk bestand staat in de juiste map.</label></div>
-      <div class="done-box"><input class="js-check" type="checkbox" id="c6"><label for="c6">Mijn <strong>screenshot</strong> staat in deel 3 van mijn paspoort.</label></div>
-      <div class="done-box"><input class="js-check" type="checkbox" id="c7"><label for="c7">Mijn map is gedeeld met mijn leraar als <strong>Kijker</strong>.</label></div>
-      <div class="done-box"><input class="js-check" type="checkbox" id="c8"><label for="c8">Alle vragen in mijn paspoort zijn ingevuld, ook de twee slotvragen.</label></div>
-
-      <h3>Inleveren</h3>
-      <ol class="todo">
-        <li>Ga naar <strong>Google Classroom</strong>, naar de opdracht van deze les.</li>
-        <li>Controleer of daar jouw <strong>Portfoliopaspoort</strong> bij staat.</li>
-        <li>Klik op <span class="ui">Inleveren</span> en bevestig.</li>
-      </ol>
-
-      <div class="note">
-        <p><strong>Niet helemaal klaar?</strong> Lever toch in. Schrijf in een <strong>privéopmerking</strong> tot welke stap je geraakt bent. Je mag later verbeteren en opnieuw inleveren.</p>
+      <div class="cl-group" data-step="2"><h3>2 · Je kast bouwen</h3>
+        <label class="cl-item"><input type="checkbox" id="c2a"><span>Hoofdmap in Mijn Drive, met mijn naam</span></label>
+        <label class="cl-item"><input type="checkbox" id="c2b"><span>Vijf mappen: 01 tot 05</span></label>
       </div>
-      <div class="note good">
-        <p><strong>Je mappen lever je niet in.</strong> Die blijven in jouw Drive staan — het hele jaar. Vanaf nu bewaar je élk stagebestand daarin.</p>
+      <div class="cl-group" data-step="3"><h3>3 · Bestanden ophalen</h3>
+        <label class="cl-item"><input type="checkbox" id="c3a"><span>Zip gedownload en uitgepakt</span></label>
+        <label class="cl-item"><input type="checkbox" id="c3b"><span>Vijf bestanden in mijn hoofdmap</span></label>
+        <label class="cl-item"><input type="checkbox" id="c3c"><span>Vraag 1 ingevuld</span></label>
       </div>
-
-      <div class="done-box">
-        <input class="js-check" type="checkbox" id="klaar-7">
-        <label for="klaar-7">Ik heb mijn Portfoliopaspoort ingeleverd</label>
+      <div class="cl-group" data-step="4"><h3>4 · De naamafspraak</h3>
+        <label class="cl-item"><input type="checkbox" id="c4a"><span>Vier bestanden hernoemd</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4b"><span>Nergens de naam van een kind</span></label>
+        <label class="cl-item"><input type="checkbox" id="c4c"><span>Namen in deel 2</span></label>
       </div>
-
-      <div class="finish" id="finish">
-        <p class="big">🌳 Je digitale kast staat klaar!</p>
-        <p>Volgende les schrijf je je eerste professionele e-mail aan je stageplaats. Die bewaar je in <strong>01_Stageplaats</strong>.</p>
+      <div class="cl-group" data-step="5"><h3>5 · Alles op zijn plaats</h3>
+        <label class="cl-item"><input type="checkbox" id="c5a"><span>Elk bestand in de juiste map</span></label>
+        <label class="cl-item"><input type="checkbox" id="c5b"><span>Zoektest gedaan</span></label>
+        <label class="cl-item"><input type="checkbox" id="c5c"><span>Mappen in deel 2</span></label>
       </div>
-
-      <div class="pane-nav">
-        <button class="btn" type="button" data-goto="6">← Stap 6</button>
-        <button class="btn btn-primary" type="button" data-goto="extra">Extra opdracht →</button>
+      <div class="cl-group" data-step="6"><h3>6 · Een foto van je kast</h3>
+        <label class="cl-item"><input type="checkbox" id="c6a"><span>Leesbare afbeelding in deel 3</span></label>
+      </div>
+      <div class="cl-group" data-step="7"><h3>7 · Delen met je leraar</h3>
+        <label class="cl-item"><input type="checkbox" id="c7a"><span>Hoofdmap gedeeld met mijn leraar (Kijker)</span></label>
+        <label class="cl-item"><input type="checkbox" id="c7b"><span>Ik ben nog eigenaar</span></label>
+        <label class="cl-item"><input type="checkbox" id="c7c"><span>Vraag 4 ingevuld</span></label>
+      </div>
+      <div class="cl-group" data-step="8"><h3>8 · Inleveren</h3>
+        <label class="cl-item"><input type="checkbox" id="c8a"><span>Zelftest gedaan</span></label>
+        <label class="cl-item"><input type="checkbox" id="c8b"><span>Slotvragen ingevuld</span></label>
+        <label class="cl-item"><input type="checkbox" id="c8c"><span>Paspoort ingeleverd</span></label>
       </div>
     </div>
-  </section>
-
-  <!-- ================= EXTRA ================= -->
-  <section class="pane" id="pane-extra" aria-labelledby="h-extra">
-    <div class="card">
-      <div class="pane-head">
-        <p class="pane-kicker">Extra · optioneel</p>
-        <h2 id="h-extra">Voor wie klaar is</h2>
-        <p class="goal">Begin hier pas nadat je je Portfoliopaspoort hebt ingeleverd.</p>
-        <span class="time">⏱ 5 tot 10 minuten</span>
-      </div>
-
-      <h3>Wat moet je doen?</h3>
-      <ol class="todo">
-        <li>Geef je vijf submappen een <strong>kleur</strong>.
-          <span class="sub">Rechtsklik op een map &rsaquo; <span class="ui">Ordenen</span>. Kies bij <span class="ui">Kleur van map</span> een kleur die past: bv. groen voor 05_Reflectie.</span></li>
-        <li>Zet een <strong>ster</strong> op je hoofdmap.
-          <span class="sub">Rechtsklik &rsaquo; <span class="ui">Ordenen</span> &rsaquo; <span class="ui">Toevoegen aan Met ster</span>. Links in Drive vind je ze nu onder <span class="ui">Met ster</span>.</span></li>
-        <li>Bedenk een <strong>zesde map</strong> die jij op jouw stageplaats nodig zal hebben.
-          <span class="sub">Maak ze aan met het juiste nummer, en schrijf onderaan in je paspoort welke map het is en <strong>waarom</strong> je ze nodig hebt.</span></li>
-      </ol>
-
-      <div class="check-self">
-        <h3>Controleer jezelf</h3>
-        <ul>
-          <li>Mijn mappen hebben een kleur die ergens op slaat, niet zomaar.</li>
-          <li>Mijn zesde map heeft een nummer en een duidelijke naam.</li>
-          <li>Ik kan in één zin uitleggen waarom die map nodig is.</li>
-        </ul>
-      </div>
-
-      <div class="done-box">
-        <input class="js-check" type="checkbox" id="klaar-extra" data-optional>
-        <label for="klaar-extra">Klaar met de extra opdracht</label>
-      </div>
-      <div class="pane-nav">
-        <button class="btn" type="button" data-goto="7">← Stap 7</button>
-        <button class="btn" type="button" id="btnReset">Vinkjes wissen</button>
-      </div>
+    <div class="cl-foot">
+      <button class="btn cl-toggle" type="button" id="clToggle" aria-expanded="false">Toon alles</button>
+      <button class="btn" type="button" id="btnReset">Vinkjes wissen</button>
+      <p class="cl-note">Je vinkjes staan alleen op deze computer. Er wordt niets doorgestuurd.</p>
     </div>
-  </section>
-
-</main>
-
-<!-- ================= THEORIEKAART ================= -->
-<aside class="theory" id="theory" aria-label="Theoriekaart">
-  <div class="theory-head">
-    <h2>📖 Theoriekaart</h2>
-    <button class="theory-close" type="button">Sluiten</button>
-  </div>
-  <div class="theory-body">
-    <nav class="theory-toc">
-      <a href="#th-waar">Waar staat het?</a>
-      <a href="#th-namen">Naamafspraak</a>
-      <a href="#th-mappen">Mijn 5 mappen</a>
-      <a href="#th-knoppen">Knoppen in Drive</a>
-      <a href="#th-rechten">Wie mag wat?</a>
-      <a href="#th-chromebook">Chromebook</a>
-      <a href="#th-fouten">Veelgemaakte fouten</a>
-    </nav>
-
-    <section id="th-waar">
-      <h3>Waar staat mijn bestand?</h3>
-      <table class="plain">
-        <tr><th>Downloads</th><td>Op de Chromebook <strong>zelf</strong>. Alleen op dat toestel. Wordt regelmatig leeggemaakt. Goed voor: screenshots, even tussendoor.</td></tr>
-        <tr><th>Google Drive</th><td><strong>Online</strong>, bij je schoolaccount. Op elk toestel waarop je aanmeldt. Goed voor: alles wat je wil bijhouden.</td></tr>
-      </table>
-      <p><strong>Vuistregel:</strong> stage en school ⇒ Drive.</p>
-    </section>
-
-    <section id="th-namen">
-      <h3>De naamafspraak</h3>
-      <p><code class="ex">JJJJ-MM-DD_wat-het-is_vX</code></p>
-      <p>Bijvoorbeeld:<code class="ex">2026-09-22_activiteitenfiche_herfstslinger_v1</code></p>
-      <ul>
-        <li>datum eerst ⇒ alles staat vanzelf op volgorde;</li>
-        <li>geen spaties: <code>_</code> tussen de delen, <code>-</code> binnen een deel;</li>
-        <li><code>v1</code>, <code>v2</code> in plaats van “definitief” of “(2)”;</li>
-        <li><strong>nooit de naam van een kind of zorgvrager</strong> ⇒ <code>kind-A</code>, <code>bewoner-B</code>.</li>
-      </ul>
-      <p class="hint-txt">Elke werkplek heeft zijn eigen naamafspraak. In je stageportfolio staat de <strong>datum</strong> vooraan, want daar telt de volgorde in de tijd. Op stage volg je de afspraak van de plaats waar je werkt.</p>
-    </section>
-
-    <section id="th-mappen">
-      <h3>Mijn vijf mappen</h3>
-      <table class="plain">
-        <tr><th>01_Stageplaats</th><td>uurrooster, afspraken, contactgegevens, huisregels</td></tr>
-        <tr><th>02_Activiteiten</th><td>activiteitenfiches, instructiefiches, spelletjes</td></tr>
-        <tr><th>03_Observaties</th><td>wat je ziet bij de kinderen en wat je erover schrijft</td></tr>
-        <tr><th>04_Materiaal</th><td>boodschappenlijsten, materiaallijsten, foto&rsquo;s van materiaal</td></tr>
-        <tr><th>05_Reflectie</th><td>hoe het ging, wat je wil bijleren, feedback</td></tr>
-      </table>
-    </section>
-
-    <section id="th-knoppen">
-      <h3>Knoppen in Google Drive</h3>
-      <table class="plain">
-        <tr><th>Map maken</th><td><span class="ui">Nieuw</span> &rsaquo; <span class="ui">Map</span> &rsaquo; naam typen &rsaquo; <span class="ui">Maken</span></td></tr>
-        <tr><th>Naam wijzigen</th><td>rechtsklik &rsaquo; <span class="ui">Naam wijzigen</span></td></tr>
-        <tr><th>Verplaatsen</th><td>slepen, of rechtsklik &rsaquo; <span class="ui">Ordenen</span> &rsaquo; <span class="ui">Verplaatsen</span> &rsaquo; map kiezen &rsaquo; <span class="ui">Verplaatsen</span></td></tr>
-        <tr><th>Terugvinden</th><td>zoekbalk bovenaan: typ een woord uit de naam</td></tr>
-        <tr><th>Waar staat het?</th><td>rechtsklik &rsaquo; <span class="ui">Bestandslocatie tonen</span></td></tr>
-        <tr><th>Delen</th><td>rechtsklik &rsaquo; <span class="ui">Delen</span></td></tr>
-        <tr><th>Per ongeluk gewist?</th><td>links &rsaquo; <span class="ui">Prullenbak</span> &rsaquo; rechtsklik &rsaquo; <span class="ui">Herstellen</span></td></tr>
-      </table>
-    </section>
-
-    <section id="th-rechten">
-      <h3>Wie mag wat?</h3>
-      <ul>
-        <li><strong>Kijker</strong> — mag openen en lezen. Meer niet.</li>
-        <li><strong>Reageerder</strong> — mag ook opmerkingen zetten.</li>
-        <li><strong>Bewerker</strong> — mag alles veranderen en verwijderen.</li>
-        <li><strong>Eigenaar</strong> — dat blijf jij. Jij beslist wie erbij mag.</li>
-      </ul>
-      <p>Je leraar krijgt <strong>Kijker</strong>. Deel je portfolio nooit met “iedereen met de link”.</p>
-      <p class="hint-txt">Het e-mailadres van je leraar vind je bij de opdracht in Google Classroom.</p>
-    </section>
-
-    <section id="th-chromebook">
-      <h3>Chromebook</h3>
-      <table class="plain">
-        <tr><th>Venster links / rechts</th><td><kbd>Alt</kbd> + <kbd>[</kbd> &nbsp; <kbd>Alt</kbd> + <kbd>]</kbd></td></tr>
-        <tr><th>Screenshot volledig scherm</th><td><kbd>Ctrl</kbd> + <span class="winkey">▭|||</span></td></tr>
-        <tr><th>Screenshot van een stuk</th><td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <span class="winkey">▭|||</span></td></tr>
-        <tr><th>Rechtermuisknop</th><td>tik met <strong>twee vingers</strong> op het touchpad</td></tr>
-        <tr><th>Bestanden-app</th><td>Launcher (rondje linksonder) &rsaquo; typ <em>Bestanden</em></td></tr>
-        <tr><th>Ongedaan maken</th><td><kbd>Ctrl</kbd> + <kbd>Z</kbd></td></tr>
-      </table>
-    </section>
-
-    <section id="th-fouten">
-      <h3>Veelgemaakte fouten</h3>
-      <ul>
-        <li>De hoofdmap staat niet in Mijn Drive, maar in de map Classroom.</li>
-        <li>Mappen met de naam “Nieuwe map” of “Varia”.</li>
-        <li>Datum als <code>22-9-26</code> in plaats van <code>2026-09-22</code>.</li>
-        <li>De naam van een kind in een bestandsnaam.</li>
-        <li>Delen als <strong>Bewerker</strong> in plaats van Kijker.</li>
-        <li>Het screenshot in het verkeerde document plakken.</li>
-      </ul>
-    </section>
-  </div>
-</aside>
+  </aside>
 </div>
 
-<div class="scrim" id="scrim"></div>
+<!-- ============ Klaar! ============ -->
+<div class="klaar-overlay" id="klaar" role="dialog" aria-modal="true" aria-labelledby="h-klaar" hidden>
+  <div class="klaar-card">
+    <svg class="ic" aria-hidden="true"><use href="#i-check-circle"/></svg>
+    <h2 id="h-klaar">Je digitale kast staat klaar!</h2>
+    <p>Alles is afgevinkt. Heb je nog tijd? Kijk dan bij <strong>Extra</strong>.</p>
+    <p>Volgende les schrijf je een e-mail aan je stageplaats. Die komt in <strong>01_Stageplaats</strong>.</p>
+    <button class="btn btn-primary" type="button" id="klaarSluit">Sluiten</button>
+  </div>
+</div>
 
 <footer class="site">
-  Toegepaste Informatica · GO! Dalton Gent · De Speelboom is een fictieve opvang. Alle namen en gegevens zijn verzonnen.<br>
-  Deze pagina bewaart alleen je vinkjes op dit toestel. Er wordt niets doorgestuurd.
+  Toegepaste Informatica · GO! Dalton Gent · De Speelboom is een fictieve opvang. Alle namen en gegevens zijn verzonnen.
 </footer>
 
 <script src="js/script.js"></script>

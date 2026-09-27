@@ -1,26 +1,30 @@
 #!/usr/bin/env python3
 """
 maak_werkdocumenten.py
-Genereert de bestanden voor les 2 "Mijn digitaal stageportfolio" (De Speelboom):
+Genereert de bestanden voor les 2 "Mijn digitaal stageportfolio" (De Speelboom, klas 3MWb):
 
-  - Portfoliopaspoort.docx              het werkdocument dat de leerling INLEVERT
-  - Document zonder titel.docx          rommelbestand 1 (samen hernoemd tijdens de demo)
-  - verslag Liam boos DEFINITIEF (2).docx   rommelbestand 2
-  - dingen.xlsx                         rommelbestand 3
-  - Kopie van sjabloon reflectie.docx    rommelbestand 4
-  - uurrooster okt def.docx             rommelbestand 5
-
-Upload ze naar Google Drive en open ze met Google Documenten / Google Spreadsheets.
+  Portfoliopaspoort.docx                  het werkdocument dat de leerling INLEVERT
+  rommel/Document zonder titel.docx       rommelbestand 1 (samen hernoemd tijdens de demo)
+  rommel/verslag Liam boos DEFINITIEF (2).docx   rommelbestand 2
+  rommel/dingen.xlsx                      rommelbestand 3
+  rommel/Kopie van sjabloon reflectie.docx       rommelbestand 4
+  rommel/uurrooster okt def.docx          rommelbestand 5
+  Les2_bestanden-om-op-te-ruimen.zip      de vijf rommelbestanden samen — DIT hangt aan de opdracht
 
 Gebruik:  python3 maak_werkdocumenten.py     (vereist python-docx en openpyxl)
+
+In Classroom: het paspoort wordt een Google-document (Drive-instelling "Uploads converteren",
+zie README §2); de zip wordt niet omgezet. De leerlingen downloaden en uitpakken hem zelf.
 
 LET OP bij aanpassen:
  - De slechte bestandsnamen zijn OPZETTELIJK. Ze zijn het lesmateriaal.
  - In elk rommelbestand staat bovenaan een datum in de vorm DD-MM-JJJJ.
    De leerling moet die omzetten naar JJJJ-MM-DD. Wijzig die vorm dus niet.
+ - De naam "Liam" staat bewust in de bestandsnaam: de leerling haalt ze eruit (kind-A).
  - Alle namen, adressen en gegevens zijn fictief.
 """
 import os
+import zipfile
 from docx import Document
 from docx.shared import Pt, Cm, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -33,6 +37,16 @@ from openpyxl.styles import Font as XFont, PatternFill, Alignment as XAlign
 NAVY = RGBColor(0x2A, 0x39, 0x73)
 GREY = RGBColor(0x4D, 0x55, 0x73)
 HERE = os.path.dirname(os.path.abspath(__file__))
+ROMMEL = os.path.join(HERE, "rommel")
+
+# De vijf rommelbestanden, in de volgorde waarin ze in het paspoort staan.
+ROMMELBESTANDEN = [
+    "Document zonder titel.docx",
+    "verslag Liam boos DEFINITIEF (2).docx",
+    "dingen.xlsx",
+    "Kopie van sjabloon reflectie.docx",
+    "uurrooster okt def.docx",
+]
 
 
 # ---------- hulpfuncties ----------
@@ -108,18 +122,18 @@ def portfoliopaspoort():
 
     kop(doc, "Zo werk je", 13, ruimte_voor=6)
     for s in [
-        "1.  Links op je scherm staat de lespagina. Daar lees je wat je moet doen.",
+        "1.  Op de lespagina lees je wat je moet doen, stap voor stap.",
         "2.  In Google Drive bouw je je mappen. Dat is je echte werk.",
         "3.  In dit document schrijf je op wat je gedaan hebt.",
-        "4.  Alleen DIT document lever je in via Google Classroom.",
+        "4.  Alleen DIT document lever je in.",
     ]:
         p = doc.add_paragraph(s)
         p.paragraph_format.space_after = Pt(2)
 
     # ---- Deel 1
     kop(doc, "Deel 1 — Waar staat mijn bestand?")
-    tekst(doc, "Vraag 1. Je bewaart een verslag in de map Downloads van je Chromebook. Morgen krijg je een "
-               "ander toestel. Kan je je verslag dan nog openen? Leg uit in één zin.", vet=True)
+    tekst(doc, "Vraag 1. Je hebt het zip-bestand uitgepakt. Waar staan de vijf bestanden dan: op de computer "
+               "of in Drive? En kan je ze thuis openen? Leg uit in één zin.", vet=True)
     antwoordlijnen(doc, 2)
 
     # ---- Deel 2
@@ -159,9 +173,8 @@ def portfoliopaspoort():
 
     # ---- Deel 3
     kop(doc, "Deel 3 — Een foto van mijn kast")
-    tekst(doc, "Plak hieronder je screenshot: Invoegen › Afbeelding › Uploaden vanaf computer › Downloads.",
-          klein=True)
-    tekst(doc, "Op je screenshot moet je de naam van je hoofdmap én je vijf submappen kunnen lezen.", klein=True)
+    tekst(doc, "Plak hieronder je schermafbeelding met Ctrl + V.", klein=True)
+    tekst(doc, "Op je schermafbeelding moet je de naam van je hoofdmap én je vijf mappen kunnen lezen.", klein=True)
     for _ in range(6):
         doc.add_paragraph()
 
@@ -185,12 +198,13 @@ def portfoliopaspoort():
     kop(doc, "Zelfcontrole — aankruisen vóór je indient")
     for s in [
         "Mijn hoofdmap staat in Mijn Drive en heeft mijn naam.",
-        "Ik heb 5 submappen, genummerd 01 tot 05.",
+        "Ik heb 5 mappen, genummerd 01 tot 05.",
+        "Mijn 5 bestanden staan in Drive, niet meer alleen in Downloads.",
         "Mijn 5 bestanden hebben een nieuwe naam volgens de naamafspraak.",
         "In geen enkele bestandsnaam staat de naam van een kind.",
         "Elk bestand staat in de juiste map.",
-        "Mijn screenshot staat in deel 3.",
-        "Mijn map is gedeeld met mijn leraar als Kijker.",
+        "Mijn schermafbeelding staat in deel 3 en is leesbaar.",
+        "Mijn map is gedeeld met mijn leraar als Kijker, en ik ben nog eigenaar.",
         "Alle vragen zijn ingevuld.",
     ]:
         p = doc.add_paragraph("☐  " + s)
@@ -223,7 +237,7 @@ def rommel_activiteitenfiche():
         p = doc.add_paragraph(s)
         p.paragraph_format.space_after = Pt(2)
     tekst(doc, "Aandacht voor veiligheid: scharen met ronde punt, perforator alleen samen met de begeleider.")
-    doc.save(os.path.join(HERE, "Document zonder titel.docx"))
+    doc.save(os.path.join(ROMMEL, "Document zonder titel.docx"))
 
 
 def rommel_observatie():
@@ -237,7 +251,7 @@ def rommel_observatie():
                "eerst alleen, daarna samen met hetzelfde kind.")
     tekst(doc, "Dit is mijn tweede versie. In de eerste versie schreef ik “Liam was stout”. "
                "Dat is geen feit maar een mening, dus heb ik het aangepast.")
-    doc.save(os.path.join(HERE, "verslag Liam boos DEFINITIEF (2).docx"))
+    doc.save(os.path.join(ROMMEL, "verslag Liam boos DEFINITIEF (2).docx"))
 
 
 def rommel_reflectie():
@@ -251,7 +265,7 @@ def rommel_reflectie():
     antwoordlijnen(doc, 2)
     tekst(doc, "Wat doe ik volgende week anders?")
     antwoordlijnen(doc, 2)
-    doc.save(os.path.join(HERE, "Kopie van sjabloon reflectie.docx"))
+    doc.save(os.path.join(ROMMEL, "Kopie van sjabloon reflectie.docx"))
 
 
 def rommel_uurrooster():
@@ -275,7 +289,7 @@ def rommel_uurrooster():
                 schaduw(c)
     doc.add_paragraph()
     tekst(doc, "Contact: onthaal De Speelboom, 09 000 00 00 (fictief nummer).", klein=True)
-    doc.save(os.path.join(HERE, "uurrooster okt def.docx"))
+    doc.save(os.path.join(ROMMEL, "uurrooster okt def.docx"))
 
 
 def rommel_boodschappen():
@@ -304,14 +318,29 @@ def rommel_boodschappen():
     ws.column_dimensions["A"].width = 30
     ws.column_dimensions["B"].width = 14
     ws.column_dimensions["C"].width = 22
-    wb.save(os.path.join(HERE, "dingen.xlsx"))
+    wb.save(os.path.join(ROMMEL, "dingen.xlsx"))
+
+
+# ---------- De zip voor Google Classroom ----------
+def maak_zip():
+    pad = os.path.join(HERE, "Les2_bestanden-om-op-te-ruimen.zip")
+    # zonder mapniveau: de leerling pakt uit en heeft meteen vijf losse bestanden
+    with zipfile.ZipFile(pad, "w", zipfile.ZIP_DEFLATED) as z:
+        for naam in ROMMELBESTANDEN:
+            z.write(os.path.join(ROMMEL, naam), arcname=naam)
+    return pad
 
 
 if __name__ == "__main__":
+    os.makedirs(ROMMEL, exist_ok=True)
     portfoliopaspoort()
     rommel_activiteitenfiche()
     rommel_observatie()
     rommel_reflectie()
     rommel_uurrooster()
     rommel_boodschappen()
-    print("Klaar. Bestanden staan in:", HERE)
+    zip_pad = maak_zip()
+    print("Klaar.")
+    print("  werkdocument om in te leveren : Portfoliopaspoort.docx")
+    print("  aan de opdracht te hangen     : " + os.path.basename(zip_pad))
+    print("  losse bronbestanden           : rommel/ ({} bestanden)".format(len(ROMMELBESTANDEN)))

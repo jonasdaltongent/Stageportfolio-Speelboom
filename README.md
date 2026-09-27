@@ -2,9 +2,10 @@
 
 **Vak:** Toegepaste Informatica
 **Doelgroep:** klas 3MWb — 2de graad Maatschappij en welzijn, dubbele finaliteit
-**Lesduur:** 1 × 50 minuten (formatief)
-**Beroepscontext:** De Speelboom, een fictieve buitenschoolse opvang
-**Toestellen:** Chromebook met schoolaccount (Google Workspace)
+**Lesduur:** 1 × 50 minuten: 10 minuten instructie + 40 minuten keuzewerktijd (formatief)
+**Context:** De Speelboom, een fictieve buitenschoolse opvang
+**Lokaal:** 18 — computers met Windows 11, Google Workspace in Chrome
+**Lesdag:** maandag 28 september 2026, 9de lesuur (rooster van 25-09-2026)
 **Kernleerplandoel:** `BV2_04.03` — digitale inhouden beheren (toepassen)
 
 ---
@@ -13,13 +14,13 @@
 
 ```text
 W04 - Les 02 - MW - Mijn digitaal stageportfolio/
-├── index.html                   # de leerlingentool (7 stappen + extra + theoriekaart)
-├── presentatie.html             # 11 klassikale dia's voor de fase "Ik doe"
+├── index.html                   # de leerlingentool: route · één stap · checklist (zie §1b)
+├── presentatie.html             # 8 dia's: 10 minuten instructie
 ├── css/
-│   ├── style.css                # leerlingentool (Dalton-kleuren, voor een half scherm)
+│   ├── style.css                # leerlingentool (Dalton-kleuren; drie kolommen, op een smal venster onder elkaar)
 │   └── slides.css               # dia's (16:9, beamer)
 ├── js/
-│   ├── script.js                # stappen, vinkjes, theoriekaart, woordenlijst, zelftest
+│   ├── script.js                # stappen, checklist, zelftest
 │   └── slides.js                # dia's: onthullen, notities (N), volledig scherm (F)
 ├── assets/
 │   ├── speelboom-logo.svg       # logo van de fictieve opvang (eigen werk)
@@ -28,190 +29,201 @@ W04 - Les 02 - MW - Mijn digitaal stageportfolio/
 │   ├── fonts/                   # Atkinson Hyperlegible + Montserrat (OFL, zelf gehost)
 │   └── screenshots/             # hier plaats jij screenshots (zie §5)
 ├── werkdocument/
-│   ├── Portfoliopaspoort.docx           # het werkdocument dat de leerling INLEVERT
-│   ├── Document zonder titel.docx       # rommelbestand 1 (samen hernoemd in de demo)
-│   ├── verslag Liam boos DEFINITIEF (2).docx
-│   ├── dingen.xlsx
-│   ├── Kopie van sjabloon reflectie.docx
-│   ├── uurrooster okt def.docx
-│   └── maak_werkdocumenten.py           # om alles opnieuw te genereren (python-docx + openpyxl)
-├── lesvoorbereiding.md          # volledige lesvoorbereiding volgens §46 van de AI-lesplanner
-├── dalton-lesfiche.md           # lesfiche in het Dalton-formaat (lestijd + KWT)
+│   ├── Portfoliopaspoort.docx              # het werkdocument dat de leerling INLEVERT
+│   ├── Les2_bestanden-om-op-te-ruimen.zip  # DIT hang je aan de opdracht
+│   ├── rommel/                             # de vijf losse bestanden die in de zip zitten
+│   └── maak_werkdocumenten.py              # genereert alles opnieuw (python-docx, openpyxl)
+├── lesvoorbereiding.md          # volledige lesvoorbereiding volgens de AI-lesplanner (§9.2)
+├── dalton-lesfiche.html         # Dalton-lesfiche in de kleurcode: openen, Kopieer, plakken in je planner
 ├── lesdoelen.json               # codes van de leerplandoelen voor je jaaroverzicht
 └── README.md                    # deze handleiding
 ```
 
 De website heeft geen server, database, login of tracking nodig. Er worden geen externe bestanden
-geladen. `localStorage` bewaart alleen de vinkjes en de huidige stap (voorvoegsel
-`speelboom_portfolio_`), met een wisknop.
+geladen. `localStorage` bewaart alleen de vinkjes en de laatste stap (voorvoegsel
+`speelboom_portfolio_v2_`), met een wisknop.
+
+### 1b. Wat er in versie 2 veranderde (27-09-2026)
+
+Deze les kreeg dezelfde opbouw als les 2 van 3MWWE (*Mijn digitale onderzoeksmap*):
+
+- **Lespagina:** links de route met alle stappen, midden één stap, rechts een checklist met 20
+  concrete taken. Elke stap heeft vijf vaste blokken: één zin · *Wat moet je doen?* · hoogstens één
+  tip · *Hulp nodig?* (dichtgeklapt) · *Klaar als*. De theoriekaart is een gewone pagina.
+- **Rommelbestanden in één zip-bestand** in plaats van een kopie per leerling. Er komt daardoor een
+  stap bij: *Bestanden ophalen* (downloaden, uitpakken, uploaden). De les heeft nu 8 stappen.
+- **Alleen Windows 11** (lokaal 18): geen Chromebook-uitleg, geen vensterindeling meer.
+- De pagina zegt niet meer dat de leerlingen Classroom moeten openen: ze starten daar al.
+- **Keuzewerktijd = 50 − instructie**: 10 minuten instructie, 40 minuten werken.
+- **Dalton-lesfiche** als HTML in de kleurcode van het Dalton-sjabloon.
+- De Drive-knopnamen zijn zoals Google ze nu noemt (**Kijker**, **Nieuw › Map**,
+  **Ordenen › Verplaatsen**, **Kleur van map**).
 
 ---
 
-## 2. Klaarzetten in 5 stappen (± 25 minuten)
+## 2. Klaarzetten
 
-### Stap 1 — Je e-mailadres  ⚠️ **verplicht, maar niet op de website**
-
-Voor stap 6 (delen) hebben de leerlingen jouw e-mailadres nodig. Dat staat **bewust niet op de
-lespagina**: die staat openbaar op GitHub Pages, en een e-mailadres op een openbare pagina wordt
-vroeg of laat opgepikt door spambots.
-
-Geef het adres op twee plaatsen:
-1. in de **instructietekst van de opdracht** in Classroom (zie stap 4 hieronder);
-2. **op het bord**, tijdens de demo van dia 9.
-
-De lespagina en de theoriekaart verwijzen daarnaar. Drive vult het adres bovendien zelf aan zodra de
-leerling begint te typen.
-
-### Stap 2 — Publiceren via GitHub Pages
-
-Dit pakket staat al online:
+### Stap 1 — De lespagina staat online
 
 - **Repository:** <https://github.com/jonasdaltongent/Stageportfolio-Speelboom>
 - **Lespagina voor de leerlingen:** <https://jonasdaltongent.github.io/Stageportfolio-Speelboom/>
 - **Dia's voor het bord:** <https://jonasdaltongent.github.io/Stageportfolio-Speelboom/presentatie.html>
 
-Deel met de leerlingen altijd het **Pages-adres**, niet de repository-link. Na een wijziging duurt het
-1 à 2 minuten voor de site opnieuw gepubliceerd is.
+⚠️ **Versie 2 staat nog niet online.** Ze is lokaal vastgelegd in git; publiceren gebeurt pas op
+jouw vraag (`git push`). Tot dan toont het adres nog versie 1.
 
-### Stap 3 — De zes bestanden in Google Drive
-1. Upload de zes bestanden uit `werkdocument/` naar Drive.
-2. Rechtsklik → **Openen met → Google Documenten** (of **Google Spreadsheets** voor `dingen.xlsx`).
-3. **Controleer** in elk Google-bestand:
-   - de slechte bestandsnaam is bewaard gebleven (Drive zet er soms `.docx` achter — haal dat weg);
-   - bovenaan staat nog een datum in de vorm `22-09-2026`;
-   - in `Portfoliopaspoort`: de tabel van deel 2 heeft vijf rijen en de eerste rij is ingevuld.
-4. Zet in elk document **Bestand → Taal → Nederlands**.
-5. Verwijder de geüploade `.docx`/`.xlsx`-originelen uit Drive, zodat je niet per ongeluk het
-   verkeerde bestand toevoegt in Classroom.
+### Stap 2 — Je e-mailadres  ⚠️ **verplicht, maar niet op de website**
 
-### Stap 4 — Twee items in Google Classroom
+Voor stap 7 (delen) hebben de leerlingen jouw e-mailadres nodig. Het staat **bewust niet op de
+lespagina**: die staat openbaar op GitHub Pages. Zet het in de **instructietekst van de opdracht**
+en schrijf het **op het bord** (dia 7 herinnert je eraan).
 
-Onder het onderwerp **Digitaal organiseren en communiceren**:
+### Stap 3 — Eén opdracht in Google Classroom
 
-| | **Materiaal** | **Opdracht** |
-|---|---|---|
-| Titel | Les 2 — Bestanden om op te ruimen | Les 2 — Mijn digitaal stageportfolio |
-| Klas | 3MWb | 3MWb |
-| Bijlagen | de 5 rommelbestanden | link naar de lespagina + `Portfoliopaspoort` |
-| Instelling | **Een kopie maken voor elke leerling** | **Een kopie maken voor elke leerling** |
-| Punten | — | Zonder cijfer |
-| Inleveren tegen | — | vrijdag 25 september 2026, 20.00 uur |
+**Eenmalig, en daarna nooit meer:** zet in Google Drive de instelling aan die een Word-bestand bij het
+uploaden meteen omzet naar Google Documenten. Ga naar
+[drive.google.com/drive/settings](https://drive.google.com/drive/settings) en vink **Uploads
+converteren naar de indeling van een Editor van Google Documenten** aan
+([Drive-help](https://support.google.com/drive/answer/2424368?hl=nl)). Let op: vanaf dan wordt élk
+Word-, Excel- of PowerPoint-bestand dat jij uploadt een Google-bestand.
 
-Instructietekst voor de opdracht (kopieer):
-```text
-1. Open de lespagina (link). Zet ze links op je scherm.
-2. Open je Portfoliopaspoort. Zet het rechts op je scherm.
-3. Volg de stappen op de lespagina. Je echte werk doe je in Google Drive.
-4. Bij stap 6 deel je je map met mij. Mijn e-mailadres is: <VUL HIER JE ADRES IN>
-5. Klaar? Klik op Inleveren. Niet klaar? Lever toch in en schrijf een privéopmerking.
-```
+Daarna, voor deze les:
 
-> **Vergeet regel 4 niet in te vullen.** Zonder jouw adres blijft stap 6 steken.
+1. Maak de opdracht en klik onder **Bijvoegen** op **Uploaden**. Kies
+   `werkdocument/Portfoliopaspoort.docx`.
+2. Staat er geen `.docx` meer achter de naam van de bijlage? Dan is het een Google-document. Kies
+   **Een kopie maken voor elke leerling**. Elke leerling krijgt een eigen kopie met de eigen naam in
+   de titel ([Classroom-help](https://support.google.com/edu/classroom/answer/6020265?hl=nl)).
+3. Upload op dezelfde manier `werkdocument/Les2_bestanden-om-op-te-ruimen.zip` en kies
+   **Leerlingen kunnen bestand bekijken**. Een zip-bestand wordt niet omgezet; dat hoeft ook niet.
+4. Voeg de lespagina toe met **Link**.
 
-> **Waarom twee items?** De vijf rommelbestanden mogen **niet** in de opdracht staan. Bij *Inleveren*
-> draagt Classroom de eigendom van álle bijlagen over aan jou, en dan verdwijnen die bestanden uit het
-> portfolio van de leerling. In een materiaalpost blijft de leerling eigenaar.
->
-> *Bevestigd: in deze Classroom-omgeving biedt een materiaalpost de optie "Een kopie maken voor elke
-> leerling" wel degelijk aan.*
+> [!IMPORTANT]
+> **Test het één keer.** Dat de uploadknop *in Classroom* die Drive-instelling volgt, staat niet in
+> de Google-documentatie. Heet het paspoort na stap 1 nog `…docx`? Upload het dan in Drive zelf
+> (**Nieuw** › **Bestanden uploaden**: daar zet de instelling het zeker om) en voeg het in Classroom
+> toe met **Drive**.
 
-> **Let op:** Classroom zet automatisch de naam van de leerling achter elke kopie
-> (*dingen - Sofie Janssens*). Dat is geen fout — integendeel: de lespagina vraagt bij stap 3
-> uitdrukkelijk om ook die eigen naam uit de bestandsnaam te halen.
->
-> Classroom maakt de kopieën op het moment dat je toewijst. Werk de bestanden dus eerst helemaal af.
+> [!NOTE]
+> *Een kopie maken voor elke leerling* kan je alleen kiezen **voordat** je de opdracht post.
 
-### Stap 5 — Dia's op het bord
-Open `presentatie.html`.
-`→`/spatie: volgende (onthult eerst antwoorden) · `←`: vorige · `F`: volledig scherm · `N`: sprekersnotities.
+| | Opdracht: **Les 2 — Mijn digitaal stageportfolio** |
+|---|---|
+| **Bijlage 1** | de link naar de lespagina (GitHub Pages) |
+| **Bijlage 2** | `Portfoliopaspoort` (Google-document) — **Een kopie maken voor elke leerling** |
+| **Bijlage 3** | `Les2_bestanden-om-op-te-ruimen.zip` — **Leerlingen kunnen bestand bekijken** |
+| **Punten** | Zonder cijfer (formatief) |
+| **Deadline** | vrijdag 2 oktober 2026, 20.00 uur |
+
+> [!IMPORTANT]
+> De aparte materiaalpost met vijf rommelbestanden uit versie 1 is **niet meer nodig**. Alleen het
+> paspoort krijgt *Een kopie maken voor elke leerling*; het zip-bestand deelt de hele klas.
+
+### Afvinklijst vóór de les
+
+- [ ] Versie 2 is gepubliceerd en het Pages-adres toont de nieuwe lespagina.
+- [ ] Mijn e-mailadres staat in de instructietekst van de opdracht.
+- [ ] De opdracht heeft drie bijlagen, met de juiste instelling per bijlage.
+- [ ] Het paspoort is een **Google-document** (geen `.docx` achter de naam), en een testleerling krijgt er een eigen kopie van met de eigen naam in de titel.
+- [ ] Een testleerling kan het zip-bestand downloaden en uitpakken.
+- [ ] De Dalton-lesfiche staat in je planner (open `dalton-lesfiche.html`, klik op **Kopieer de fiche**, plak).
+- [ ] `presentatie.html` opent op de beamer; `N` toont mijn notities, `F` is volledig scherm.
 
 ---
 
-## 3. Test vóór de les (10 minuten, bij voorkeur met een leerlingaccount)
+## 3. Het verloop van de les
 
-- [ ] De Pages-link opent de lespagina; de lettertypes en het logo laden.
-- [ ] De stappenbalk werkt, de vinkjes blijven staan na een verversing, de knop *Vinkjes wissen* werkt.
-- [ ] De theoriekaart opent (en staat vast rechts op een breed scherm).
-- [ ] In de instructietekst van de Classroom-opdracht staat **jouw** e-mailadres (regel 4).
-- [ ] De vijf kopieën komen bij de leerling terecht in `Mijn Drive › Classroom › <klasnaam>`.
-- [ ] Je kan zelf een map delen met dat leerlingaccount en het leerlingaccount kan omgekeerd delen.
-- [ ] Het screenshot van de Chromebook belandt in `Downloads` en kan ingevoegd worden via
-      *Invoegen → Afbeelding → Uploaden vanaf computer*.
-- [ ] `index.html?leraar` toont de roze screenshot-kaders (die zien de leerlingen niet).
+| Fase | Tijd | Wat |
+|---|---|---|
+| **Instructie** | **10'** | Dia 1–2 lesstart (3'), dia 3–6 demo (5'): ophalen/uitpakken/uploaden en bestand 1 hernoemen, dia 7 *Zo werk je verder* (2') met je e-mailadres op het bord |
+| **Keuzewerktijd** | **40'** | Dia 7 blijft staan; de leerlingen werken stap 1 tot 8 af, inleveren inbegrepen. Dia 8 in de laatste minuut. |
+
+Keuzewerktijd = 50 minuten − instructietijd. Zeg aan het einde mondeling dat wie niet klaar is, toch
+inlevert. Volledige uitwerking: `lesvoorbereiding.md` §15–17; sprekersnotities: druk op `N`.
+
+**Eerste rondgang, kijk alleen naar twee dingen.** Ze blokkeren allebei alles wat erna komt:
+
+1. Staat de hoofdmap in **Mijn Drive** en niet in de map *Classroom*?
+2. Zijn de vijf bestanden van **Downloads** naar **Drive** geraakt?
 
 ---
 
 ## 4. Verbetersleutel
 
-### Verwachte namen en mappen
+De leerling levert alleen het **Portfoliopaspoort** in. De mappen bekijk je via *Gedeeld met mij*.
+
+### Deel 2 — de vijf bestanden
 
 | Oude naam | Verwachte nieuwe naam | Map |
 |---|---|---|
-| `Document zonder titel` | `2026-09-22_activiteitenfiche_herfstslinger_v1` | 02_Activiteiten |
-| `verslag Liam boos DEFINITIEF (2)` | `2026-09-18_observatie_kind-A_v2` | 03_Observaties |
-| `dingen` | `2026-09-22_boodschappenlijst_herfstslinger_v1` | 04_Materiaal |
-| `Kopie van sjabloon reflectie` | `2026-09-21_reflectie_week-1_v1` | 05_Reflectie |
-| `uurrooster okt def` | `2026-10-01_uurrooster_stage_v1` | 01_Stageplaats |
+| `Document zonder titel` | `2026-09-22_activiteitenfiche_herfstslinger_v1` | `02_Activiteiten` (voorbeeld, al ingevuld) |
+| `verslag Liam boos DEFINITIEF (2)` | `2026-09-18_observatie_kind-A_v2` | `03_Observaties` |
+| `dingen` | `2026-09-22_boodschappenlijst_herfstslinger_v1` | `04_Materiaal` |
+| `Kopie van sjabloon reflectie` | `2026-09-21_reflectie_week-1_v1` | `05_Reflectie` |
+| `uurrooster okt def` | `2026-10-01_uurrooster_stage_v1` | `01_Stageplaats` |
 
-Andere woorden in het middenstuk zijn **goed** zolang ze zeggen wat het bestand is. Beoordeel op:
-datumvorm · geen spaties · versie als `vX` · geen kindnaam.
+Kleine verschillen in het middenstuk zijn **goed**. Wat moet kloppen: de datumvorm `JJJJ-MM-DD`,
+het versienummer (`v2` bij het verslag, `v1` bij de rest), geen spaties, en geen naam van een kind.
 
-### Verwachte antwoorden op de vragen
+### Korte antwoorden bij de vragen
 
-1. **Vraag 1 (Downloads):** Neen. Downloads staat op dat ene toestel; op een andere Chromebook staat
-   het bestand er niet. (Ook goed: "alleen als ik het eerst naar Drive verplaats".)
-2. **Vraag 2 (datum vooraan):** Omdat de bestanden dan vanzelf op volgorde in de tijd staan. De vorm
-   `2026-09-22` sorteert correct; `22-9-26` niet.
-3. **Vraag 3 (geen kindnaam):** Iedereen die op het scherm kijkt of de map ziet, leest de bestandsnaam.
-   Wat je op stage over een kind weet, deel je niet met anderen (beroepsgeheim).
-4. **Vraag 4 (Kijker):** Wel — openen en lezen. Niet — iets veranderen, hernoemen of verwijderen.
-   (Ook goed: "geen opmerkingen zetten".)
+| Vraag | Waar het om gaat |
+|---|---|
+| 1 | In **Downloads**, op de computer zelf (lokale opslag). Thuis kan je ze niet openen: ze staan niet in je Drive. |
+| 2 | Jaar-maand-dag zet alles vanzelf op volgorde in de tijd; `22-09-2026` sorteert op dag. |
+| 3 | De naam van een kind is een persoonsgegeven. Iedereen die op je scherm kijkt, leest de bestandsnaam. Beroepsgeheim geldt ook digitaal: `kind-A`. |
+| 4 | Wel: je mappen en bestanden bekijken. Niet: iets veranderen, hernoemen of verwijderen. |
+| 5–6 | Exitvragen: geen juist of fout. De vaakst genoemde moeilijkheid wordt de lesstart van les 3. |
 
-### Essentiële fouten (geven altijd feedback)
+### Essentiële fouten — geef hier altijd feedback op
 
-- De naam van het kind blijft in de bestandsnaam staan.
-- Delen als **Bewerker** of via **iedereen met de link**.
-- De hoofdmap staat in de map `Classroom` in plaats van in **Mijn Drive**.
-- Datum als `22-9-26`, `22-09-2026` of `sept`.
-- Het screenshot in een ander document dan het paspoort.
-
-### Minimumroute
-
-Hoofdmap + vijf submappen · minstens twee hernoemde en verplaatste bestanden (waaronder het
-observatieverslag) · de map gedeeld als Kijker. Het screenshot mag vervangen worden door de mapnamen
-uit te typen; die terugvaloptie staat in de hint bij stap 5.
+- De naam van het kind staat nog in de bestandsnaam.
+- Gedeeld als **Bewerker** of via "Iedereen met de link" in plaats van als **Kijker**.
+- De hoofdmap staat in de map *Classroom* in plaats van in *Mijn Drive*.
+- Datum als `22-9-26`.
+- De bestanden staan nog steeds alleen in Downloads.
 
 ---
 
 ## 5. Screenshots (optioneel)
 
-De lespagina heeft vier screenshot-plaatsen. **Ze zijn nog niet ingevuld** — zonder de bestanden werkt
-alles gewoon, er blijft alleen geen lege plek achter. Wil je ze later toevoegen (voor zwakkere lezers
-maakt dat een groot verschil), maak ze dan tijdens de les zelf op een Chromebook. Zie `assets/screenshots/LEESMIJ.md` voor de exacte
-bestandsnamen. Open `index.html?leraar` om de plaatsen te zien.
+`index.html` verwacht vijf schermafbeeldingen in `assets/screenshots/`. Ze zijn **niet verplicht**:
+ontbreekt er een, dan laat de pagina die plaats gewoon weg. Open `index.html?leraar` om te zien waar
+ze komen. De lijst staat in `assets/screenshots/LEESMIJ.md`.
 
 ---
 
-## 6. Wat als je krap in de tijd zit?
+## 6. Het materiaal opnieuw genereren
 
-Schrappen in deze volgorde:
+```bash
+python3 "werkdocument/maak_werkdocumenten.py"
+```
 
-1. **Stap 5** (screenshot) — laat de leerlingen in plaats daarvan hun mapnamen uittypen in deel 3.
-2. **De extra stap** — die is sowieso optioneel.
-3. **Twee van de vier te hernoemen bestanden** — hou in elk geval `verslag Liam boos DEFINITIEF (2)`
-   (privacy) en `dingen` (een naam die niets zegt).
-
-Schrap **niet** stap 2 (de mappenstructuur) of stap 6 (delen met de juiste rechten): dat zijn de twee
-onderdelen van `BV2_04.03` waarop de rest van het jaar verder gebouwd wordt.
+Dat maakt het paspoort, de vijf rommelbestanden **en** de zip opnieuw aan. Lees eerst de
+waarschuwing bovenaan het script: de slechte bestandsnamen en de datumvorm `DD-MM-JJJJ` zijn
+lesmateriaal, geen slordigheid.
 
 ---
 
-## 7. Privacy en licenties
+## 7. Leerplandoelen in je jaaroverzicht
 
-- De Speelboom, Liam en alle gegevens zijn **fictief**; het telefoonnummer bestaat niet.
-- De leerling blijft **eigenaar** van de portfoliomap. De leraar krijgt alleen leesrechten.
-- De lespagina bewaart alleen vinkjes lokaal op het toestel, met een wisknop. Geen login, geen
-  tracking, geen externe scripts, geen persoonsgegevens.
-- Lettertypes: Atkinson Hyperlegible en Montserrat, SIL Open Font License (licenties in
-  `assets/fonts/`).
-- Logo van De Speelboom: eigen werk (SVG). Logo GO! Dalton Gent: van de school.
+`lesdoelen.json` gebruikt nu de klasgroepcode **`3 MW`** (met spatie; in versie 1 stond `3MWb`, en
+die code vindt `_tools/update_leerdoelen.py` niet). De echte klasnaam staat in het veld `klasnaam`.
+
+> [!NOTE]
+> Het blad **3 Maatschappij en welzijn** in `Leerplandoelen 2026-2027.xlsx` is nog leeg ("Leerplan
+> nog niet beschikbaar op deze computer"). Het script schrijft de regels wel weg op het blad
+> *Registratie*, maar telt ze niet tot dat blad de doelen uit
+> `Leerplannen_2de_graad_TOINFO_MW_dubbele_finaliteit.md` bevat.
+
+---
+
+## 8. Wat nog moet blijken in de klas
+
+1. **Stap 3 en 4 samen in 15 minuten** (ophalen en hernoemen). Is dat te krap, beperk dan de
+   minimumroute tot twee hernoemde bestanden, waaronder het observatieverslag.
+2. **Windows en het klembord:** het knipsel uit Knipprogramma plakken met `Ctrl + V` in het
+   Google-document zou moeten werken; lukt dat niet, dan bewaart de leerling het knipsel eerst. Dat
+   staat in *Hulp nodig?* bij stap 6.
+3. **Classroom en de Drive-instelling:** zet het paspoort na het uploaden in Classroom om of niet?
+   Zie §2, stap 3.

@@ -7,18 +7,32 @@
   <link rel="icon" href="assets/speelboom-icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/slides.css">
   <style>
-    .fname { font-family: "Courier New", monospace; font-weight: 700; font-size: 34px; }
+    .fname { font-family: "Courier New", monospace; font-weight: 700; font-size: 32px; }
     .fname .d { background: #A7B1DE; padding: 0 6px; border-radius: 5px; }
     .fname .o { background: #FCD6CF; padding: 0 6px; border-radius: 5px; }
     .fname .v { background: #9CCFB6; padding: 0 6px; border-radius: 5px; }
     .folders { list-style: none; padding: 0 !important; }
-    .folders li { font-size: 30px; margin-bottom: 12px; }
+    .folders li { font-size: 26px; margin-bottom: 4px; }
+    /* dia 3: vijf regels met een bolletje passen net niet met de standaardafstand */
+    .rules.krap li { margin-bottom: 10px; min-height: 56px; font-size: 28px; }
     .folders li::before { content: "📁 "; }
-    .mono { font-family: "Courier New", monospace; font-size: 26px; }
-    .arrowrow { display: grid; grid-template-columns: 1fr 60px 1fr; align-items: center; gap: 12px; margin-bottom: 16px; }
+    .folders li.in { margin-left: 46px; font-size: 24px; }
+    .mono { font-family: "Courier New", monospace; font-size: 24px; }
+    .arrowrow { display: grid; grid-template-columns: 430px 44px 1fr; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .arrowrow .mono { font-size: 22px; white-space: nowrap; }
     .arrowrow .bad { color: #A0372A; }
     .arrowrow .good { color: #1F7A55; }
-    .arrowrow .ar { text-align: center; font-size: 34px; color: #4D5573; }
+    .arrowrow .ar { text-align: center; font-size: 30px; color: #4D5573; }
+    .steps2 { columns: 2; column-gap: 40px; }
+    .steps2 li { font-size: 25px; margin-bottom: 6px; break-inside: avoid; }
+    .klok { font-size: 22px; color: #4D5573; }
+    /* Dia 5 en 7: de panelen mogen niet uitrekken over de tekst eronder. */
+    .compact .two { flex: 0 0 auto; }
+    .compact .panel p { margin-bottom: 10px; }
+    .compact .panel p:last-child { margin-bottom: 0; }
+    .compact .mono { font-size: 22px; }
+    .steps1 { margin: 0; padding-left: 1.2em; }
+    .steps1 li { font-size: 27px; margin-bottom: 14px; }
   </style>
 </head>
 <body>
@@ -31,26 +45,24 @@
   <h1>Mijn digitaal<br>stageportfolio</h1>
   <p>Je digitale kast voor stage in De Speelboom</p>
   <div class="logos"><img src="assets/speelboom-logo.svg" alt="De Speelboom"><img src="assets/dalton-gent-logo.png" alt="GO! Dalton Gent"></div>
-  <template class="note"><p><strong>Lesstart (5').</strong> Laat de Chromebooks opstarten en aanmelden terwijl deze dia op het bord staat. Ga verder zodra de meesten aangemeld zijn.</p></template>
+  <template class="note"><p><strong>Instructie, 0–1'.</strong> Laat de computers opstarten en aanmelden terwijl deze dia op het bord staat. Ga verder zodra de meesten aangemeld zijn.</p></template>
 </section>
 
 <!-- 2 -->
 <section class="slide">
-  <p class="kicker">Lesstart</p>
+  <p class="kicker">Lesstart · 3 minuten</p>
   <h2>In welke kast vind jij iets terug?</h2>
   <div class="two">
     <div><span class="tag">A</span>
-      <div class="paper" style="height:380px">
+      <div class="paper" style="height:320px">
         <p>📄 Document zonder titel</p>
         <p>📄 verslag Liam boos DEFINITIEF (2)</p>
         <p>📄 dingen</p>
         <p>📄 Kopie van sjabloon reflectie</p>
         <p>📄 uurrooster okt def</p>
-        <p>📄 Naamloze spreadsheet</p>
-        <p>📄 Document zonder titel (1)</p>
       </div></div>
     <div><span class="tag">B</span>
-      <div class="paper" style="height:380px">
+      <div class="paper" style="height:320px">
         <p>📁 01_Stageplaats</p>
         <p>📁 02_Activiteiten</p>
         <p>📁 03_Observaties</p>
@@ -58,174 +70,143 @@
         <p>📁 05_Reflectie</p>
       </div></div>
   </div>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
+  <p class="reveal-item" style="margin-top:18px"><strong>En één naam mag echt niet.</strong> Welke, en waarom?</p>
   <template class="note">
-    <p><strong>Activeren voorkennis.</strong> Vragen: “Je bent ziek. Een collega moet jouw activiteitenfiche van dinsdag vinden. In welke kast lukt dat?”</p>
-    <p>Doorvraag 1: “Wat is er precies fout aan de namen in A?” (zegt niets · naam van een kind · DEFINITIEF (2))</p>
-    <p>Doorvraag 2: “Waar staan jouw bestanden nu eigenlijk? Weet je dat?” Laat twee leerlingen antwoorden.</p>
-    <p>Geen herhaling van vorige les: dit is de eerste echte werkles. Hou de lesstart kort.</p>
+    <p><strong>Lesstart, 3'.</strong> Een herkenbare situatie in plaats van herhaling: dit is de eerste echte werkles.</p>
+    <p><em>“Je bent ziek. Een collega moet jouw activiteitenfiche van dinsdag vinden. In welke kast lukt dat?”</em> Doorvraag: wat is er precies fout aan de namen in A? (zegt niets · DEFINITIEF (2) · spaties)</p>
+    <p>Druk op → voor de onthulling: <strong>verslag Liam boos</strong> bevat de naam van een kind. Beroepsgeheim geldt ook voor een bestandsnaam. Hoe het wel moet, komt op dia 6.</p>
   </template>
 </section>
 
 <!-- 3 -->
 <section class="slide">
-  <p class="kicker">Vandaag</p>
-  <h2>Jij bouwt je eigen kast</h2>
-  <div class="two">
-    <div>
-      <p>Straks sta je op stage. Alles wat je daar maakt, bewaar je digitaal.</p>
-      <ul>
-        <li>1 hoofdmap en 5 submappen</li>
-        <li>5 bestanden een fatsoenlijke naam geven</li>
-        <li>alles op zijn plaats zetten</li>
-        <li>delen met je leraar</li>
-      </ul>
-    </div>
-    <div class="panel navy">
-      <p style="font-weight:700;margin-top:0">Op het einde kan je</p>
-      <ul>
-        <li>zeggen waar een bestand staat;</li>
-        <li>mappen maken en benoemen;</li>
-        <li>een bestand in seconden terugvinden;</li>
-        <li>delen met de juiste rechten.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
-  <template class="note"><p><strong>Lesdoel zichtbaar maken.</strong> Zeg er expliciet bij: “Deze kast gebruik je het hele jaar. Wat je vandaag bouwt, gooien we niet weg.”</p></template>
+  <p class="kicker">Ik doe · dia 1 van 4</p>
+  <h2>Wat kan je straks?</h2>
+  <ul class="rules krap">
+    <li>Je weet waar een bestand staat: op <strong>de computer</strong> of in <strong>de cloud</strong>.</li>
+    <li>Je pakt een zip-bestand uit en <strong>uploadt</strong> de bestanden naar Drive.</li>
+    <li>Je bouwt een <strong>kast met vijf mappen</strong> voor je stage.</li>
+    <li>Je geeft bestanden een naam volgens de <strong>afspraak</strong> — nooit de naam van een kind.</li>
+    <li>Je <strong>deelt</strong> je kast met je leraar als <strong>Kijker</strong>.</li>
+  </ul>
+  <p class="klok" style="margin-top:6px">Ik leg 5 minuten uit. Daarna werk jij zelfstandig met de lespagina — en kom ik bij jou langs.</p>
+  <template class="note"><p><strong>Ik doe, 0'30".</strong> Lesdoel voorlezen. Zeg erbij: <em>“Deze kast gebruik je het hele jaar. Wat je vandaag bouwt, gooien we niet weg.”</em></p></template>
 </section>
 
 <!-- 4 -->
 <section class="slide">
-  <p class="kicker">Ik doe · 1</p>
-  <h2>Waar staat jouw bestand?</h2>
-  <table class="style-table">
-    <tr><th>Downloads</th><td>Op de Chromebook <strong>zelf</strong>.<br>Alleen op dát toestel. Wordt leeggemaakt.</td></tr>
-    <tr><th>Google Drive</th><td><strong>Online</strong>, bij je schoolaccount.<br>Op elk toestel waar je aanmeldt.</td></tr>
-  </table>
-  <p style="margin-top:24px"><strong>Vuistregel: school en stage ⇒ Drive.</strong></p>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
-  <template class="note"><p><strong>Demo (1').</strong> Open de Bestanden-app op het bord. Toon <em>Mijn bestanden › Downloads</em> en <em>Google Drive › Mijn Drive</em>. Zeg waarom: de Chromebooks worden gedeeld en leeggemaakt.</p></template>
+  <p class="kicker">Ik doe · dia 2 van 4</p>
+  <h2>Dit bouw je vandaag</h2>
+  <div class="panel">
+    <ul class="folders">
+      <li><strong>Stageportfolio_2026-2027_Naam</strong></li>
+      <li class="in">01_Stageplaats</li>
+      <li class="in">02_Activiteiten</li>
+      <li class="in">03_Observaties</li>
+      <li class="in">04_Materiaal</li>
+      <li class="in">05_Reflectie</li>
+    </ul>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 1'.</strong> Toon het eindproduct: één hoofdmap, vijf laden. Eén zin over het nummer vooraan: dan staan ze vanzelf op volgorde.</p>
+    <p>Mappen maken doe je <strong>niet</strong> voor: dat staat als mappenboom op de lespagina en lukt zelfstandig.</p>
+  </template>
 </section>
 
 <!-- 5 -->
-<section class="slide" data-answer>
-  <p class="kicker">Begripscontrole · steek 1, 2 of 3 vingers op</p>
-  <h2>Je zet je verslag in Downloads. Morgen krijg je een andere Chromebook.</h2>
-  <div class="opts">
-    <div class="opt"><span class="n">1</span>Je verslag staat er gewoon weer.</div>
-    <div class="opt right"><span class="n">2</span>Je verslag is weg: het stond op dát ene toestel.</div>
-    <div class="opt"><span class="n">3</span>Je verslag wordt automatisch doorgestuurd.</div>
+<section class="slide compact">
+  <p class="kicker">Ik doe · dia 3 van 4 · demo</p>
+  <h2>Van Downloads naar Drive</h2>
+  <div class="panel">
+    <ol class="steps1">
+      <li>Download het zip-bestand uit de opdracht.</li>
+      <li><span class="mono">Windows + E</span> › Downloads › rechtsklik › <span class="mono">Alles uitpakken…</span></li>
+      <li>Drive › je hoofdmap › <span class="mono">Nieuw › Bestanden uploaden</span></li>
+    </ol>
   </div>
-  <p class="answer">Antwoord 2 · daarom werk je altijd in Drive.</p>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
-  <template class="note"><p>Iedereen tegelijk vingers omhoog. Druk → om het antwoord te tonen. Minder dan ± 80 % juist? Toon de Bestanden-app nog één keer.</p></template>
+  <p class="reveal-item" style="color:#A0372A;margin-top:18px"><strong>Downloads staat op déze computer.</strong> Thuis of op je stageplaats heb je die bestanden niet. Je stagewerk hoort in Drive.</p>
+  <template class="note">
+    <p><strong>Ik doe, 2' — hardop denkend voordoen.</strong> Dit is het echt nieuwe stuk van de les.</p>
+    <ol>
+      <li>Download het zip-bestand uit de opdracht.</li>
+      <li>Open de Verkenner (Windows + E), ga naar Downloads. Zeg hardop: <em>“Kijk, de bestanden staan nu op déze computer, niet in mijn Drive.”</em></li>
+      <li>Rechtsklik › Alles uitpakken… Toon de nieuwe map met vijf bestanden.</li>
+      <li>Ga naar Drive, open je hoofdmap, Nieuw › Bestanden uploaden, alle vijf tegelijk (Ctrl + A).</li>
+    </ol>
+    <p>Druk op → voor de onthulling. De vraag erbij: <em>“En als je thuis verder wil werken?”</em></p>
+  </template>
 </section>
 
 <!-- 6 -->
-<section class="slide">
-  <p class="kicker">Ik doe · 2</p>
-  <h2>Vijf laden in je kast</h2>
-  <div class="two">
-    <div>
-      <ul class="folders">
-        <li>01_Stageplaats</li>
-        <li>02_Activiteiten</li>
-        <li>03_Observaties</li>
-        <li>04_Materiaal</li>
-        <li>05_Reflectie</li>
-      </ul>
-    </div>
-    <div class="panel">
-      <p style="margin-top:0"><strong>Waarom 01 en niet 1?</strong></p>
-      <p>Drive sorteert op alfabet. Met een cijfer vooraan bepaal jij de volgorde.</p>
-      <p style="margin-bottom:0"><strong>Nooit</strong> een map “Varia” of “Nieuwe map”: daar verdwijnt alles in.</p>
-    </div>
+<section class="slide" data-answer>
+  <p class="kicker">Ik doe · dia 4 van 4 · demo</p>
+  <h2>De naamafspraak</h2>
+  <p class="fname"><span class="d">2026-09-22</span>_<span class="o">activiteitenfiche_herfstslinger</span>_<span class="v">v1</span></p>
+  <div class="arrowrow" style="margin-top:22px">
+    <span class="mono bad">Document zonder titel</span><span class="ar">→</span>
+    <span class="mono good">2026-09-22_activiteitenfiche_herfstslinger_v1</span>
   </div>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
-  <template class="note"><p><strong>Demo (2').</strong> Maak op het bord in Mijn Drive de hoofdmap <em>Stageportfolio_2026-2027_Voornaam-Achternaam</em>, open ze, maak daarin <em>01_Stageplaats</em>. Denk hardop: “Ik maak eerst de kast, pas daarna berg ik op.” Toon het pad bovenaan (Mijn Drive › Stageportfolio…) en hoe je terugkeert.</p></template>
+  <div class="arrowrow">
+    <span class="mono bad">verslag Liam boos DEFINITIEF (2)</span><span class="ar">→</span>
+    <span class="mono good">2026-09-18_observatie_kind-A_v2</span>
+  </div>
+  <div class="answer">
+    <p><strong>datum</strong> eerst · <strong>wat het is</strong> in het midden · <strong>v1, v2</strong> achteraan · géén spaties · <strong>nooit de naam van een kind</strong></p>
+  </div>
+  <template class="note">
+    <p><strong>Ik doe, 1'30" — het tweede stuk van de demo.</strong></p>
+    <p>Neem <em>Document zonder titel</em>. Open het, lees hardop de datum bovenaan (22-09-2026), zeg <em>“omdraaien: jaar, maand, dag”</em>, sluit, rechtsklik › Naam wijzigen, typ de nieuwe naam. Zeg erbij: <em>“de .docx laat ik staan.”</em> Dit is <strong>rij 1</strong> van hun tabel: die staat al in het paspoort.</p>
+    <p>Wijs op de tweede regel: <strong>kind-A</strong>. Beroepsgeheim geldt ook digitaal. Binnenin het verslag mag de naam voorlopig staan; hoe je ook de inhoud anonimiseert, komt in de les over privacy.</p>
+  </template>
 </section>
 
 <!-- 7 -->
-<section class="slide">
-  <p class="kicker">Ik doe · 3</p>
-  <h2>De naamafspraak</h2>
-  <p class="fname"><span class="d">2026-09-22</span>_<span class="o">activiteitenfiche_herfstslinger</span>_<span class="v">v1</span></p>
-  <ul class="rules" style="margin-top:30px">
-    <li><strong>Datum</strong> — jaar-maand-dag. Dan staat alles vanzelf op volgorde.</li>
-    <li><strong>Wat is het?</strong> — 1 tot 3 woorden. Geen spaties: <span class="mono">_</span> en <span class="mono">-</span>.</li>
-    <li><strong>Versie</strong> — v1, v2, v3. Nooit “definitief”.</li>
-  </ul>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
+<section class="slide compact">
+  <p class="kicker">Keuzewerktijd · 40 minuten</p>
+  <h2>Zo werk je verder</h2>
+  <div class="two">
+    <div>
+      <ol class="steps2">
+        <li>Klaarzetten <span class="klok">2'</span></li>
+        <li>Je kast bouwen <span class="klok">5'</span></li>
+        <li>Bestanden ophalen <span class="klok">6'</span></li>
+        <li>De naamafspraak <span class="klok">9'</span></li>
+        <li>Alles op zijn plaats <span class="klok">5'</span></li>
+        <li>Foto van je kast <span class="klok">3'</span></li>
+        <li>Delen met je leraar <span class="klok">5'</span></li>
+        <li>Controleren en inleveren <span class="klok">5'</span></li>
+      </ol>
+    </div>
+    <div class="panel navy">
+      <p style="font-size:25px"><strong>Vast je?</strong></p>
+      <p>1. Theoriekaart &nbsp; 2. Hulp nodig?</p>
+      <p>3. Je buur &nbsp; 4. Ik</p>
+      <p style="margin-top:14px;font-size:22px">Vink af in de <strong>checklist</strong>.</p>
+    </div>
+  </div>
+  <p class="klok" style="margin-top:18px"><!-- PAS AAN na het publiceren: zet hier jouw eigen GitHub Pages-adres -->
+    <strong>Alles staat in de opdracht</strong> <em>Les 2 — Mijn digitaal stageportfolio</em>: de lespagina, je paspoort en het zip-bestand.
+    Adres: jonasdaltongent.github.io/Stageportfolio-Speelboom/ &nbsp;·&nbsp; Je levert alleen je <strong>paspoort</strong> in.</p>
   <template class="note">
-    <p><strong>Demo (2').</strong> Hernoem samen bestand 1: open <em>Document zonder titel</em>, lees de eerste regel (Datum: 22-09-2026), sluit, rechtsklik › Naam wijzigen, typ de naam hardop denkend: “Eerst de datum, maar omgedraaid…”</p>
-    <p>Benadruk: haal ook je eigen naam uit de bestandsnaam (Classroom zet die erbij).</p>
+    <p><strong>Instructie, 2' — daarna keuzewerktijd, 40'.</strong> Laat deze dia staan zolang ze werken.</p>
+    <p><strong>Schrijf nu je e-mailadres op het bord</strong> (voor stap 7). Het staat bewust niet op de lespagina: die is openbaar.</p>
+    <p>Eerste rondgang: werkt iedereen in <em>Mijn Drive</em> (niet in de map Classroom)? Zijn de vijf bestanden van Downloads naar Drive geraakt? Essentiële fouten: datum als 22-9-26 · de naam van het kind blijft staan · delen als Bewerker.</p>
+    <p>Feedback met denkvragen: <em>“Lees je bestandsnaam eens luidop. Wat weet ik nu nog niet over dat bestand?”</em></p>
   </template>
 </section>
 
 <!-- 8 -->
-<section class="slide" data-answer>
-  <p class="kicker">Ik doe · 4 · wat is hier fout?</p>
-  <h2>Eén naam mag echt niet</h2>
-  <div class="arrowrow">
-    <span class="mono bad">verslag Liam boos DEFINITIEF (2)</span><span class="ar">→</span>
-    <span class="mono good reveal-item">2026-09-18_observatie_kind-A_v2</span>
+<section class="slide">
+  <p class="kicker">Afsluiten · laatste minuut</p>
+  <h2>Eén zin in je paspoort</h2>
+  <div class="panel navy" style="margin-top:10px">
+    <p style="font-size:30px">Wat ga jij vanaf nu anders doen met je bestanden?</p>
   </div>
-  <div class="arrowrow">
-    <span class="mono bad">22-9-26 fiche</span><span class="ar">→</span>
-    <span class="mono good reveal-item">2026-09-22_activiteitenfiche_herfstslinger_v1</span>
-  </div>
-  <p class="answer" style="font-size:30px">Iedereen die op je scherm kijkt, leest de bestandsnaam.<br>De naam van een kind hoort daar niet in: <strong>kind-A</strong>.</p>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
+  <p style="margin-top:24px">Volgende les: <strong>een e-mail</strong> aan je stageplaats.<br>Die bewaar je in <strong>01_Stageplaats</strong> — je kast is er al.</p>
   <template class="note">
-    <p>Vraag eerst: “Wat is er mis met de eerste naam?” Verwacht: naam van een kind · DEFINITIEF · (2) · spaties. Onthul daarna met →.</p>
-    <p><strong>Link met het beroep:</strong> beroepsgeheim geldt ook digitaal. Binnenin het verslag mag de naam voorlopig staan; hoe je ook de inhoud anonimiseert, zien we in de les over privacy.</p>
+    <p><strong>Laatste minuut van de keuzewerktijd.</strong> Zeg mondeling dat wie niet klaar is, toch inlevert.</p>
+    <p>De slotvragen (vraag 5 en 6) zijn de exitvragen. Lees ze na de les: de vaakst gemelde moeilijkheid wordt de lesstart van les 3.</p>
   </template>
-</section>
-
-<!-- 9 -->
-<section class="slide">
-  <p class="kicker">Ik doe · 5</p>
-  <h2>Delen: wie mag wat?</h2>
-  <table class="style-table">
-    <tr><th>Kijker</th><td>mag openen en lezen — meer niet</td></tr>
-    <tr><th>Reageerder</th><td>mag ook opmerkingen zetten</td></tr>
-    <tr><th>Bewerker</th><td>mag alles veranderen en verwijderen</td></tr>
-  </table>
-  <p style="margin-top:20px">Je leraar krijgt <strong>Kijker</strong>. Jij blijft <strong>eigenaar</strong>.</p>
-  <p class="hand">Nooit “iedereen met de link”.</p>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
-  <template class="note"><p><strong>Demo (1').</strong> Rechtsklik op de map › Delen › typ je eigen e-mailadres › toon het keuzelijstje Kijker / Reageerder / Bewerker.</p><p><strong>Schrijf je e-mailadres nu op het bord</strong> en zeg dat het ook bij de opdracht in Classroom staat. Het staat bewust niet op de lespagina, want die is openbaar.</p></template>
-</section>
-
-<!-- 10 -->
-<section class="slide">
-  <p class="kicker">Jullie doen · ± 30 minuten</p>
-  <h2>Zo werk je verder</h2>
-  <div class="two">
-    <div class="panel"><p style="margin-top:0"><strong>Links: de lespagina</strong><br>Hier lees je wat je moet doen.</p>
-      <p><strong>Rechts: Drive</strong><br>Hier bouw je je kast.</p>
-      <p style="margin-bottom:0"><strong>Je paspoort</strong><br>Hierin schrijf je op wat je deed. Dit lever je in.</p></div>
-    <div class="panel"><p style="margin-top:0"><strong>Elke stap</strong></p><ol><li>Lees de hele stap.</li><li>Doe het, één voor één.</li><li>Controleer jezelf.</li><li>Vink “Klaar” aan.</li></ol></div>
-  </div>
-  <div class="help-row"><div><b>1</b>theoriekaart</div><div><b>2</b>hint 💡</div><div><b>3</b>je buur</div><div><b>4</b>de leraar</div></div>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
-  <template class="note">
-    <p><strong>Rondgang.</strong> Eerste ronde: kijkt iedereen in <em>Mijn Drive</em> (niet in de map Classroom)? Staan er 5 submappen?</p>
-    <p><strong>Essentiële fouten:</strong> hoofdmap in de verkeerde map · datum als 22-9-26 · naam van het kind blijft staan · delen als Bewerker.</p>
-    <p>Feedback met denkvragen: “Lees je naam eens luidop. Wat weet ik nu nog niet over dat bestand?”</p>
-  </template>
-</section>
-
-<!-- 11 -->
-<section class="slide">
-  <p class="kicker">Afsluiting</p>
-  <h2>Eén zin op je paspoort</h2>
-  <p style="font-size:34px">Wat ga jij vanaf nu anders doen met je bestanden?</p>
-  <p class="hand" style="margin-top:20px">Vergeet niet: eerst de controlelijst, dan <strong>Inleveren</strong>.</p>
-  <p style="margin-top:40px">Volgende keer: je eerste <strong>professionele e-mail</strong> aan je stageplaats.<br>Die bewaar je in 01_Stageplaats.</p>
-  <div class="foot"><span>De Speelboom · les 2</span><img src="assets/dalton-gent-logo.png" alt=""></div>
-  <template class="note"><p><strong>Exit.</strong> Vraag 5 en 6 van het paspoort zijn de exitvragen. Lees ze na de les: de vaakst gemelde moeilijkheid wordt de lesstart van les 3.</p></template>
 </section>
 
 </div></div>
