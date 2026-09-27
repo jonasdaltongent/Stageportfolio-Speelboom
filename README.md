@@ -89,20 +89,18 @@ Word-, Excel- of PowerPoint-bestand dat jij uploadt een Google-bestand.
 
 Daarna, voor deze les:
 
-1. Maak de opdracht en klik onder **Bijvoegen** op **Uploaden**. Kies
-   `werkdocument/Portfoliopaspoort.docx`.
-2. Staat er geen `.docx` meer achter de naam van de bijlage? Dan is het een Google-document. Kies
-   **Een kopie maken voor elke leerling**. Elke leerling krijgt een eigen kopie met de eigen naam in
-   de titel ([Classroom-help](https://support.google.com/edu/classroom/answer/6020265?hl=nl)).
-3. Upload op dezelfde manier `werkdocument/Les2_bestanden-om-op-te-ruimen.zip` en kies
+1. Upload `werkdocument/Portfoliopaspoort.docx` **in Drive zelf**: **Nieuw** › **Bestanden
+   uploaden**. Staat er geen `.docx` meer achter de naam? Dan is het een Google-document.
+2. Maak de opdracht en voeg het paspoort toe met **Bijvoegen** › **Drive**. Kies **Een kopie maken
+   voor elke leerling**. Elke leerling krijgt een eigen kopie met de eigen naam in de titel
+   ([Classroom-help](https://support.google.com/edu/classroom/answer/6020265?hl=nl)).
+3. Voeg `werkdocument/Les2_bestanden-om-op-te-ruimen.zip` toe met **Bijvoegen** › **Uploaden** en kies
    **Leerlingen kunnen bestand bekijken**. Een zip-bestand wordt niet omgezet; dat hoeft ook niet.
 4. Voeg de lespagina toe met **Link**.
 
 > [!IMPORTANT]
-> **Test het één keer.** Dat de uploadknop *in Classroom* die Drive-instelling volgt, staat niet in
-> de Google-documentatie. Heet het paspoort na stap 1 nog `…docx`? Upload het dan in Drive zelf
-> (**Nieuw** › **Bestanden uploaden**: daar zet de instelling het zeker om) en voeg het in Classroom
-> toe met **Drive**.
+> Voeg het paspoort **niet** toe met **Uploaden** in Classroom. Die knop volgt de Drive-instelling
+> niet: het bestand blijft dan een `.docx` (getest op 27-09-2026).
 
 > [!NOTE]
 > *Een kopie maken voor elke leerling* kan je alleen kiezen **voordat** je de opdracht post.

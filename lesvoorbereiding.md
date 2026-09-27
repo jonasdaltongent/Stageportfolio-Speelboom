@@ -150,9 +150,9 @@ Zie `README.md` §2. In het kort:
 
 1. Publiceer de lespagina (staat al online; na een wijziging opnieuw pushen) en test de link.
 2. Zet **één keer** in Drive de instelling *Uploads converteren naar de indeling van een Editor
-   van Google Documenten* aan. Upload dan in Classroom (**Bijvoegen** › **Uploaden**) het paspoort
-   en het zip-bestand; het paspoort wordt een Google-document, het zip-bestand blijft een zip.
-   Details en een terugvaloptie: `README.md` §2, stap 3.
+   van Google Documenten* aan. Upload het paspoort **in Drive** (**Nieuw** › **Bestanden uploaden**):
+   dan wordt het een Google-document. Voeg het in Classroom toe met **Drive**, het zip-bestand met
+   **Uploaden** (de Classroom-upload zet een `.docx` niet om). Details: `README.md` §2, stap 3.
 3. Maak **één** opdracht met drie bijlagen (zie punt 13) en test met een leerlingaccount.
 
 **Zet je e-mailadres in de instructietekst van de opdracht** en schrijf het tijdens de les op het
