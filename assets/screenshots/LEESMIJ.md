@@ -9,7 +9,7 @@ kader op elke plaats, met de bestandsnaam erbij.
 | Bestandsnaam | Wat moet erop staan | Stap |
 |---|---|---|
 | `stap3-uitpakken.png` | Het rechtermuisknopmenu op het zip-bestand in de Verkenner, met **Alles uitpakken…** zichtbaar. | 3 |
-| `stap3-uploaden.png` | Het menu **Nieuw** in Drive, opengeklapt, met **Bestanden uploaden**. | 3 |
+| `stap3-uploaden.png` | Het menu **Nieuw** in Drive, opengeklapt, met **Bestand uploaden**. | 3 |
 | `stap4-naam-wijzigen.png` | Het rechtermuisknopmenu in Drive met **Naam wijzigen**. | 4 |
 | `stap5-verplaatsen.png` | Rechtsklik › **Ordenen** › **Verplaatsen**, met de vijf mappen van het stageportfolio. | 5 |
 | `stap7-delen.png` | Het venster **Delen**, met de rollen open: **Kijker / Reageerder / Bewerker**. | 7 |

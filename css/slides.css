@@ -12,7 +12,9 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; background: #1D2340; font-family: "Atkinson", Verdana, sans-serif; color: var(--ink); overflow: hidden; }
 
-.deck { position: absolute; inset: 0; display: grid; place-items: center; }
+/* place-content: center houdt het podium ook in het midden als het scherm kleiner is dan 1280x720;
+   zonder viel dan rechts of onderaan een strook van de dia weg */
+.deck { position: absolute; inset: 0; display: grid; place-items: center; place-content: center; }
 .stage { width: 1280px; height: 720px; position: relative; transform-origin: center center; }
 .slide { position: absolute; inset: 0; background: var(--sand); display: none; padding: 56px 72px 64px; flex-direction: column; }
 .slide.active { display: flex; }

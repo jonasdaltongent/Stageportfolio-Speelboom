@@ -56,8 +56,9 @@ Deze les kreeg dezelfde opbouw als les 2 van 3MWWE (*Mijn digitale onderzoeksmap
 - De pagina zegt niet meer dat de leerlingen Classroom moeten openen: ze starten daar al.
 - **Keuzewerktijd = 50 − instructie**: 10 minuten instructie, 40 minuten werken.
 - **Dalton-lesfiche** als HTML in de kleurcode van het Dalton-sjabloon.
-- De Drive-knopnamen zijn zoals Google ze nu noemt (**Kijker**, **Nieuw › Map**,
-  **Ordenen › Verplaatsen**, **Kleur van map**).
+- De Drive-knopnamen zijn zoals Google ze nu noemt (**Kijker**, **Nieuw › Nieuwe map**,
+  **Nieuw › Bestand uploaden**, **Ordenen › Verplaatsen**, **Kleur van map**). *Nieuwe map* en
+  *Bestand uploaden* komen van jouw scherm (04-10-2026); de Drive-help schrijft *Map* en *Bestanden uploaden*.
 
 ---
 
