@@ -60,6 +60,16 @@ Deze les kreeg dezelfde opbouw als les 2 van 3MWWE (*Mijn digitale onderzoeksmap
   **Nieuw › Bestand uploaden**, **Ordenen › Verplaatsen**, **Kleur van map**). *Nieuwe map* en
   *Bestand uploaden* komen van jouw scherm (04-10-2026); de Drive-help schrijft *Map* en *Bestanden uploaden*.
 
+### 1c. Rechtgezet op 08-10-2026
+
+Gezien in een opname in Drive (schoolaccount, demomap):
+
+- **Stap 4:** *Naam wijzigen* selecteert de **hele** naam, ook `.docx`. Wie typt, wist dus ook de
+  extensie. De pagina zei *"Laat .docx of .xlsx achteraan staan"*; nu: *"Typ er dan .docx of .xlsx
+  achter"*, met uitleg en een regel bij *Hulp nodig?*. De demo-notitie op dia 6 zegt het ook.
+- **Stap 5:** het venster *Verplaatsen* opent op het tabblad *Voorgesteld*, met andere mappen. Nieuwe
+  handeling: *"Klik naast Huidige locatie op je hoofdmap."*
+
 ---
 
 ## 2. Klaarzetten
