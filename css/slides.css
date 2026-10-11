@@ -84,3 +84,10 @@ body.show-notes .notes { display: block; }
 .hud { position: fixed; top: 10px; right: 14px; color: #fff; background: rgba(29,35,64,.75); padding: 3px 10px; border-radius: 99px; font-size: 14px; z-index: 6; }
 .hud kbd { background: #2A3973; border-radius: 4px; padding: 0 5px; color: #fff; }
 body.show-notes .hud, body:fullscreen .hud { display: none; }
+
+/* Logo's (sinds 11-10-2026, _afspraken/vormgeving-en-techniek.md) */
+.logo { width: 1em; height: 1em; flex-shrink: 0; vertical-align: -.12em; object-fit: contain; }
+.url-balk { display: inline-flex; align-items: center; gap: 8px; }
+.url-balk .logo, .bijl-chip .logo { width: 20px; height: 20px; }
+.met-logo { white-space: nowrap; }
+.met-logo .logo { margin-right: .25em; }
