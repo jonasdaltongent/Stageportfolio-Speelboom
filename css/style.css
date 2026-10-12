@@ -343,3 +343,19 @@ footer.site { max-width: 1440px; margin: 0 auto; padding: 0 1.2rem 2rem; font-si
 .met-logo { white-space: nowrap; }
 .met-logo .logo { margin-right: .25em; }
 .md-balk .logo { margin-right: .3rem; }
+
+/* ==========================================================================
+   Laag scherm (sinds 12-10-2026): leerlingen hebben 1280 x 800, in Chrome blijft ± 650 px hoogte
+   over. "Wat moet je doen?" moet zonder scrollen in beeld komen: kop en ruimtes worden compacter.
+   ========================================================================== */
+@media (max-height: 820px) and (min-width: 900px) {
+  .topbar-inner { padding: .35rem 1.2rem; }
+  .brand img { height: 30px; }
+  .layout { padding-top: .7rem; }
+  .card-head { padding: .85rem 1.8rem .75rem; }
+  .tags { margin-bottom: .4rem; }
+  .card-head h1, .card-head h2 { font-size: 1.4rem; }
+  .card-body { padding-top: 1rem; }
+  .intro { margin-bottom: .8rem; }
+  .nameplate { margin-bottom: .8rem; }
+}
