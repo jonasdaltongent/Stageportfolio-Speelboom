@@ -8,6 +8,7 @@ lokaal: "18 — computers met Windows 11, Google Workspace in Chrome"
 lesdag: "maandag 28 september 2026, 9de lesuur (rooster van 25-09-2026)"
 gekoppeld_lessenplan: "Lessenplan_TOINFO_MW_dubbele_finaliteit_30u.md — module 1, les 2"
 opgesteld_volgens: "AI-lesplanner versie 2.1, §9.2"
+vakinhoud: "_vakinhoud/bestandsbeheer.md"
 ---
 
 # Lesvoorbereiding — Les 2: Mijn digitaal stageportfolio
